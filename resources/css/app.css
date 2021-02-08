@@ -1,0 +1,58 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.btn{
+    @apply font-bold py-1 px-3 rounded-full outline-none;
+}
+
+.btn-edit:hover{
+    @apply bg-green-600 text-white;
+}
+.modal{
+    @apply transition-opacity duration-300 ease-in-out;
+}
+.modal-active{
+    @apply overflow-x-hidden overflow-y-visible !important;
+}
+.modal-overlay{
+    @apply absolute w-full h-full bg-gray-900 opacity-50 ;
+}
+.modal-container{
+    @apply bg-white mx-auto rounded shadow-lg z-50 overflow-y-auto;
+}
+.modal-esc{
+    @apply absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50;
+}
+.modal-create{
+    @apply px-4 bg-blue-500 p-3 rounded-lg text-white flex justify-center items-center w-full;
+}
+.modal-create:focus{
+    @apply outline-none
+}
+.modal-create:hover{
+    @apply bg-blue-400
+}
+.modal-open{
+    @apply bg-transparent border border-gray-500 text-gray-500 font-bold py-2 px-4 rounded-full flex justify-center items-center w-full;
+}
+.modal-open:focus{
+    @apply outline-none
+}
+.modal-open:hover{
+    @apply border-indigo-500 text-indigo-500;
+}
+.modal-submit{
+    @apply px-4 bg-transparent p-3 rounded-lg text-indigo-500 mr-8;
+}
+.modal-submit:hover{
+    @apply text-indigo-400 bg-gray-200;
+}
+.input-text{
+    @apply px-4 py-2 border w-full border-gray-300 rounded-md text-gray-600
+}
+.input-text:focus{
+    @apply border-gray-900 outline-none
+}
