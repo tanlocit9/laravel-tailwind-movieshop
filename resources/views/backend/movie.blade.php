@@ -85,9 +85,15 @@
 </div>
 
 @if(Session::has('status'))
-<script>
-    alert('{{Session::get("type")." ".$title." ".Session::get("status")}}')
-</script>
+    <script>
+        alert('{{Session::get("type")." ".$title." ".Session::get("status")}}')
+    </script>
 @endif
+{{-- @if($errors->any())
+@dd($errors)
+    <script>
+        alert('{{Session::get("type")." ".$title." ".Session::get("status").$errors->messages}}')
+    </script>
+@endif --}}
 @endsection
 

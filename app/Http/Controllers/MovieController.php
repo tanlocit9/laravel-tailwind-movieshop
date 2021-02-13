@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreMovieRequest;
 use App\Models\Movie;
 use Illuminate\Http\Request;
 
@@ -33,29 +34,36 @@ class MovieController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreMovieRequest $request)
     {
-        $movie = Movie::create([
-            'name' => $request->name,
-            'movie_description' =>  $request->description,
-            'movie_duration' => strtotime($request->duration),
-            'poster_path'=>$request->poster,
-            'age_limit'=>$request->limit,
-            'country_id'=>$request->country
-        ]);
-        $target_dir = $_SERVER["DOCUMENT_ROOT"].'/storage/posters';
-        $filename = $request->poster->getClientOriginalName();
-        $target_file = $target_dir .'/'. $filename;
-        $path=$request->poster->path();
-        $request->poster->storeAs('posters',$filename);
-        if(move_uploaded_file($path, $target_file));
-        return redirect()->back()
-                        ->with('type', 'Add')
-                        ->with('status', 'successed');
+        // dd($request);
+        if($request->validated()){
+            $target_dir = $_SERVER["DOCUMENT_ROOT"].'/storage/posters';
+            $filename = strtolower($request->poster->getClientOriginalName());
+            $target_file = $target_dir .'/'. $filename;
+            $path=$request->poster->path();
+            $request->poster->storeAs('posters',$filename);
 
-        return redirect()->back()
+            $times = explode(':',$request->duration);
+            $seconds = $times[0]*3600+$times[1]*60+$times[2];
+            move_uploaded_file($path, $target_file);
+            $movie = Movie::create([
+                'movie_name' => $request->movie_name,
+                'movie_description' =>  $request->description,
+                'movie_duration' => date('H:i:s',$seconds),
+                'poster'=>$filename,
+                'release_day'=>date('Y-m-d',strtotime($request->release)),
+                'age_limit'=>$request->limit,
+                'country_id'=>$request->country
+            ]);
+            return redirect()->back()
+                            ->with('type', 'Add')
+                            ->with('status', 'successed');
+            }
+        else return redirect()->back()
                         ->with('type', 'Add')
                         ->with('status', 'failed');
+
     }
 
     /**

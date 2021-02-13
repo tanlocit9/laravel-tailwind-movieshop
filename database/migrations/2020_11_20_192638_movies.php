@@ -19,8 +19,8 @@ class Movies extends Migration
             $table->string('movie_description')->default("The movie do not have description");
             $table->time('movie_duration');
             $table->integer('age_limit')->nullable();
-            $table->date('release_day')->comment('ngay ra mat');
-            $table->string('poster_path')->comment('duong dan hinh');
+            $table->string('release_day')->comment('ngay ra mat');
+            $table->string('poster');
 
             $table->foreignId('country_id')->constrained('countries')->onDelete('cascade');
 
