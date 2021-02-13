@@ -36,7 +36,7 @@ class HomeController extends Controller
     }
     public function movies()
     {
-        $movies = Movie::all();
+        $movies = Movie::paginate(5);
         $countries = Country::all();
         $title = 'movie';
         return view('backend.movie',compact('countries','movies','title'));

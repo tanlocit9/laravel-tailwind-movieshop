@@ -22,26 +22,37 @@
                             <th>release day</th>
                             <th>country</th>
                             <th>age limit</th>
-                            <th>discription</th>
-                            <th>details</th>
+                            <th>description</th>
+                            <th>average rate</th>
                         </tr>
                     </thead>
                     <tbody class="text-sm normal-case">
+                        @foreach($movies as $movie)
                         <tr class="capitalize">
-                            <td>Tiệc trăng máu</td>
-                            <td>1h</td>
-                            <td>Ngày nào đó</td>
-                            <td>Việt Nam</td>
-                            <td>16</td>
-                            <td>
-                                <button class="btn btn-edit" type="submit">View</button>
+                            <td>{{$movie->movie_name}}</td>
+                            <td>{{$movie->movie_duration}}</td>
+                            <td>{{$movie->release_day}}</td>
+                            <td>{{$movie->country->country_name}}</td>
+                            <td>{{$movie->age_limit}}</td>
+                            <td class="break-all">
+                                {{$movie->movie_description}}
                             </td>
+                            @if($movie->avg_rate())
                             <td>
-                                <button class="btn btn-edit" type="submit">Show More</button>
+                                {{$movie->avg_rate()}}
                             </td>
+                            @else
+                            <td>
+                                Not Rated
+                            </td>
+                            @endif
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
+                <div>
+                    {{$movies->links()}}
+                </div>
             </div>
         </div>
         <div class="grid grid-cols-1 gap-5">

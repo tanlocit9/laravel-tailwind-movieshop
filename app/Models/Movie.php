@@ -21,4 +21,10 @@ class Movie extends Model
     public function actors(){
         return $this->belongsToMany(Actor::class);
     }
+    public function country(){
+        return $this->belongsTo(Country::class);
+    }
+    public function avg_rate(){
+        return $this->hasMany(Ratings::class)->avg('star');
+    }
 }
