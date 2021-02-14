@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Country;
 use App\Models\Movie;
+use App\Models\Theater;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -44,7 +45,8 @@ class HomeController extends Controller
     public function theaters()
     {
         $title = 'theater';
-        return view('backend.theater',compact('title'));
+        $theaters = Theater::paginate(5);
+        return view('backend.theater',compact('title','theaters'));
     }
     public function movie_calendar()
     {

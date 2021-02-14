@@ -23,16 +23,21 @@
                         </tr>
                     </thead>
                     <tbody class="text-sm normal-case">
+                        @foreach($theaters as $theater)
                         <tr class="capitalize">
-                            <td>Tiệc trăng máu</td>
-                            <td>1h</td>
-                            <td>Ngày nào đó</td>
+                            <td>{{$theater->theater_name}}</td>
+                            <td>{{$theater->theater_address}}</td>
+                            <td>{{$theater->theater_address}}</td>
                             <td>Việt Nam</td>
                             <td>16</td>
                             <td>16</td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
+                <div>
+                    {{$theaters->links()}}
+                </div>
             </div>
         </div>
         <div class="grid grid-cols-1 gap-5">
