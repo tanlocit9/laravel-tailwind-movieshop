@@ -19,6 +19,7 @@ class Theaters extends Migration
             $table->string('theater_name');
             $table->string('theater_address');
             $table->string('theater_phone')->default('0368823899');
+            // $table->string('manager_id');
             $table->timestamps();
         });
         $theater = Theater::create([

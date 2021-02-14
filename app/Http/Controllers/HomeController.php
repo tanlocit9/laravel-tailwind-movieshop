@@ -43,7 +43,8 @@ class HomeController extends Controller
     }
     public function theaters()
     {
-        return view('backend.theater');
+        $title = 'theater';
+        return view('backend.theater',compact('title'));
     }
     public function movie_calendar()
     {

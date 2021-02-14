@@ -56,7 +56,7 @@ class MovieController extends Controller
                 'age_limit'=>$request->limit,
                 'country_id'=>$request->country
             ]);
-            return redirect()->back()
+            return redirect('components.modal')
                             ->with('type', 'Add')
                             ->with('status', 'successed');
             }

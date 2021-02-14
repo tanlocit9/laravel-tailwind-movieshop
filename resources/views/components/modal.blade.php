@@ -27,6 +27,9 @@
                     @case('movie')
                         @include('components.modals.modal_movie')
                         @break
+                    @case('theater')
+                        @include('components.modals.modal_theater')
+                        @break
                     @default
 
                 @endswitch
@@ -34,4 +37,3 @@
         </div>
     </div>
 </span>
-

@@ -9,7 +9,7 @@
             <div class="card-body">
                 <div class="flex flex-row justify-between items-center">
                     <h1 class="font-extrabold text-lg">Theaters info</h1>
-                    <a href="#" class="btn-gray text-sm">Add</a>
+                    @include('components.modal',['title'=>$title])
                 </div>
                 <table class="text-left w-full mt-5 ">
                     <thead>
@@ -77,4 +77,5 @@
                     </table>
                 </div>
             </div>
+@include('components.alert')
 @endsection

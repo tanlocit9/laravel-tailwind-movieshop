@@ -9,9 +9,6 @@
             <div class="card-body">
                 <div class="flex flex-row justify-between items-center">
                     <h1 class="font-extrabold text-lg">movies info</h1>
-                    <div id="alert" class="invisible">
-
-                    </div>
                     @include('components.modal',['title'=>$title])
                 </div>
                 <table class="text-left w-full mt-5 ">
@@ -95,16 +92,6 @@
     </div>
 </div>
 
-@if(Session::has('status'))
-    <script>
-        alert('{{Session::get("type")." ".$title." ".Session::get("status")}}')
-    </script>
-@endif
-{{-- @if($errors->any())
-@dd($errors)
-    <script>
-        alert('{{Session::get("type")." ".$title." ".Session::get("status").$errors->messages}}')
-    </script>
-@endif --}}
+@include('components.alert')
 @endsection
 
