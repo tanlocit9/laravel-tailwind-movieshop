@@ -16,12 +16,11 @@ class TheaterController extends Controller
                 'theater_address'=>$request->address,
                 'theater_phone'=>$request->phone,
             ]);
-            return redirect()
-                ->route('manage_theater')
+            return redirect()->route('manage_theater')
                 ->with('type', 'Add')
                 ->with('status', 'Succeeded');
         } catch (\Throwable $th) {
-            return redirect()->back()
+            return redirect()->route('manage_theater')
                 ->with('type', 'Add')
                 ->with('status', 'failed');
         }

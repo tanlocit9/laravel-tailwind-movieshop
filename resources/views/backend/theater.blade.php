@@ -82,5 +82,4 @@
                     </table>
                 </div>
             </div>
-@include('components.alert')
 @endsection

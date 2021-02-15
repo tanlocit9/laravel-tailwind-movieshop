@@ -34,10 +34,10 @@ class MovieController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreMovieRequest $request)
+    public function store(Request $request)
     {
         // dd($request);
-        if($request->validated()){
+        try {
             $target_dir = $_SERVER["DOCUMENT_ROOT"].'/storage/posters';
             $filename = strtolower($request->poster->getClientOriginalName());
             $target_file = $target_dir .'/'. $filename;
@@ -56,14 +56,15 @@ class MovieController extends Controller
                 'age_limit'=>$request->limit,
                 'country_id'=>$request->country
             ]);
-            return redirect('components.modal')
+            return redirect()->route('manage_movie')
                             ->with('type', 'Add')
                             ->with('status', 'successed');
-            }
-        else return redirect()->back()
+        } catch (\Throwable $th) {
+            dd($th);
+            return redirect()->route('manage_movie')
                         ->with('type', 'Add')
                         ->with('status', 'failed');
-
+        }
     }
 
     /**

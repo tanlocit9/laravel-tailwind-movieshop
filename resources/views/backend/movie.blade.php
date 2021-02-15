@@ -96,7 +96,5 @@
         </div>
     </div>
 </div>
-
-@include('components.alert')
 @endsection
 
