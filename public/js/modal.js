@@ -29,9 +29,12 @@ var openmodal = document.querySelectorAll('.modal-open')
 
 
     function toggleModal () {
-      const body = document.querySelector('body')
-      const modal = document.querySelector('.modal')
-      modal.classList.toggle('opacity-0')
-      modal.classList.toggle('pointer-events-none')
-      body.classList.toggle('modal-active')
+        const body = document.querySelector('body')
+        const modal = document.querySelector('.modal')
+        const paginate = document.getElementById('paginate')
+        modal.classList.toggle('opacity-0')
+        modal.classList.toggle('pointer-events-none')
+        body.classList.toggle('modal-active')
+        console.log(paginate.val)
+        paginate.classList.toggle('opacity-100')
     }

@@ -30,6 +30,9 @@
                     @case('theater')
                         @include('components.modals.modal_theater')
                         @break
+                    @case('genres')
+                        @include('components.modals.modal_genre')
+                        @break
                     @default
 
                 @endswitch

@@ -34,3 +34,4 @@ Route::get('/admin/theater','HomeController@theaters')->name('manage_theater');
 
 Route::post('/admin/movie_add','MovieController@store')->name('movie_add');
 Route::post('/admin/theater_add','TheaterController@store')->name('theater_add');
+Route::post('/admin/genre_add','GenreController@store')->name('genre_add');
