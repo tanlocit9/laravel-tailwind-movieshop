@@ -28,9 +28,9 @@ Auth::routes();
 Route::get('/admin','HomeController@admin')->name('admin');
 Route::get('/admin/user','HomeController@users')->name('manage_user');
 Route::get('/admin/movie','HomeController@movies')->name('manage_movie');
+Route::get('/admin/movie-genres','HomeController@genres')->name('manage_genres');
 Route::get('/admin/theater','HomeController@theaters')->name('manage_theater');
-Route::get('/admin/movie-calendar','HomeController@movie_calendar')->name('manage_movie_calendar');
+// Route::get('/admin/movie-calendar','HomeController@movie_calendar')->name('manage_movie_calendar');
 
 Route::post('/admin/movie_add','MovieController@store')->name('movie_add');
 Route::post('/admin/theater_add','TheaterController@store')->name('theater_add');
-

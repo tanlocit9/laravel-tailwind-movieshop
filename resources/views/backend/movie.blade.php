@@ -21,6 +21,8 @@
                             <th>age limit</th>
                             <th>description</th>
                             <th>average rate</th>
+                            <th>genres</th>
+                            <th>action</th>
                         </tr>
                     </thead>
                     <tbody class="text-sm normal-case">
@@ -43,7 +45,10 @@
                                 Not Rated
                             </td>
                             @endif
+                            <td>genres list</td>
+                        <td>genres list</td>
                         </tr>
+
                         @endforeach
                     </tbody>
                 </table>
