@@ -8,6 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Genre extends Model
 {
     use HasFactory;
+    public $timestamps = false;
+    protected $fillable = [
+        'genre_name',
+        'genre_description'
+    ];
     public function movies()
     {
         return $this->belongsToMany(Movie::class);

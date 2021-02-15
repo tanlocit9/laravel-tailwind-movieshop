@@ -5,12 +5,12 @@
         <div class="text-base leading-4 space-y-4 text-gray-700 sm:text-lg sm:leading-5">
             <div class="flex flex-col">
                 <label class="leading-relaxed">Genre name</label>
-                <input type="text" name="Genre_name"class="input-text sm:text-sm" placeholder="Theater name" required value="{{old('movie_name')}}">
+                <input type="text" name="genre_name"class="input-text sm:text-sm" placeholder="Genre name" required value="{{old('movie_name')}}">
             </div>
             <div class="flex flex-col">
                 <label class="leading-relaxed">description</label>
                 <div class="relative focus-within:text-gray-600 text-gray-400">
-                    <input type="text" name="description" class="pr-4 pl-10 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="">
+                    <input type="text" name="description" class="input-text sm:text-sm" placeholder="Genre description">
                 </div>
             </div>
             <div class="pt-4 flex items-center space-x-4">

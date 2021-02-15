@@ -23,7 +23,7 @@
                         @foreach($genres as $genre)
                         <tr class="capitalize">
                             <td>{{$genre->genre_name}}</td>
-                            <td>{{$genre->genre_discription}}</td>
+                            <td>{{$genre->genre_description}}</td>
                             <td>Modify</td>
                         @endforeach
                     </tbody>
@@ -33,10 +33,9 @@
                 </div>
             </div>
         </div>
-
     </div>
 </div>
-
 @include('components.alert')
+
 @endsection
 

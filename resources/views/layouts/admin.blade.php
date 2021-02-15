@@ -185,6 +185,7 @@
 <!-- script -->
 <script src="{{asset('backend/js/scripts.js')}}"></script>
 <script src="{{asset('/js/modal.js')}}"></script>
+
 <!-- end script -->
 
 </body>

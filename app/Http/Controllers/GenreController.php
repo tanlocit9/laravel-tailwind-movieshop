@@ -35,7 +35,19 @@ class GenreController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
+        try {
+            $genre = Genre::create([
+                'genre_name'=>$request->genre_name,
+                'genre_description'=>$request->description,
+            ]);
+            return redirect()->route('manage_genres')
+                ->with('type', 'Add')
+                ->with('status', 'Succeeded');
+        } catch (\Throwable $th) {
+            return redirect()->route('manage_genres')
+                ->with('type', 'Add')
+                ->with('status', 'failed');
+        }
     }
 
     /**
