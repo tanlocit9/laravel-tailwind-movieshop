@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Theater;
 use Illuminate\Http\Request;
-use PhpParser\Node\Stmt\TryCatch;
 
 class TheaterController extends Controller
 {

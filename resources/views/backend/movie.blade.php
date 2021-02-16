@@ -21,8 +21,8 @@
                             <th>age limit</th>
                             <th>description</th>
                             <th>average rate</th>
-                            <th>genres</th>
-                            <th>action</th>
+                            <th>main genre</th>
+                            <th>sub genres</th>
                         </tr>
                     </thead>
                     <tbody class="text-sm normal-case">
