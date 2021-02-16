@@ -13,7 +13,7 @@ class MovieTheaters extends Migration
      */
     public function up()
     {
-        Schema::create('movie_theaters', function (Blueprint $table) {
+        Schema::create('movie_theater', function (Blueprint $table) {
             $table->foreignId('theater_id')->constrained('theaters')->onDelete('cascade');
             $table->foreignId('movie_id')->constrained('movies')->onDelete('cascade');
             $table->timestamps();

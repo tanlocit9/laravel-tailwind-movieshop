@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreMovieRequest;
+use App\Models\Genre;
 use App\Models\Movie;
+use App\Models\MovieGenre;
 use Illuminate\Http\Request;
 
 class MovieController extends Controller
@@ -56,6 +58,7 @@ class MovieController extends Controller
                 'age_limit'=>$request->limit,
                 'country_id'=>$request->country
             ]);
+            $movie->genres()->attach($request->genre,['is_main'=>1]);
             return redirect()->route('manage_movie')
                             ->with('type', 'Add')
                             ->with('status', 'successed');

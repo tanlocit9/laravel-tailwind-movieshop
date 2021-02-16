@@ -27,4 +27,10 @@ class Movie extends Model
     public function avg_rate(){
         return $this->hasMany(Ratings::class)->avg('star');
     }
+    public function genres(){
+        return $this->belongsToMany(Genre::class,'genre_movie')->withPivot(['is_main']);
+    }
+    public function main_genre(){
+        return $this->genres()->wherePivot('is_main',1);
+    }
 }

@@ -13,7 +13,7 @@ class MoviesGenres extends Migration
      */
     public function up()
     {
-        Schema::create('movie_genre', function (Blueprint $table) {
+        Schema::create('genre_movie', function (Blueprint $table) {
             $table->foreignId('genre_id')->constrained('genres')->onDelete('cascade');
             $table->foreignId('movie_id')->constrained('movies')->onDelete('cascade');
             $table->boolean('is_main')->default(0);

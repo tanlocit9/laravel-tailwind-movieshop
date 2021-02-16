@@ -1,5 +1,7 @@
 <span class="focus:outline-none">
-    <button class="modal-open">Add</button>
+    <button class="modal-open">
+        Add
+    </button>
     <!--Modal-->
     <div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
         <div class="modal-overlay"></div>

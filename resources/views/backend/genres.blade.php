@@ -33,6 +33,34 @@
                 </div>
             </div>
         </div>
+        <div class="card">
+            <div class="card-body">
+                <div class="flex flex-row justify-between items-center">
+                    <h1 class="font-extrabold text-lg">Movies - Genres</h1>
+                    @include('components.modal',['title'=>$title])
+                </div>
+                <table class="text-left w-full mt-5 ">
+                    <thead>
+                        <tr>
+                            <th>Movie name</th>
+                            <th>Sub Genres</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm normal-case">
+                        @foreach($genres as $genre)
+                        <tr class="capitalize">
+                            <td>{{$genre->genre_name}}</td>
+                            <td>{{$genre->genre_description}}</td>
+                            <td>Modify</td>
+                        @endforeach
+                    </tbody>
+                </table>
+                <div>
+                    {{$genres->links()}}
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

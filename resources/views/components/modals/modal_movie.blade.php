@@ -25,14 +25,25 @@
                     <input type="text" name="limit" class="input-text sm:text-sm" placeholder="Optional">
                 </div>
             </div>
-            <div class="flex flex-col w-1/2">
-                <label class="leading-relaxed" for="country">Movie country</label>
-                <select name="country" id="country" class="input-text" required>
-                    <option value="0">Select country</option>
-                    @foreach($countries as $country)
-                        <option value="{{$country->id}}">{{$country->country_name}}</option>
-                    @endforeach
-                </select>
+            <div class="flex items-center space-x-4">
+                <div class="flex flex-col w-1/2">
+                    <label class="leading-relaxed" for="country">Movie country</label>
+                    <select name="country" id="country" class="input-text" required>
+                        <option value="0">Select country</option>
+                        @foreach($countries as $country)
+                            <option value="{{$country->id}}">{{$country->country_name}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="flex flex-col w-1/2">
+                    <label class="leading-relaxed" for="country">Movie genre</label>
+                    <select name="genre" id="genre" class="input-text" required>
+                        <option value="0">Select main genre</option>
+                        @foreach($genres as $genre)
+                            <option value="{{$genre->id}}">{{$genre->genre_name}}</option>
+                        @endforeach
+                    </select>
+                </div>
             </div>
             <div class="flex items-center space-x-4">
                 <div class="flex flex-col w-full">

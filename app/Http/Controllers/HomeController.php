@@ -40,8 +40,9 @@ class HomeController extends Controller
     {
         $movies = Movie::paginate(5);
         $countries = Country::all();
+        $genres = Genre::all();
         $title = 'movie';
-        return view('backend.movie',compact('countries','movies','title'));
+        return view('backend.movie',compact('countries','movies','title','genres'));
     }
     public function theaters()
     {

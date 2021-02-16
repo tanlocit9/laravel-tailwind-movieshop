@@ -22,7 +22,6 @@
                             <th>description</th>
                             <th>average rate</th>
                             <th>main genre</th>
-                            <th>sub genres</th>
                         </tr>
                     </thead>
                     <tbody class="text-sm normal-case">
@@ -45,10 +44,10 @@
                                 Not Rated
                             </td>
                             @endif
-                            <td>genres list</td>
-                        <td>genres list</td>
+                            @foreach($movie->main_genre as $genre)
+                                <th>{{$genre->genre_name}}</th>
+                            @endforeach
                         </tr>
-
                         @endforeach
                     </tbody>
                 </table>
