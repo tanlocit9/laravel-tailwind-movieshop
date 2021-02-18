@@ -44,19 +44,22 @@ class HomeController extends Controller
         $title = 'movie';
         return view('backend.movie',compact('countries','movies','title','genres'));
     }
+    public function genres()
+    {
+        $title = 'genre';
+        $genres = Genre::paginate(5);
+        return view('backend.genre',compact('title','genres'));
+    }
+    public function movies_genres()
+    {
+        $movies = Movie::paginate(5);
+        $title = 'genre';
+        return view('backend.movie_genre',compact('movies','title'));
+    }
     public function theaters()
     {
         $title = 'theater';
         $theaters = Theater::paginate(5);
         return view('backend.theater',compact('title','theaters'));
     }
-
-    public function genres()
-    {
-        $title = 'genres';
-        $genres = Genre::paginate(5);
-        $movies = Movie::paginate(5);
-        return view('backend.genres',compact('title','genres','movies'));
-    }
-
 }

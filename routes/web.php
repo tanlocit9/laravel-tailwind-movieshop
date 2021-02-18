@@ -28,10 +28,11 @@ Auth::routes();
 Route::get('/admin','HomeController@admin')->name('admin');
 Route::get('/admin/user','HomeController@users')->name('manage_user');
 Route::get('/admin/movie','HomeController@movies')->name('manage_movie');
-Route::get('/admin/movie-genres','HomeController@genres')->name('manage_genres');
+Route::get('/admin/genre','HomeController@genres')->name('manage_genre');
+Route::get('/admin/movie_genre','HomeController@movies_genres')->name('manage_movie_genre');
 Route::get('/admin/theater','HomeController@theaters')->name('manage_theater');
-// Route::get('/admin/movie-calendar','HomeController@movie_calendar')->name('manage_movie_calendar');
 
 Route::post('/admin/movie_add','MovieController@store')->name('movie_add');
 Route::post('/admin/theater_add','TheaterController@store')->name('theater_add');
 Route::post('/admin/genre_add','GenreController@store')->name('genre_add');
+Route::post('/admin/genre_modify','GenreController@update')->name('genre_modify');

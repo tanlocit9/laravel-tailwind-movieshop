@@ -153,7 +153,12 @@
         </a>
         <!-- end link -->
         <!-- link -->
-        <a href="{{route('manage_genres')}}" class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
+        <a href="{{route('manage_genre')}}" class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
+            <i class="fad fa-comments text-xs mr-2"></i>
+            Genres
+        </a>
+        <!-- link -->
+        <a href="{{route('manage_movie_genre')}}" class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
             <i class="fad fa-comments text-xs mr-2"></i>
             Movies - genres
         </a>

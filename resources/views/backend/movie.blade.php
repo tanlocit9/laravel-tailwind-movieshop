@@ -9,7 +9,7 @@
             <div class="card-body">
                 <div class="flex flex-row justify-between items-center">
                     <h1 class="font-extrabold text-lg">movies info</h1>
-                    @include('components.modal',['title'=>$title])
+                    @include('components.modal',['action'=>'Add','title'=>$title])
                 </div>
                 <table class="text-left w-full mt-5 ">
                     <thead>
