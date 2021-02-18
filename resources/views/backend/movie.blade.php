@@ -44,9 +44,9 @@
                                 Not Rated
                             </td>
                             @endif
-                            @foreach($movie->main_genre as $genre)
-                                <th>{{$genre->genre_name}}</th>
-                            @endforeach
+                            <th>
+                                {{$movie->main_genre->first()->genre_name}}
+                            </th>
                         </tr>
                         @endforeach
                     </tbody>

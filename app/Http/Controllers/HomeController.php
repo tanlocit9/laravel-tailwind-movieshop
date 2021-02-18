@@ -55,7 +55,8 @@ class HomeController extends Controller
     {
         $title = 'genres';
         $genres = Genre::paginate(5);
-        return view('backend.genres',compact('title','genres'));
+        $movies = Movie::paginate(5);
+        return view('backend.genres',compact('title','genres','movies'));
     }
 
 }

@@ -43,21 +43,29 @@
                     <thead>
                         <tr>
                             <th>Movie name</th>
+                            <th>Main Genre</th>
                             <th>Sub Genres</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody class="text-sm normal-case">
-                        @foreach($genres as $genre)
+                        @foreach($movies as $movie)
                         <tr class="capitalize">
-                            <td>{{$genre->genre_name}}</td>
-                            <td>{{$genre->genre_description}}</td>
+                            <td>{{$movie->movie_name}}</td>
+                            <td>{{$movie->main_genre->first()->genre_name}}</td>
+                            <td>
+                                @forelse($movie->sub_genre as $genre)
+                                    $genre->genre_name
+                                @empty
+                                    Movie doesn't have sub Genres
+                                @endforelse
+                            </td>
                             <td>Modify</td>
                         @endforeach
                     </tbody>
                 </table>
                 <div>
-                    {{$genres->links()}}
+                    {{$movies->links()}}
                 </div>
             </div>
         </div>

@@ -15,6 +15,6 @@ class Genre extends Model
     ];
     public function movies()
     {
-        return $this->belongsToMany(Movie::class)->withPivot('is_main')->using(GenreMovie::class);
+        return $this->belongsToMany(Movie::class,'genre_movie')->withPivot('is_main');
     }
 }

@@ -33,4 +33,7 @@ class Movie extends Model
     public function main_genre(){
         return $this->genres()->wherePivot('is_main',1);
     }
+    public function sub_genre(){
+        return $this->genres()->wherePivot('is_main',0);
+    }
 }
