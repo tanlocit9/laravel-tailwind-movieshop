@@ -10,10 +10,8 @@
                 <div>
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
-
                         <div >
-                            <label for="name"{{ __('Name') }}</label>
-
+                            <label for="name">{{ __('Name') }}</label>
                             <div >
                                 <input id="name" type="text" class="text-black bg-teal-400 pl-2 rounded-full focus:outline-none focus:shadow-outline @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 

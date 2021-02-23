@@ -36,7 +36,8 @@ class HomeController extends Controller
     public function users()
     {
         $users = User::paginate(5);
-        return view('backend.user',compact('users'));
+        $title = 'user';
+        return view('backend.user',compact('users','title'));
     }
     public function movies()
     {

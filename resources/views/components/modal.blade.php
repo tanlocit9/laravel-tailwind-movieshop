@@ -36,6 +36,9 @@
                         @case('genre')
                             @include('components.modals.modal_genre')
                             @break
+                        @case('user')
+                        @include('components.modals.modal_user')
+                        @break
                             @default
                     @endswitch
                     @break

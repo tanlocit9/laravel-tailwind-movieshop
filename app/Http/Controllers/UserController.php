@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 class UserController extends Controller
 {
     /**
@@ -24,7 +26,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        
+
     }
 
     /**
@@ -33,9 +35,32 @@ class UserController extends Controller
     //  * @param  \Illuminate\Http\Request  $request
     //  * @return \Illuminate\Http\Response
      */
-    public function stores(Request $request)
-    {   
-        
+    public function store(Request $request)
+    {
+        // $validator = Validator::make($request->all(), [
+        //     'name' => ['required', 'string', 'max:255'],
+        //     'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+        //     'password' => ['required', 'string', 'min:8', 'confirmed'],
+        // ]);
+        try {
+            if($request->is('admin/*')){
+                $user = User::create([
+                    'name' => $request->name,
+                    'email' => $request->email,
+                    'password' => Hash::make($request->password),
+                    'role_id'=>1,
+                ]);
+            };
+            return redirect()->route('manage_user')
+                        ->with('type', 'Add')
+                        ->with('status', 'successed');
+        } catch (\Throwable $th) {
+            dd($th);
+            return redirect()->route('manage_user')
+                        ->with('type', 'Add')
+                        ->with('status', 'failed');
+        }
+
     }
 
     /**

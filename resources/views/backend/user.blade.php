@@ -9,7 +9,7 @@
             <div class="card-body">
                 <div class="flex flex-row justify-between items-center">
                     <h1 class="font-extrabold text-lg">admin</h1>
-                    {{-- <a href="#" class="btn-gray text-sm">view all</a> --}}
+                    @include('components.modal',['action'=>'Add','title'=>$title])
                 </div>
                 <table class="text-left w-full mt-5 ">
                     <thead>

@@ -17,7 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/test','MovieActorController@index');
 Route::get('/login','HomeController@login');
 
 Route::get('/movie/tiectrangmau',function () {
@@ -32,6 +31,7 @@ Route::get('/admin/genre','HomeController@genres')->name('manage_genre');
 Route::get('/admin/movie_genre','HomeController@movies_genres')->name('manage_movie_genre');
 Route::get('/admin/theater','HomeController@theaters')->name('manage_theater');
 
+Route::post('/admin/user_add','UserController@store')->name('user_add');
 Route::post('/admin/movie_add','MovieController@store')->name('movie_add');
 Route::post('/admin/theater_add','TheaterController@store')->name('theater_add');
 Route::post('/admin/genre_add','GenreController@store')->name('genre_add');
