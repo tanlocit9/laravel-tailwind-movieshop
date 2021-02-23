@@ -6,6 +6,7 @@ use App\Models\Country;
 use App\Models\Movie;
 use App\Models\Theater;
 use App\Models\Genre;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -34,7 +35,8 @@ class HomeController extends Controller
     }
     public function users()
     {
-        return view('backend.user');
+        $users = User::paginate(5);
+        return view('backend.user',compact('users'));
     }
     public function movies()
     {

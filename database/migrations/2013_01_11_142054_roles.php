@@ -23,7 +23,7 @@ class Roles extends Migration
         $now = date('Y-m-d H:i:s');
         $data = [
             ['created_at' => $now, 'updated_at' => $now, 'role_type'=>'system', 'role_name'=>'admin'],
-            ['created_at' => $now, 'updated_at' => $now, 'role_type'=>'system', 'role_name'=>'user'],
+            ['created_at' => $now, 'updated_at' => $now, 'role_type'=>'system', 'role_name'=>'customer'],
             ['created_at' => $now, 'updated_at' => $now, 'role_type'=>'movie', 'role_name'=>'actor_main'],
             ['created_at' => $now, 'updated_at' => $now, 'role_type'=>'movie', 'role_name'=>'actor_suport'],
         ];
