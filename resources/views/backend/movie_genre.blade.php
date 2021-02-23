@@ -21,21 +21,31 @@
                         </tr>
                     </thead>
                     <tbody class="text-sm normal-case">
-                        @foreach($movies as $movie)
-                        <tr class="capitalize">
-                            <td>{{$movie->movie_name}}</td>
-                            <td>{{$movie->main_genre->first()->genre_name}}</td>
-                            <td>
-                                @forelse($movie->sub_genre as $genre)
-                                    $genre->genre_name
-                                @empty
-                                    Movie doesn't have sub Genres
-                                @endforelse
-                            </td>
-                            <td>Modify</td>
-                        @endforeach
+
+                            @foreach($movies as $movie)
+                            <tr class="capitalize">
+                                <td>{{$movie->movie_name}}</td>
+                                <td>
+                                    {{$movie->main_genre->first()->genre_name}}
+                                </td>
+                                <td>
+                                    @forelse($movie->sub_genre as $genre)
+                                        @if ($loop->last)
+                                            {{$genre->genre_name}}.
+                                        @else {{$genre->genre_name}},
+                                        @endif
+                                    @empty
+                                        Movie doesn't have sub genres.
+                                    @endforelse
+                                </td>
+                                <td>Modify</td>
+                            @endforeach
+
                     </tbody>
                 </table>
+                @if($movies->count()==0)
+                    We don't have any movies.
+                @endif
                 <div>
                     {{$movies->links()}}
                 </div>
@@ -43,6 +53,4 @@
         </div>
     </div>
 </div>
-
 @endsection
-

@@ -9,7 +9,6 @@
     <link rel="stylesheet" type="text/css" href="{{asset('/css/app.css')}}">
 
     <script src="{{asset('/js/app.js')}}" type="text/javascript"></script>
-
     <title>BakaMovie Admin</title>
 </head>
 <body class="bg-gray-800">
@@ -190,6 +189,7 @@
 <!-- script -->
 <script src="{{asset('backend/js/scripts.js')}}"></script>
 <script src="{{asset('/js/modal.js')}}"></script>
+
 @include('components.alert')
 
 <!-- end script -->

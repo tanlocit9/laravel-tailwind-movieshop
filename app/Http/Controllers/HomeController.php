@@ -53,8 +53,9 @@ class HomeController extends Controller
     public function movies_genres()
     {
         $movies = Movie::paginate(5);
+        $genres = Genre::all();
         $title = 'genre';
-        return view('backend.movie_genre',compact('movies','title'));
+        return view('backend.movie_genre',compact('movies','title','genres'));
     }
     public function theaters()
     {
