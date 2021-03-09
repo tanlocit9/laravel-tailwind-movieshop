@@ -41,7 +41,7 @@
                 <div id="modal-close" class="flex justify-center items-center w-full text-gray-900 px-4 py-3 rounded-md focus:outline-none cursor-pointer">
                     <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> Cancel
                 </div>
-                <button type="submit" class="modal-create">Create</button>
+                <button type="submit" class="modal-create">Modify</button>
             </div>
         </div>
     </div>
@@ -62,8 +62,8 @@
     var final = ""
     $('#movie').change(function(){
         movie_id = $('#movie option:selected').val()
-        var str = '{{$movies->find(2)->main_genre->first()->id}}'
-        main_genre_id = str.replace("2", movie_id);
+        var str = '{{$movies->find(1)->main_genre->first()->id}}'
+        main_genre_id = str.replace("1", movie_id);
         resetSelected(selected_genres)
         console.log(selected_genres)
         selected_genres.forEach(hideSubGenres)
@@ -72,7 +72,7 @@
     })
     $('#main_genre').change(function(){
         var selected_main_genre = $('#main_genre option:selected').val()
-        var str = "{{$genres->find(2)->id}}"
+        var str = "{{$genres->find(1)->id}}"
         $('#sub_genre option[value=0]').attr("selected", "selected");
         $("#sub_genre option[value="+main_genre_id+"]").show()
         $("#sub_genre option[value="+sub_genre_id+"]").show()

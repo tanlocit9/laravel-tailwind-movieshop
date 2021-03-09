@@ -27,13 +27,13 @@
                     <tbody class="text-sm normal-case">
                         @foreach($movies as $movie)
                         <tr class="capitalize">
-                            <td>{{$movie->movie_name}}</td>
-                            <td>{{$movie->movie_duration}}</td>
-                            <td>{{$movie->release_day}}</td>
+                            <td>{{$movie->title}}</td>
+                            <td>{{$movie->duration}}</td>
+                            <td>{{$movie->release_date}}</td>
                             <td>{{$movie->country->country_name}}</td>
                             <td>{{$movie->age_limit}}</td>
                             <td class="break-all">
-                                {{$movie->movie_description}}
+                                {{$movie->description}}
                             </td>
                             @if($movie->avg_rate())
                             <td>

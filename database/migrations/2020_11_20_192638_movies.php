@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Movie;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -15,17 +16,23 @@ class Movies extends Migration
     {
         Schema::create('movies', function (Blueprint $table) {
             $table->id();
-            $table->string('movie_name');
-            $table->string('movie_description')->default("The movie do not have description");
-            $table->time('movie_duration');
-            $table->integer('age_limit')->nullable();
-            $table->string('release_day')->comment('ngay ra mat');
+            $table->string('title');
+            $table->string('description')->default("The movie do not have description");
+            $table->string('duration');
+            $table->integer('age_limit');
+            $table->string('release_date');
             $table->string('poster');
 
             $table->foreignId('country_id')->constrained('countries')->onDelete('cascade');
-
+            $table->foreignId('type_id')->constrained('types')->onDelete('cascade');
             $table->timestamps();
         });
+        // $now = date('Y-m-d H:i:s');
+        $data = [
+            ['created_at' => now(), 'updated_at' => now(),'country_id'=>1,'type_id'=>1, 'title' => 'Công nghệ Sài Gòn', 'description' => '','duration'=>'1:30:00', 'age_limit'=>16, 'release_date'=>"22/12/1999",'poster'=>"E:\Sod\2.Programs\Laravel\movie-shop\public\storage\img\TTM_poster.jpg"],
+            //...
+        ];
+        Movie::insert($data);
     }
 
     /**

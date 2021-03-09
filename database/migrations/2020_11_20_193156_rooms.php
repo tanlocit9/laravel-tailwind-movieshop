@@ -17,7 +17,6 @@ class Rooms extends Migration
             $table->id();
             $table->string('room_name');
             $table->integer('slot_max');
-            $table->timestamps();
 
             $table->foreignId('theater_id')->constrained('theaters')->onDelete('cascade');
         });

@@ -18,14 +18,12 @@ class Roles extends Migration
             $table->id();
             $table->string('role_type');
             $table->string('role_name');
-            $table->timestamps();
         });
-        $now = date('Y-m-d H:i:s');
         $data = [
-            ['created_at' => $now, 'updated_at' => $now, 'role_type'=>'system', 'role_name'=>'admin'],
-            ['created_at' => $now, 'updated_at' => $now, 'role_type'=>'system', 'role_name'=>'customer'],
-            ['created_at' => $now, 'updated_at' => $now, 'role_type'=>'movie', 'role_name'=>'actor_main'],
-            ['created_at' => $now, 'updated_at' => $now, 'role_type'=>'movie', 'role_name'=>'actor_suport'],
+            ['role_type'=>'system', 'role_name'=>'admin'],
+            ['role_type'=>'system', 'role_name'=>'customer'],
+            ['role_type'=>'movie', 'role_name'=>'actor_main'],
+            ['role_type'=>'movie', 'role_name'=>'actor_suport'],
         ];
         Role::insert($data);
     }

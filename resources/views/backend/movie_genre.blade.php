@@ -14,38 +14,35 @@
                 <table class="text-left w-full mt-5 ">
                     <thead>
                         <tr>
-                            <th>Movie name</th>
+                            <th>title</th>
                             <th>Main Genre</th>
                             <th>Sub Genres</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody class="text-sm normal-case">
-
-                            @foreach($movies as $movie)
-                            <tr class="capitalize">
-                                <td>{{$movie->movie_name}}</td>
-                                <td>
-                                    {{$movie->main_genre->first()->genre_name}}
-                                </td>
-                                <td>
-                                    @forelse($movie->sub_genre as $genre)
-                                        @if ($loop->last)
-                                            {{$genre->genre_name}}.
-                                        @else {{$genre->genre_name}},
-                                        @endif
-                                    @empty
-                                        Movie doesn't have sub genres.
-                                    @endforelse
-                                </td>
-                                <td>Modify</td>
-                            @endforeach
-
+                        @forelse($movies as $movie)
+                        <tr class="capitalize">
+                            <td>{{$movie->title}}</td>
+                            <td>
+                                {{$movie->main_genre->first()->genre_name}}
+                            </td>
+                            <td>
+                                @forelse($movie->sub_genre as $genre)
+                                    @if ($loop->last)
+                                        {{$genre->genre_name}}.
+                                    @else {{$genre->genre_name}},
+                                    @endif
+                                @empty
+                                    Movie doesn't have sub genres.
+                                @endforelse
+                            </td>
+                            <td>Modify</td>
+                            @empty
+                            We don't have any movies.
+                        @endforelse
                     </tbody>
                 </table>
-                @if($movies->count()==0)
-                    We don't have any movies.
-                @endif
                 <div>
                     {{$movies->links()}}
                 </div>

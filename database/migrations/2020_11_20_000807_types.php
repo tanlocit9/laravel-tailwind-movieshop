@@ -1,11 +1,11 @@
 <?php
 
+use App\Models\Type;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use App\Models\Actor;
 
-class Actors extends Migration
+class Types extends Migration
 {
     /**
      * Run the migrations.
@@ -14,12 +14,16 @@ class Actors extends Migration
      */
     public function up()
     {
-        Schema::create('actors', function (Blueprint $table) {
+        Schema::create('types', function (Blueprint $table) {
             $table->id();
-            $table->char('full_name');
-            $table->boolean('gender');
-            $table->timestamps();
+            $table->string('type');
         });
+        $data =[
+            ['type'=>'movie'],
+            ['type'=>'tvshow'],
+        ];
+        Type::insert($data);
+
     }
 
     /**
@@ -29,6 +33,6 @@ class Actors extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('actors');
+        Schema::dropIfExists('types');
     }
 }

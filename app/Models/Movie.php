@@ -9,13 +9,14 @@ class Movie extends Model
     use HasFactory;
 
     protected $fillable = [
-        'movie_name',
-        'movie_description',
-        'movie_duration',
+        'title',
+        'description',
+        'duration',
         'age_limit',
-        'release_day',
+        'release_date',
         'poster',
-        'country_id'
+        'country_id',
+        'type_id'
     ];
 
     public function actors(){

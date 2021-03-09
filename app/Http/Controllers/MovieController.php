@@ -51,13 +51,14 @@ class MovieController extends Controller
             move_uploaded_file($path, $target_file);
 
             $movie = Movie::create([
-                'movie_name' => $request->movie_name,
-                'movie_description' =>  $request->description,
-                'movie_duration' => date('H:i:s',$seconds),
+                'title' => $request->title,
+                'description' =>  $request->description,
+                'duration' => date('H:i:s',$seconds),
                 'poster'=>$filename,
-                'release_day'=>date('Y-m-d',strtotime($request->release)),
+                'release_date'=>date('Y-m-d',strtotime($request->release)),
                 'age_limit'=>$request->limit,
-                'country_id'=>$request->country
+                'country_id'=>$request->country,
+                'type_id'=>1
             ]);
 
             $movie->genres()->attach($request->genre,['is_main'=>1]);
@@ -66,6 +67,7 @@ class MovieController extends Controller
                             ->with('status', 'successed');
 
         } catch (\Throwable $th) {
+            dd($th);
             return redirect()->route('manage_movie')
                         ->with('type', 'Add')
                         ->with('status', 'failed');

@@ -5,7 +5,7 @@
         <div class="text-base leading-4 space-y-4 text-gray-700 sm:text-lg sm:leading-5">
             <div class="flex flex-col">
                 <label class="leading-relaxed">Movie name</label>
-                <input type="text" name="movie_name"class="input-text sm:text-sm" placeholder="Movie name" required value="{{old('movie_name')}}">
+                <input type="text" name="title"class="input-text sm:text-sm" placeholder="Movie name" required value="{{old('movie_name')}}">
             </div>
             <div class="flex items-center space-x-4">
                 <div class="flex flex-col">

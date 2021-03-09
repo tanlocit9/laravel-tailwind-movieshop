@@ -17,6 +17,7 @@ class Screenings extends Migration
             $table->foreignId('room_id')->constrained('rooms')->onDelete('cascade');
             $table->foreignId('movie_id')->constrained('movies')->onDelete('cascade');
             $table->foreignId('theater_id')->constrained('theaters')->onDelete('cascade');
+
             $table->dateTime('time_start');
             $table->dateTime('time_end');
             $table->float('percent_price')->default(1);
