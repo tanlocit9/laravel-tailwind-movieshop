@@ -20,7 +20,9 @@ module.exports = {
         variants: {
             extend: {
                 padding: ['hover'],
-                transitions: ['responsive', 'before', 'after', 'hover', 'focus']
+                transitions: ['responsive', 'before', 'after', 'hover', 'focus'],
+                textOverflow: ['hover', 'focus'],
+                overflow: ['hover', 'focus'],
             }
         },
         plugins: [
@@ -36,4 +38,8 @@ module.exports = {
             variants: ['responsive'],
         }),
         ],
+    corePlugins: {
+        // ...
+        textOverflow: true,
+        }
     }

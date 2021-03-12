@@ -11,28 +11,32 @@
                     <h1 class="font-extrabold text-lg">movies info</h1>
                     @include('components.modal',['action'=>'Add','title'=>$title])
                 </div>
-                <table class="text-left w-full mt-5 ">
+                <div>
+                <table class="w-full mt-5 text-center">
                     <thead>
-                        <tr>
-                            <th>Movie Name</th>
+                        <tr class="divide-y divide-x divide-red-800 text-left">
+                            <th hidden></th>
+                            <th>Title</th>
                             <th>duration</th>
-                            <th>release day</th>
+                            <th>release date</th>
                             <th>country</th>
                             <th>age limit</th>
-                            <th>description</th>
+                            <th class="w-2/6 ">description</th>
                             <th>average rate</th>
                             <th>main genre</th>
+                            <th class="invisible"></th>
                         </tr>
                     </thead>
                     <tbody class="text-sm normal-case">
                         @foreach($movies as $movie)
-                        <tr class="capitalize">
+                        <tr class="capitalize divide-y divide-x divide-red-800">
+                            <td hidden></td>
                             <td>{{$movie->title}}</td>
                             <td>{{$movie->duration}}</td>
                             <td>{{$movie->release_date}}</td>
                             <td>{{$movie->country->country_name}}</td>
                             <td>{{$movie->age_limit}}</td>
-                            <td class="break-all">
+                            <td class="truncate max-w-xs hover:text-red-500 break-normal text-left">
                                 {{$movie->description}}
                             </td>
                             @if($movie->avg_rate())
@@ -44,13 +48,16 @@
                                 Not Rated
                             </td>
                             @endif
-                            <th>
+                            <td>
                                 {{$movie->main_genre->first()->genre_name}}
-                            </th>
+                            </td>
+                            <td class="invisible"></td>
                         </tr>
                         @endforeach
+                        <tr class="invisible"></tr>
                     </tbody>
                 </table>
+            </div>
                 <div>
                     {{$movies->links()}}
                 </div>

@@ -26,7 +26,7 @@ class MovieFactory extends Factory
             'description'=>$this->faker->text,
             'duration'=>$this->faker->time,
             'release_date'=>$this->faker->date,
-            'age_limit'=>$this->faker->numberBetween(1,150),
+            'age_limit'=>$this->faker->numberBetween(8,18),
             'poster'=>'TTM_poster.jpg',
             'country_id'=>$this->faker->numberBetween(1,150),
             'type_id'=>1

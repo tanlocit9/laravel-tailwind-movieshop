@@ -7,7 +7,6 @@ use Illuminate\Support\Str;
 
 use \App\Models\Movie;
 use \App\Models\Actor;
-use \App\Models\MovieActor;
 class ActorMovieSeeder extends Seeder
 {
     /**

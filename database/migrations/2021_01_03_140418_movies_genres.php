@@ -19,7 +19,6 @@ class MoviesGenres extends Migration
             $table->foreignId('movie_id')->constrained('movies')->onDelete('cascade');
             $table->boolean('is_main')->default(0);
         });
-        Movie::find(1)->genres()->attach(1,['is_main'=>1]);
     }
 
     /**
