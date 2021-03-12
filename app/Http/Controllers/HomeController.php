@@ -28,14 +28,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $response = Http::withHeaders([
-            'x-rapidapi-key' => '6c66da7dbdmsh5a3c73f38529428p1eee5djsn0f4260dc7904',
-	        'x-rapidapi-host' => 'imdb8.p.rapidapi.com'
-        ])->get('https://imdb8.p.rapidapi.com/auto-complete', [
-            'q' => 'game of thr',
-        ]);
-        dd($response);
-        return view('welcome');
+        $movies = Movie::all();
+        return view('welcome',compact('movies'));
     }
     public function admin()
     {

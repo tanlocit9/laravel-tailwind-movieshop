@@ -17,7 +17,8 @@ class MovieController extends Controller
      */
     public function index()
     {
-        //
+
+
     }
 
     /**
@@ -109,7 +110,7 @@ class MovieController extends Controller
      */
     public function show(Movie $movie)
     {
-        //
+        return view('frontend.show',compact('movie'));
     }
 
     /**

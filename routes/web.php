@@ -17,9 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/','HomeController@index');
 Route::get('/login','HomeController@login');
 
-Route::get('/movie/tiectrangmau',function () {
-    return view('frontend.show');
-});
+Route::get('/movie/{movie}','MovieController@show')->name('show_movie');
 Auth::routes();
 
 Route::get('/admin','HomeController@admin')->name('admin');

@@ -7,21 +7,22 @@
                 Popular Movies
             </h2>
             {{-- Grid --}}
-            <div class="grid grid-cols-4 gap-8">
+            <div class="grid grid-cols-4 gap-4">
+                @foreach($movies as $movie)
                 {{-- Card --}}
                 <div class="mt-6">
-                    <a href="/movie/tiectrangmau">
-                        <img src="/storage/img/TTM_poster.jpg" alt="Tiec trang mau" class="w-64">
+                    <a href="{{route('show_movie',$movie)}}">
+                        <img src="{{asset('storage/img')}}/{{$movie->poster}}" alt="{{$movie->title}}" class="w-64">
                     </a>
                     <div class="mt-2">
-                    <a href="/movie/tiectrangmau" class="text-lg mt-2 hover:text-gray-300">Tiệc trăng máu</a>
+                    <a href="{{route('show_movie',$movie)}}" class="text-lg mt-2 hover:text-gray-300">{{$movie->title}}</a>
                     </div>
                     {{-- Movie Info --}}
                     <div >
                         <img class="inline text-orange-500 w-4 h-4 mb-1" src="/storage/img/star.png" alt="star">
                         <span>85%</span>
                         <span>|</span>
-                        <span>Feb 20, 2020</span>
+                        <span>{{$movie->release_date}}</span>
                     </div>
                     <div>
                         Action, Thriller, Comedy
@@ -29,6 +30,7 @@
                     {{-- End Movie Info --}}
                 </div>
                 {{-- End Card --}}
+                @endforeach
             </div>
             {{-- End Grid --}}
         </div>
