@@ -8,6 +8,7 @@ use App\Models\Theater;
 use App\Models\Genre;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class HomeController extends Controller
 {
@@ -27,7 +28,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('frontend.index');
+        $response = Http::withHeaders([
+            'x-rapidapi-key' => '6c66da7dbdmsh5a3c73f38529428p1eee5djsn0f4260dc7904',
+	        'x-rapidapi-host' => 'imdb8.p.rapidapi.com'
+        ])->get('https://imdb8.p.rapidapi.com/auto-complete', [
+            'q' => 'game of thr',
+        ]);
+        dd($response);
+        return view('welcome');
     }
     public function admin()
     {

@@ -53,7 +53,7 @@ class Genres extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('movie_genre');
+        Schema::dropIfExists('genre_movie');
         Schema::dropIfExists('genres');
     }
 }

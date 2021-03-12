@@ -27,6 +27,6 @@ class MovieTheaters extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('movie_theaters');
+        Schema::dropIfExists('movie_theater');
     }
 }

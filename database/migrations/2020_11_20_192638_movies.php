@@ -29,7 +29,7 @@ class Movies extends Migration
         });
         // $now = date('Y-m-d H:i:s');
         $data = [
-            ['created_at' => now(), 'updated_at' => now(),'country_id'=>1,'type_id'=>1, 'title' => 'Công nghệ Sài Gòn', 'description' => '','duration'=>'1:30:00', 'age_limit'=>16, 'release_date'=>"22/12/1999",'poster'=>"E:\Sod\2.Programs\Laravel\movie-shop\public\storage\img\TTM_poster.jpg"],
+            ['created_at' => now(), 'updated_at' => now(),'country_id'=>1,'type_id'=>1, 'title' => 'Công nghệ Sài Gòn', 'description' => '','duration'=>'1:30:00', 'age_limit'=>16, 'release_date'=>"22/12/1999",'poster'=>"TTM_poster.jpg"],
             //...
         ];
         Movie::insert($data);

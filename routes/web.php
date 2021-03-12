@@ -14,9 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','HomeController@index');
 Route::get('/login','HomeController@login');
 
 Route::get('/movie/tiectrangmau',function () {
