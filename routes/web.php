@@ -14,21 +14,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/','HomeController@index');
 Route::get('/login','HomeController@login');
 
-Route::get('/movie/{movie}','MovieController@show')->name('show_movie');
 Auth::routes();
+Route::prefix('')->group(function () {
+    Route::get('/','CustomerController@index');
+    Route::get('/movie/{movie}','MovieController@show')->name('show_movie');
+});
+Route::prefix('admin')->group(function () {
+    Route::get('/','HomeController@admin')->name('admin');
+    Route::get('/user','HomeController@users')->name('manage_user');
+    Route::get('/movie','HomeController@movies')->name('manage_movie');
+    Route::get('/genre','HomeController@genres')->name('manage_genre');
+    Route::get('/movie_genre','HomeController@movies_genres')->name('manage_movie_genre');
+    Route::get('/theater','HomeController@theaters')->name('manage_theater');
 
-Route::get('/admin','HomeController@admin')->name('admin');
-Route::get('/admin/user','HomeController@users')->name('manage_user');
-Route::get('/admin/movie','HomeController@movies')->name('manage_movie');
-Route::get('/admin/genre','HomeController@genres')->name('manage_genre');
-Route::get('/admin/movie_genre','HomeController@movies_genres')->name('manage_movie_genre');
-Route::get('/admin/theater','HomeController@theaters')->name('manage_theater');
+    Route::post('/user_add','UserController@store')->name('user_add');
+    Route::post('/movie_add','MovieController@store')->name('movie_add');
+    Route::post('/theater_add','TheaterController@store')->name('theater_add');
+    Route::post('/genre_add','GenreController@store')->name('genre_add');
+    Route::post('/genre_modify','MovieController@updateGenres')->name('genre_modify');
+});
 
-Route::post('/admin/user_add','UserController@store')->name('user_add');
-Route::post('/admin/movie_add','MovieController@store')->name('movie_add');
-Route::post('/admin/theater_add','TheaterController@store')->name('theater_add');
-Route::post('/admin/genre_add','GenreController@store')->name('genre_add');
-Route::post('/admin/genre_modify','MovieController@updateGenres')->name('genre_modify');
+

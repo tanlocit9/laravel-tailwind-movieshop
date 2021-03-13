@@ -7,8 +7,6 @@ use App\Models\Movie;
 use App\Models\Theater;
 use App\Models\Genre;
 use App\Models\User;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Http;
 
 class HomeController extends Controller
 {
@@ -26,11 +24,7 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
-    {
-        $movies = Movie::all();
-        return view('welcome',compact('movies'));
-    }
+
     public function admin()
     {
         return view('backend.index');
