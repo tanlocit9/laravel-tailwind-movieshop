@@ -171,6 +171,17 @@
         <!-- end link -->
 
         <!-- link -->
+        <a href="{{route('manage_actor')}}" class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
+            <i class="fad fa-shield-check text-xs mr-2"></i>
+            Actors
+        </a>
+
+        <a href="{{route('manage_movie_actor')}}" class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
+            <i class="fad fa-shield-check text-xs mr-2"></i>
+            Movies - Actors
+        </a>
+        <!-- end link -->
+        <!-- link -->
         {{-- <a href="{{route('manage_movie_calendar')}}" class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
             <i class="fad fa-calendar-edit text-xs mr-2"></i>
             Movie Calendar

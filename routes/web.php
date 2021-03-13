@@ -28,6 +28,8 @@ Route::prefix('admin')->group(function () {
     Route::get('/genre','HomeController@genres')->name('manage_genre');
     Route::get('/movie_genre','HomeController@movies_genres')->name('manage_movie_genre');
     Route::get('/theater','HomeController@theaters')->name('manage_theater');
+    Route::get('/actor','HomeController@actors')->name('manage_actor');
+    Route::get('/movie_actor','HomeController@movies_actors')->name('manage_movie_actor');
 
     Route::post('/user_add','UserController@store')->name('user_add');
     Route::post('/movie_add','MovieController@store')->name('movie_add');

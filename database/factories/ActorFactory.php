@@ -23,11 +23,8 @@ class ActorFactory extends Factory
     public function definition()
     {
         return [
-            'role'=> Str::random(10),
-            'fname'=> Str::random(10),
-            'lname'=> Str::random(10),
-            'sex'=> rand(0,1),
-            
+            'full_name'=> $this->faker->name,
+            'gender'=> rand(0,1),
         ];
     }
 }

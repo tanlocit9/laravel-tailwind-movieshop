@@ -19,7 +19,7 @@ class MoviesActors extends Migration
             $table->foreignID('role_id')->constrained('roles')->onDelete('cascade');
             $table->primary(array('movie_id', 'actor_id'));
 
-            $table->string('character');
+            // $table->string('character');
         });
     }
 

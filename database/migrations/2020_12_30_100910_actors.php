@@ -16,9 +16,8 @@ class Actors extends Migration
     {
         Schema::create('actors', function (Blueprint $table) {
             $table->id();
-            $table->char('full_name');
+            $table->string('full_name');
             $table->boolean('gender');
-            $table->timestamps();
         });
     }
 

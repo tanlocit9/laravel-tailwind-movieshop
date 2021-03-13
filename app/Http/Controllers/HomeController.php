@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Actor;
 use App\Models\Country;
 use App\Models\Movie;
 use App\Models\Theater;
@@ -49,6 +50,19 @@ class HomeController extends Controller
         $genres = Genre::paginate(5);
         return view('backend.genre',compact('title','genres'));
     }
+
+    public function theaters()
+    {
+        $title = 'theater';
+        $theaters = Theater::paginate(5);
+        return view('backend.theater',compact('title','theaters'));
+    }
+    public function actors()
+    {
+        $title = 'actor';
+        $actors = Actor::paginate(5);
+        return view('backend.actor',compact('title','actors'));
+    }
     public function movies_genres()
     {
         $movies = Movie::paginate(5);
@@ -56,10 +70,12 @@ class HomeController extends Controller
         $title = 'genre';
         return view('backend.movie_genre',compact('movies','title','genres'));
     }
-    public function theaters()
+    public function movies_actors()
     {
-        $title = 'theater';
-        $theaters = Theater::paginate(5);
-        return view('backend.theater',compact('title','theaters'));
+        $movies = Movie::paginate(5);
+        $actors = Actor::all();
+        $title = 'actor';
+        return view('backend.movie_actor',compact('movies','title','actors'));
     }
+
 }

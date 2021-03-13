@@ -25,6 +25,7 @@
                             <td>{{$genre->genre_name}}</td>
                             <td>{{$genre->genre_description}}</td>
                             <td>Modify</td>
+                        <tr>
                         @endforeach
                     </tbody>
                 </table>
