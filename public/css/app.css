@@ -12988,6 +12988,666 @@ video {
   padding-left: 1px;
 }
 
+.hover\:p-0:hover {
+  padding: 0;
+}
+
+.hover\:p-1:hover {
+  padding: 0.25rem;
+}
+
+.hover\:p-2:hover {
+  padding: 0.5rem;
+}
+
+.hover\:p-3:hover {
+  padding: 0.75rem;
+}
+
+.hover\:p-4:hover {
+  padding: 1rem;
+}
+
+.hover\:p-5:hover {
+  padding: 1.25rem;
+}
+
+.hover\:p-6:hover {
+  padding: 1.5rem;
+}
+
+.hover\:p-8:hover {
+  padding: 2rem;
+}
+
+.hover\:p-10:hover {
+  padding: 2.5rem;
+}
+
+.hover\:p-12:hover {
+  padding: 3rem;
+}
+
+.hover\:p-16:hover {
+  padding: 4rem;
+}
+
+.hover\:p-20:hover {
+  padding: 5rem;
+}
+
+.hover\:p-24:hover {
+  padding: 6rem;
+}
+
+.hover\:p-32:hover {
+  padding: 8rem;
+}
+
+.hover\:p-40:hover {
+  padding: 10rem;
+}
+
+.hover\:p-48:hover {
+  padding: 12rem;
+}
+
+.hover\:p-56:hover {
+  padding: 14rem;
+}
+
+.hover\:p-64:hover {
+  padding: 16rem;
+}
+
+.hover\:p-72:hover {
+  padding: 18rem;
+}
+
+.hover\:p-84:hover {
+  padding: 21rem;
+}
+
+.hover\:p-96:hover {
+  padding: 24rem;
+}
+
+.hover\:p-px:hover {
+  padding: 1px;
+}
+
+.hover\:py-0:hover {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.hover\:px-0:hover {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.hover\:py-1:hover {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.hover\:px-1:hover {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.hover\:py-2:hover {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.hover\:px-2:hover {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.hover\:py-3:hover {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.hover\:px-3:hover {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.hover\:py-4:hover {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.hover\:px-4:hover {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.hover\:py-5:hover {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.hover\:px-5:hover {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.hover\:py-6:hover {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.hover\:px-6:hover {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.hover\:py-8:hover {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.hover\:px-8:hover {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.hover\:py-10:hover {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.hover\:px-10:hover {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.hover\:py-12:hover {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.hover\:px-12:hover {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.hover\:py-16:hover {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.hover\:px-16:hover {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.hover\:py-20:hover {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.hover\:px-20:hover {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.hover\:py-24:hover {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.hover\:px-24:hover {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
+.hover\:py-32:hover {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.hover\:px-32:hover {
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
+.hover\:py-40:hover {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.hover\:px-40:hover {
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+
+.hover\:py-48:hover {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+}
+
+.hover\:px-48:hover {
+  padding-left: 12rem;
+  padding-right: 12rem;
+}
+
+.hover\:py-56:hover {
+  padding-top: 14rem;
+  padding-bottom: 14rem;
+}
+
+.hover\:px-56:hover {
+  padding-left: 14rem;
+  padding-right: 14rem;
+}
+
+.hover\:py-64:hover {
+  padding-top: 16rem;
+  padding-bottom: 16rem;
+}
+
+.hover\:px-64:hover {
+  padding-left: 16rem;
+  padding-right: 16rem;
+}
+
+.hover\:py-72:hover {
+  padding-top: 18rem;
+  padding-bottom: 18rem;
+}
+
+.hover\:px-72:hover {
+  padding-left: 18rem;
+  padding-right: 18rem;
+}
+
+.hover\:py-84:hover {
+  padding-top: 21rem;
+  padding-bottom: 21rem;
+}
+
+.hover\:px-84:hover {
+  padding-left: 21rem;
+  padding-right: 21rem;
+}
+
+.hover\:py-96:hover {
+  padding-top: 24rem;
+  padding-bottom: 24rem;
+}
+
+.hover\:px-96:hover {
+  padding-left: 24rem;
+  padding-right: 24rem;
+}
+
+.hover\:py-px:hover {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.hover\:px-px:hover {
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
+.hover\:pt-0:hover {
+  padding-top: 0;
+}
+
+.hover\:pr-0:hover {
+  padding-right: 0;
+}
+
+.hover\:pb-0:hover {
+  padding-bottom: 0;
+}
+
+.hover\:pl-0:hover {
+  padding-left: 0;
+}
+
+.hover\:pt-1:hover {
+  padding-top: 0.25rem;
+}
+
+.hover\:pr-1:hover {
+  padding-right: 0.25rem;
+}
+
+.hover\:pb-1:hover {
+  padding-bottom: 0.25rem;
+}
+
+.hover\:pl-1:hover {
+  padding-left: 0.25rem;
+}
+
+.hover\:pt-2:hover {
+  padding-top: 0.5rem;
+}
+
+.hover\:pr-2:hover {
+  padding-right: 0.5rem;
+}
+
+.hover\:pb-2:hover {
+  padding-bottom: 0.5rem;
+}
+
+.hover\:pl-2:hover {
+  padding-left: 0.5rem;
+}
+
+.hover\:pt-3:hover {
+  padding-top: 0.75rem;
+}
+
+.hover\:pr-3:hover {
+  padding-right: 0.75rem;
+}
+
+.hover\:pb-3:hover {
+  padding-bottom: 0.75rem;
+}
+
+.hover\:pl-3:hover {
+  padding-left: 0.75rem;
+}
+
+.hover\:pt-4:hover {
+  padding-top: 1rem;
+}
+
+.hover\:pr-4:hover {
+  padding-right: 1rem;
+}
+
+.hover\:pb-4:hover {
+  padding-bottom: 1rem;
+}
+
+.hover\:pl-4:hover {
+  padding-left: 1rem;
+}
+
+.hover\:pt-5:hover {
+  padding-top: 1.25rem;
+}
+
+.hover\:pr-5:hover {
+  padding-right: 1.25rem;
+}
+
+.hover\:pb-5:hover {
+  padding-bottom: 1.25rem;
+}
+
+.hover\:pl-5:hover {
+  padding-left: 1.25rem;
+}
+
+.hover\:pt-6:hover {
+  padding-top: 1.5rem;
+}
+
+.hover\:pr-6:hover {
+  padding-right: 1.5rem;
+}
+
+.hover\:pb-6:hover {
+  padding-bottom: 1.5rem;
+}
+
+.hover\:pl-6:hover {
+  padding-left: 1.5rem;
+}
+
+.hover\:pt-8:hover {
+  padding-top: 2rem;
+}
+
+.hover\:pr-8:hover {
+  padding-right: 2rem;
+}
+
+.hover\:pb-8:hover {
+  padding-bottom: 2rem;
+}
+
+.hover\:pl-8:hover {
+  padding-left: 2rem;
+}
+
+.hover\:pt-10:hover {
+  padding-top: 2.5rem;
+}
+
+.hover\:pr-10:hover {
+  padding-right: 2.5rem;
+}
+
+.hover\:pb-10:hover {
+  padding-bottom: 2.5rem;
+}
+
+.hover\:pl-10:hover {
+  padding-left: 2.5rem;
+}
+
+.hover\:pt-12:hover {
+  padding-top: 3rem;
+}
+
+.hover\:pr-12:hover {
+  padding-right: 3rem;
+}
+
+.hover\:pb-12:hover {
+  padding-bottom: 3rem;
+}
+
+.hover\:pl-12:hover {
+  padding-left: 3rem;
+}
+
+.hover\:pt-16:hover {
+  padding-top: 4rem;
+}
+
+.hover\:pr-16:hover {
+  padding-right: 4rem;
+}
+
+.hover\:pb-16:hover {
+  padding-bottom: 4rem;
+}
+
+.hover\:pl-16:hover {
+  padding-left: 4rem;
+}
+
+.hover\:pt-20:hover {
+  padding-top: 5rem;
+}
+
+.hover\:pr-20:hover {
+  padding-right: 5rem;
+}
+
+.hover\:pb-20:hover {
+  padding-bottom: 5rem;
+}
+
+.hover\:pl-20:hover {
+  padding-left: 5rem;
+}
+
+.hover\:pt-24:hover {
+  padding-top: 6rem;
+}
+
+.hover\:pr-24:hover {
+  padding-right: 6rem;
+}
+
+.hover\:pb-24:hover {
+  padding-bottom: 6rem;
+}
+
+.hover\:pl-24:hover {
+  padding-left: 6rem;
+}
+
+.hover\:pt-32:hover {
+  padding-top: 8rem;
+}
+
+.hover\:pr-32:hover {
+  padding-right: 8rem;
+}
+
+.hover\:pb-32:hover {
+  padding-bottom: 8rem;
+}
+
+.hover\:pl-32:hover {
+  padding-left: 8rem;
+}
+
+.hover\:pt-40:hover {
+  padding-top: 10rem;
+}
+
+.hover\:pr-40:hover {
+  padding-right: 10rem;
+}
+
+.hover\:pb-40:hover {
+  padding-bottom: 10rem;
+}
+
+.hover\:pl-40:hover {
+  padding-left: 10rem;
+}
+
+.hover\:pt-48:hover {
+  padding-top: 12rem;
+}
+
+.hover\:pr-48:hover {
+  padding-right: 12rem;
+}
+
+.hover\:pb-48:hover {
+  padding-bottom: 12rem;
+}
+
+.hover\:pl-48:hover {
+  padding-left: 12rem;
+}
+
+.hover\:pt-56:hover {
+  padding-top: 14rem;
+}
+
+.hover\:pr-56:hover {
+  padding-right: 14rem;
+}
+
+.hover\:pb-56:hover {
+  padding-bottom: 14rem;
+}
+
+.hover\:pl-56:hover {
+  padding-left: 14rem;
+}
+
+.hover\:pt-64:hover {
+  padding-top: 16rem;
+}
+
+.hover\:pr-64:hover {
+  padding-right: 16rem;
+}
+
+.hover\:pb-64:hover {
+  padding-bottom: 16rem;
+}
+
+.hover\:pl-64:hover {
+  padding-left: 16rem;
+}
+
+.hover\:pt-72:hover {
+  padding-top: 18rem;
+}
+
+.hover\:pr-72:hover {
+  padding-right: 18rem;
+}
+
+.hover\:pb-72:hover {
+  padding-bottom: 18rem;
+}
+
+.hover\:pl-72:hover {
+  padding-left: 18rem;
+}
+
+.hover\:pt-84:hover {
+  padding-top: 21rem;
+}
+
+.hover\:pr-84:hover {
+  padding-right: 21rem;
+}
+
+.hover\:pb-84:hover {
+  padding-bottom: 21rem;
+}
+
+.hover\:pl-84:hover {
+  padding-left: 21rem;
+}
+
+.hover\:pt-96:hover {
+  padding-top: 24rem;
+}
+
+.hover\:pr-96:hover {
+  padding-right: 24rem;
+}
+
+.hover\:pb-96:hover {
+  padding-bottom: 24rem;
+}
+
+.hover\:pl-96:hover {
+  padding-left: 24rem;
+}
+
+.hover\:pt-px:hover {
+  padding-top: 1px;
+}
+
+.hover\:pr-px:hover {
+  padding-right: 1px;
+}
+
+.hover\:pb-px:hover {
+  padding-bottom: 1px;
+}
+
+.hover\:pl-px:hover {
+  padding-left: 1px;
+}
+
 .placeholder-transparent::-moz-placeholder {
   color: transparent;
 }
@@ -22179,6 +22839,98 @@ video {
 .animate-bounce {
   -webkit-animation: bounce 1s infinite;
           animation: bounce 1s infinite;
+}
+
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.line-clamp-4 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+.line-clamp-5 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
+
+.line-clamp-6 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+}
+
+.line-clamp-none {
+  -webkit-line-clamp: unset;
+}
+
+.hover\:line-clamp-1:hover {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.hover\:line-clamp-2:hover {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.hover\:line-clamp-3:hover {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.hover\:line-clamp-4:hover {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+.hover\:line-clamp-5:hover {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
+
+.hover\:line-clamp-6:hover {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+}
+
+.hover\:line-clamp-none:hover {
+  -webkit-line-clamp: unset;
 }
 
 .animate__animated {
@@ -37717,666 +38469,6 @@ video {
     overscroll-behavior-x: none;
   }
 
-  .sm\:p-0 {
-    padding: 0;
-  }
-
-  .sm\:p-1 {
-    padding: 0.25rem;
-  }
-
-  .sm\:p-2 {
-    padding: 0.5rem;
-  }
-
-  .sm\:p-3 {
-    padding: 0.75rem;
-  }
-
-  .sm\:p-4 {
-    padding: 1rem;
-  }
-
-  .sm\:p-5 {
-    padding: 1.25rem;
-  }
-
-  .sm\:p-6 {
-    padding: 1.5rem;
-  }
-
-  .sm\:p-8 {
-    padding: 2rem;
-  }
-
-  .sm\:p-10 {
-    padding: 2.5rem;
-  }
-
-  .sm\:p-12 {
-    padding: 3rem;
-  }
-
-  .sm\:p-16 {
-    padding: 4rem;
-  }
-
-  .sm\:p-20 {
-    padding: 5rem;
-  }
-
-  .sm\:p-24 {
-    padding: 6rem;
-  }
-
-  .sm\:p-32 {
-    padding: 8rem;
-  }
-
-  .sm\:p-40 {
-    padding: 10rem;
-  }
-
-  .sm\:p-48 {
-    padding: 12rem;
-  }
-
-  .sm\:p-56 {
-    padding: 14rem;
-  }
-
-  .sm\:p-64 {
-    padding: 16rem;
-  }
-
-  .sm\:p-72 {
-    padding: 18rem;
-  }
-
-  .sm\:p-84 {
-    padding: 21rem;
-  }
-
-  .sm\:p-96 {
-    padding: 24rem;
-  }
-
-  .sm\:p-px {
-    padding: 1px;
-  }
-
-  .sm\:py-0 {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  .sm\:px-0 {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .sm\:py-1 {
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-  }
-
-  .sm\:px-1 {
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
-  }
-
-  .sm\:py-2 {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-
-  .sm\:px-2 {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-
-  .sm\:py-3 {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-  }
-
-  .sm\:px-3 {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-  }
-
-  .sm\:py-4 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-
-  .sm\:px-4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .sm\:py-5 {
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-  }
-
-  .sm\:px-5 {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-
-  .sm\:py-6 {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
-
-  .sm\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-
-  .sm\:py-8 {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-
-  .sm\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .sm\:py-10 {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-  }
-
-  .sm\:px-10 {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
-
-  .sm\:py-12 {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-
-  .sm\:px-12 {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-
-  .sm\:py-16 {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-
-  .sm\:px-16 {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-
-  .sm\:py-20 {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
-
-  .sm\:px-20 {
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
-
-  .sm\:py-24 {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-  }
-
-  .sm\:px-24 {
-    padding-left: 6rem;
-    padding-right: 6rem;
-  }
-
-  .sm\:py-32 {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-  }
-
-  .sm\:px-32 {
-    padding-left: 8rem;
-    padding-right: 8rem;
-  }
-
-  .sm\:py-40 {
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-  }
-
-  .sm\:px-40 {
-    padding-left: 10rem;
-    padding-right: 10rem;
-  }
-
-  .sm\:py-48 {
-    padding-top: 12rem;
-    padding-bottom: 12rem;
-  }
-
-  .sm\:px-48 {
-    padding-left: 12rem;
-    padding-right: 12rem;
-  }
-
-  .sm\:py-56 {
-    padding-top: 14rem;
-    padding-bottom: 14rem;
-  }
-
-  .sm\:px-56 {
-    padding-left: 14rem;
-    padding-right: 14rem;
-  }
-
-  .sm\:py-64 {
-    padding-top: 16rem;
-    padding-bottom: 16rem;
-  }
-
-  .sm\:px-64 {
-    padding-left: 16rem;
-    padding-right: 16rem;
-  }
-
-  .sm\:py-72 {
-    padding-top: 18rem;
-    padding-bottom: 18rem;
-  }
-
-  .sm\:px-72 {
-    padding-left: 18rem;
-    padding-right: 18rem;
-  }
-
-  .sm\:py-84 {
-    padding-top: 21rem;
-    padding-bottom: 21rem;
-  }
-
-  .sm\:px-84 {
-    padding-left: 21rem;
-    padding-right: 21rem;
-  }
-
-  .sm\:py-96 {
-    padding-top: 24rem;
-    padding-bottom: 24rem;
-  }
-
-  .sm\:px-96 {
-    padding-left: 24rem;
-    padding-right: 24rem;
-  }
-
-  .sm\:py-px {
-    padding-top: 1px;
-    padding-bottom: 1px;
-  }
-
-  .sm\:px-px {
-    padding-left: 1px;
-    padding-right: 1px;
-  }
-
-  .sm\:pt-0 {
-    padding-top: 0;
-  }
-
-  .sm\:pr-0 {
-    padding-right: 0;
-  }
-
-  .sm\:pb-0 {
-    padding-bottom: 0;
-  }
-
-  .sm\:pl-0 {
-    padding-left: 0;
-  }
-
-  .sm\:pt-1 {
-    padding-top: 0.25rem;
-  }
-
-  .sm\:pr-1 {
-    padding-right: 0.25rem;
-  }
-
-  .sm\:pb-1 {
-    padding-bottom: 0.25rem;
-  }
-
-  .sm\:pl-1 {
-    padding-left: 0.25rem;
-  }
-
-  .sm\:pt-2 {
-    padding-top: 0.5rem;
-  }
-
-  .sm\:pr-2 {
-    padding-right: 0.5rem;
-  }
-
-  .sm\:pb-2 {
-    padding-bottom: 0.5rem;
-  }
-
-  .sm\:pl-2 {
-    padding-left: 0.5rem;
-  }
-
-  .sm\:pt-3 {
-    padding-top: 0.75rem;
-  }
-
-  .sm\:pr-3 {
-    padding-right: 0.75rem;
-  }
-
-  .sm\:pb-3 {
-    padding-bottom: 0.75rem;
-  }
-
-  .sm\:pl-3 {
-    padding-left: 0.75rem;
-  }
-
-  .sm\:pt-4 {
-    padding-top: 1rem;
-  }
-
-  .sm\:pr-4 {
-    padding-right: 1rem;
-  }
-
-  .sm\:pb-4 {
-    padding-bottom: 1rem;
-  }
-
-  .sm\:pl-4 {
-    padding-left: 1rem;
-  }
-
-  .sm\:pt-5 {
-    padding-top: 1.25rem;
-  }
-
-  .sm\:pr-5 {
-    padding-right: 1.25rem;
-  }
-
-  .sm\:pb-5 {
-    padding-bottom: 1.25rem;
-  }
-
-  .sm\:pl-5 {
-    padding-left: 1.25rem;
-  }
-
-  .sm\:pt-6 {
-    padding-top: 1.5rem;
-  }
-
-  .sm\:pr-6 {
-    padding-right: 1.5rem;
-  }
-
-  .sm\:pb-6 {
-    padding-bottom: 1.5rem;
-  }
-
-  .sm\:pl-6 {
-    padding-left: 1.5rem;
-  }
-
-  .sm\:pt-8 {
-    padding-top: 2rem;
-  }
-
-  .sm\:pr-8 {
-    padding-right: 2rem;
-  }
-
-  .sm\:pb-8 {
-    padding-bottom: 2rem;
-  }
-
-  .sm\:pl-8 {
-    padding-left: 2rem;
-  }
-
-  .sm\:pt-10 {
-    padding-top: 2.5rem;
-  }
-
-  .sm\:pr-10 {
-    padding-right: 2.5rem;
-  }
-
-  .sm\:pb-10 {
-    padding-bottom: 2.5rem;
-  }
-
-  .sm\:pl-10 {
-    padding-left: 2.5rem;
-  }
-
-  .sm\:pt-12 {
-    padding-top: 3rem;
-  }
-
-  .sm\:pr-12 {
-    padding-right: 3rem;
-  }
-
-  .sm\:pb-12 {
-    padding-bottom: 3rem;
-  }
-
-  .sm\:pl-12 {
-    padding-left: 3rem;
-  }
-
-  .sm\:pt-16 {
-    padding-top: 4rem;
-  }
-
-  .sm\:pr-16 {
-    padding-right: 4rem;
-  }
-
-  .sm\:pb-16 {
-    padding-bottom: 4rem;
-  }
-
-  .sm\:pl-16 {
-    padding-left: 4rem;
-  }
-
-  .sm\:pt-20 {
-    padding-top: 5rem;
-  }
-
-  .sm\:pr-20 {
-    padding-right: 5rem;
-  }
-
-  .sm\:pb-20 {
-    padding-bottom: 5rem;
-  }
-
-  .sm\:pl-20 {
-    padding-left: 5rem;
-  }
-
-  .sm\:pt-24 {
-    padding-top: 6rem;
-  }
-
-  .sm\:pr-24 {
-    padding-right: 6rem;
-  }
-
-  .sm\:pb-24 {
-    padding-bottom: 6rem;
-  }
-
-  .sm\:pl-24 {
-    padding-left: 6rem;
-  }
-
-  .sm\:pt-32 {
-    padding-top: 8rem;
-  }
-
-  .sm\:pr-32 {
-    padding-right: 8rem;
-  }
-
-  .sm\:pb-32 {
-    padding-bottom: 8rem;
-  }
-
-  .sm\:pl-32 {
-    padding-left: 8rem;
-  }
-
-  .sm\:pt-40 {
-    padding-top: 10rem;
-  }
-
-  .sm\:pr-40 {
-    padding-right: 10rem;
-  }
-
-  .sm\:pb-40 {
-    padding-bottom: 10rem;
-  }
-
-  .sm\:pl-40 {
-    padding-left: 10rem;
-  }
-
-  .sm\:pt-48 {
-    padding-top: 12rem;
-  }
-
-  .sm\:pr-48 {
-    padding-right: 12rem;
-  }
-
-  .sm\:pb-48 {
-    padding-bottom: 12rem;
-  }
-
-  .sm\:pl-48 {
-    padding-left: 12rem;
-  }
-
-  .sm\:pt-56 {
-    padding-top: 14rem;
-  }
-
-  .sm\:pr-56 {
-    padding-right: 14rem;
-  }
-
-  .sm\:pb-56 {
-    padding-bottom: 14rem;
-  }
-
-  .sm\:pl-56 {
-    padding-left: 14rem;
-  }
-
-  .sm\:pt-64 {
-    padding-top: 16rem;
-  }
-
-  .sm\:pr-64 {
-    padding-right: 16rem;
-  }
-
-  .sm\:pb-64 {
-    padding-bottom: 16rem;
-  }
-
-  .sm\:pl-64 {
-    padding-left: 16rem;
-  }
-
-  .sm\:pt-72 {
-    padding-top: 18rem;
-  }
-
-  .sm\:pr-72 {
-    padding-right: 18rem;
-  }
-
-  .sm\:pb-72 {
-    padding-bottom: 18rem;
-  }
-
-  .sm\:pl-72 {
-    padding-left: 18rem;
-  }
-
-  .sm\:pt-84 {
-    padding-top: 21rem;
-  }
-
-  .sm\:pr-84 {
-    padding-right: 21rem;
-  }
-
-  .sm\:pb-84 {
-    padding-bottom: 21rem;
-  }
-
-  .sm\:pl-84 {
-    padding-left: 21rem;
-  }
-
-  .sm\:pt-96 {
-    padding-top: 24rem;
-  }
-
-  .sm\:pr-96 {
-    padding-right: 24rem;
-  }
-
-  .sm\:pb-96 {
-    padding-bottom: 24rem;
-  }
-
-  .sm\:pl-96 {
-    padding-left: 24rem;
-  }
-
-  .sm\:pt-px {
-    padding-top: 1px;
-  }
-
-  .sm\:pr-px {
-    padding-right: 1px;
-  }
-
-  .sm\:pb-px {
-    padding-bottom: 1px;
-  }
-
-  .sm\:pl-px {
-    padding-left: 1px;
-  }
-
   .sm\:placeholder-transparent::-moz-placeholder {
     color: transparent;
   }
@@ -47502,6 +47594,98 @@ video {
   .sm\:animate-bounce {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
+  }
+
+  .sm\:line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+
+  .sm\:line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .sm\:line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  .sm\:line-clamp-4 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+  }
+
+  .sm\:line-clamp-5 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+  }
+
+  .sm\:line-clamp-6 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+  }
+
+  .sm\:line-clamp-none {
+    -webkit-line-clamp: unset;
+  }
+
+  .sm\:hover\:line-clamp-1:hover {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+
+  .sm\:hover\:line-clamp-2:hover {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .sm\:hover\:line-clamp-3:hover {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  .sm\:hover\:line-clamp-4:hover {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+  }
+
+  .sm\:hover\:line-clamp-5:hover {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+  }
+
+  .sm\:hover\:line-clamp-6:hover {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+  }
+
+  .sm\:hover\:line-clamp-none:hover {
+    -webkit-line-clamp: unset;
   }
 
   .sm\:animate__animated {
@@ -59811,666 +59995,6 @@ video {
     overscroll-behavior-x: none;
   }
 
-  .md\:p-0 {
-    padding: 0;
-  }
-
-  .md\:p-1 {
-    padding: 0.25rem;
-  }
-
-  .md\:p-2 {
-    padding: 0.5rem;
-  }
-
-  .md\:p-3 {
-    padding: 0.75rem;
-  }
-
-  .md\:p-4 {
-    padding: 1rem;
-  }
-
-  .md\:p-5 {
-    padding: 1.25rem;
-  }
-
-  .md\:p-6 {
-    padding: 1.5rem;
-  }
-
-  .md\:p-8 {
-    padding: 2rem;
-  }
-
-  .md\:p-10 {
-    padding: 2.5rem;
-  }
-
-  .md\:p-12 {
-    padding: 3rem;
-  }
-
-  .md\:p-16 {
-    padding: 4rem;
-  }
-
-  .md\:p-20 {
-    padding: 5rem;
-  }
-
-  .md\:p-24 {
-    padding: 6rem;
-  }
-
-  .md\:p-32 {
-    padding: 8rem;
-  }
-
-  .md\:p-40 {
-    padding: 10rem;
-  }
-
-  .md\:p-48 {
-    padding: 12rem;
-  }
-
-  .md\:p-56 {
-    padding: 14rem;
-  }
-
-  .md\:p-64 {
-    padding: 16rem;
-  }
-
-  .md\:p-72 {
-    padding: 18rem;
-  }
-
-  .md\:p-84 {
-    padding: 21rem;
-  }
-
-  .md\:p-96 {
-    padding: 24rem;
-  }
-
-  .md\:p-px {
-    padding: 1px;
-  }
-
-  .md\:py-0 {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  .md\:px-0 {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .md\:py-1 {
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-  }
-
-  .md\:px-1 {
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
-  }
-
-  .md\:py-2 {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-
-  .md\:px-2 {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-
-  .md\:py-3 {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-  }
-
-  .md\:px-3 {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-  }
-
-  .md\:py-4 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-
-  .md\:px-4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .md\:py-5 {
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-  }
-
-  .md\:px-5 {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-
-  .md\:py-6 {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
-
-  .md\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-
-  .md\:py-8 {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-
-  .md\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .md\:py-10 {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-  }
-
-  .md\:px-10 {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
-
-  .md\:py-12 {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-
-  .md\:px-12 {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-
-  .md\:py-16 {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-
-  .md\:px-16 {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-
-  .md\:py-20 {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
-
-  .md\:px-20 {
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
-
-  .md\:py-24 {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-  }
-
-  .md\:px-24 {
-    padding-left: 6rem;
-    padding-right: 6rem;
-  }
-
-  .md\:py-32 {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-  }
-
-  .md\:px-32 {
-    padding-left: 8rem;
-    padding-right: 8rem;
-  }
-
-  .md\:py-40 {
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-  }
-
-  .md\:px-40 {
-    padding-left: 10rem;
-    padding-right: 10rem;
-  }
-
-  .md\:py-48 {
-    padding-top: 12rem;
-    padding-bottom: 12rem;
-  }
-
-  .md\:px-48 {
-    padding-left: 12rem;
-    padding-right: 12rem;
-  }
-
-  .md\:py-56 {
-    padding-top: 14rem;
-    padding-bottom: 14rem;
-  }
-
-  .md\:px-56 {
-    padding-left: 14rem;
-    padding-right: 14rem;
-  }
-
-  .md\:py-64 {
-    padding-top: 16rem;
-    padding-bottom: 16rem;
-  }
-
-  .md\:px-64 {
-    padding-left: 16rem;
-    padding-right: 16rem;
-  }
-
-  .md\:py-72 {
-    padding-top: 18rem;
-    padding-bottom: 18rem;
-  }
-
-  .md\:px-72 {
-    padding-left: 18rem;
-    padding-right: 18rem;
-  }
-
-  .md\:py-84 {
-    padding-top: 21rem;
-    padding-bottom: 21rem;
-  }
-
-  .md\:px-84 {
-    padding-left: 21rem;
-    padding-right: 21rem;
-  }
-
-  .md\:py-96 {
-    padding-top: 24rem;
-    padding-bottom: 24rem;
-  }
-
-  .md\:px-96 {
-    padding-left: 24rem;
-    padding-right: 24rem;
-  }
-
-  .md\:py-px {
-    padding-top: 1px;
-    padding-bottom: 1px;
-  }
-
-  .md\:px-px {
-    padding-left: 1px;
-    padding-right: 1px;
-  }
-
-  .md\:pt-0 {
-    padding-top: 0;
-  }
-
-  .md\:pr-0 {
-    padding-right: 0;
-  }
-
-  .md\:pb-0 {
-    padding-bottom: 0;
-  }
-
-  .md\:pl-0 {
-    padding-left: 0;
-  }
-
-  .md\:pt-1 {
-    padding-top: 0.25rem;
-  }
-
-  .md\:pr-1 {
-    padding-right: 0.25rem;
-  }
-
-  .md\:pb-1 {
-    padding-bottom: 0.25rem;
-  }
-
-  .md\:pl-1 {
-    padding-left: 0.25rem;
-  }
-
-  .md\:pt-2 {
-    padding-top: 0.5rem;
-  }
-
-  .md\:pr-2 {
-    padding-right: 0.5rem;
-  }
-
-  .md\:pb-2 {
-    padding-bottom: 0.5rem;
-  }
-
-  .md\:pl-2 {
-    padding-left: 0.5rem;
-  }
-
-  .md\:pt-3 {
-    padding-top: 0.75rem;
-  }
-
-  .md\:pr-3 {
-    padding-right: 0.75rem;
-  }
-
-  .md\:pb-3 {
-    padding-bottom: 0.75rem;
-  }
-
-  .md\:pl-3 {
-    padding-left: 0.75rem;
-  }
-
-  .md\:pt-4 {
-    padding-top: 1rem;
-  }
-
-  .md\:pr-4 {
-    padding-right: 1rem;
-  }
-
-  .md\:pb-4 {
-    padding-bottom: 1rem;
-  }
-
-  .md\:pl-4 {
-    padding-left: 1rem;
-  }
-
-  .md\:pt-5 {
-    padding-top: 1.25rem;
-  }
-
-  .md\:pr-5 {
-    padding-right: 1.25rem;
-  }
-
-  .md\:pb-5 {
-    padding-bottom: 1.25rem;
-  }
-
-  .md\:pl-5 {
-    padding-left: 1.25rem;
-  }
-
-  .md\:pt-6 {
-    padding-top: 1.5rem;
-  }
-
-  .md\:pr-6 {
-    padding-right: 1.5rem;
-  }
-
-  .md\:pb-6 {
-    padding-bottom: 1.5rem;
-  }
-
-  .md\:pl-6 {
-    padding-left: 1.5rem;
-  }
-
-  .md\:pt-8 {
-    padding-top: 2rem;
-  }
-
-  .md\:pr-8 {
-    padding-right: 2rem;
-  }
-
-  .md\:pb-8 {
-    padding-bottom: 2rem;
-  }
-
-  .md\:pl-8 {
-    padding-left: 2rem;
-  }
-
-  .md\:pt-10 {
-    padding-top: 2.5rem;
-  }
-
-  .md\:pr-10 {
-    padding-right: 2.5rem;
-  }
-
-  .md\:pb-10 {
-    padding-bottom: 2.5rem;
-  }
-
-  .md\:pl-10 {
-    padding-left: 2.5rem;
-  }
-
-  .md\:pt-12 {
-    padding-top: 3rem;
-  }
-
-  .md\:pr-12 {
-    padding-right: 3rem;
-  }
-
-  .md\:pb-12 {
-    padding-bottom: 3rem;
-  }
-
-  .md\:pl-12 {
-    padding-left: 3rem;
-  }
-
-  .md\:pt-16 {
-    padding-top: 4rem;
-  }
-
-  .md\:pr-16 {
-    padding-right: 4rem;
-  }
-
-  .md\:pb-16 {
-    padding-bottom: 4rem;
-  }
-
-  .md\:pl-16 {
-    padding-left: 4rem;
-  }
-
-  .md\:pt-20 {
-    padding-top: 5rem;
-  }
-
-  .md\:pr-20 {
-    padding-right: 5rem;
-  }
-
-  .md\:pb-20 {
-    padding-bottom: 5rem;
-  }
-
-  .md\:pl-20 {
-    padding-left: 5rem;
-  }
-
-  .md\:pt-24 {
-    padding-top: 6rem;
-  }
-
-  .md\:pr-24 {
-    padding-right: 6rem;
-  }
-
-  .md\:pb-24 {
-    padding-bottom: 6rem;
-  }
-
-  .md\:pl-24 {
-    padding-left: 6rem;
-  }
-
-  .md\:pt-32 {
-    padding-top: 8rem;
-  }
-
-  .md\:pr-32 {
-    padding-right: 8rem;
-  }
-
-  .md\:pb-32 {
-    padding-bottom: 8rem;
-  }
-
-  .md\:pl-32 {
-    padding-left: 8rem;
-  }
-
-  .md\:pt-40 {
-    padding-top: 10rem;
-  }
-
-  .md\:pr-40 {
-    padding-right: 10rem;
-  }
-
-  .md\:pb-40 {
-    padding-bottom: 10rem;
-  }
-
-  .md\:pl-40 {
-    padding-left: 10rem;
-  }
-
-  .md\:pt-48 {
-    padding-top: 12rem;
-  }
-
-  .md\:pr-48 {
-    padding-right: 12rem;
-  }
-
-  .md\:pb-48 {
-    padding-bottom: 12rem;
-  }
-
-  .md\:pl-48 {
-    padding-left: 12rem;
-  }
-
-  .md\:pt-56 {
-    padding-top: 14rem;
-  }
-
-  .md\:pr-56 {
-    padding-right: 14rem;
-  }
-
-  .md\:pb-56 {
-    padding-bottom: 14rem;
-  }
-
-  .md\:pl-56 {
-    padding-left: 14rem;
-  }
-
-  .md\:pt-64 {
-    padding-top: 16rem;
-  }
-
-  .md\:pr-64 {
-    padding-right: 16rem;
-  }
-
-  .md\:pb-64 {
-    padding-bottom: 16rem;
-  }
-
-  .md\:pl-64 {
-    padding-left: 16rem;
-  }
-
-  .md\:pt-72 {
-    padding-top: 18rem;
-  }
-
-  .md\:pr-72 {
-    padding-right: 18rem;
-  }
-
-  .md\:pb-72 {
-    padding-bottom: 18rem;
-  }
-
-  .md\:pl-72 {
-    padding-left: 18rem;
-  }
-
-  .md\:pt-84 {
-    padding-top: 21rem;
-  }
-
-  .md\:pr-84 {
-    padding-right: 21rem;
-  }
-
-  .md\:pb-84 {
-    padding-bottom: 21rem;
-  }
-
-  .md\:pl-84 {
-    padding-left: 21rem;
-  }
-
-  .md\:pt-96 {
-    padding-top: 24rem;
-  }
-
-  .md\:pr-96 {
-    padding-right: 24rem;
-  }
-
-  .md\:pb-96 {
-    padding-bottom: 24rem;
-  }
-
-  .md\:pl-96 {
-    padding-left: 24rem;
-  }
-
-  .md\:pt-px {
-    padding-top: 1px;
-  }
-
-  .md\:pr-px {
-    padding-right: 1px;
-  }
-
-  .md\:pb-px {
-    padding-bottom: 1px;
-  }
-
-  .md\:pl-px {
-    padding-left: 1px;
-  }
-
   .md\:placeholder-transparent::-moz-placeholder {
     color: transparent;
   }
@@ -69596,6 +69120,98 @@ video {
   .md\:animate-bounce {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
+  }
+
+  .md\:line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+
+  .md\:line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .md\:line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  .md\:line-clamp-4 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+  }
+
+  .md\:line-clamp-5 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+  }
+
+  .md\:line-clamp-6 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+  }
+
+  .md\:line-clamp-none {
+    -webkit-line-clamp: unset;
+  }
+
+  .md\:hover\:line-clamp-1:hover {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+
+  .md\:hover\:line-clamp-2:hover {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .md\:hover\:line-clamp-3:hover {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  .md\:hover\:line-clamp-4:hover {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+  }
+
+  .md\:hover\:line-clamp-5:hover {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+  }
+
+  .md\:hover\:line-clamp-6:hover {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+  }
+
+  .md\:hover\:line-clamp-none:hover {
+    -webkit-line-clamp: unset;
   }
 
   .md\:animate__animated {
@@ -81905,666 +81521,6 @@ video {
     overscroll-behavior-x: none;
   }
 
-  .lg\:p-0 {
-    padding: 0;
-  }
-
-  .lg\:p-1 {
-    padding: 0.25rem;
-  }
-
-  .lg\:p-2 {
-    padding: 0.5rem;
-  }
-
-  .lg\:p-3 {
-    padding: 0.75rem;
-  }
-
-  .lg\:p-4 {
-    padding: 1rem;
-  }
-
-  .lg\:p-5 {
-    padding: 1.25rem;
-  }
-
-  .lg\:p-6 {
-    padding: 1.5rem;
-  }
-
-  .lg\:p-8 {
-    padding: 2rem;
-  }
-
-  .lg\:p-10 {
-    padding: 2.5rem;
-  }
-
-  .lg\:p-12 {
-    padding: 3rem;
-  }
-
-  .lg\:p-16 {
-    padding: 4rem;
-  }
-
-  .lg\:p-20 {
-    padding: 5rem;
-  }
-
-  .lg\:p-24 {
-    padding: 6rem;
-  }
-
-  .lg\:p-32 {
-    padding: 8rem;
-  }
-
-  .lg\:p-40 {
-    padding: 10rem;
-  }
-
-  .lg\:p-48 {
-    padding: 12rem;
-  }
-
-  .lg\:p-56 {
-    padding: 14rem;
-  }
-
-  .lg\:p-64 {
-    padding: 16rem;
-  }
-
-  .lg\:p-72 {
-    padding: 18rem;
-  }
-
-  .lg\:p-84 {
-    padding: 21rem;
-  }
-
-  .lg\:p-96 {
-    padding: 24rem;
-  }
-
-  .lg\:p-px {
-    padding: 1px;
-  }
-
-  .lg\:py-0 {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  .lg\:px-0 {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .lg\:py-1 {
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-  }
-
-  .lg\:px-1 {
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
-  }
-
-  .lg\:py-2 {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-
-  .lg\:px-2 {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-
-  .lg\:py-3 {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-  }
-
-  .lg\:px-3 {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-  }
-
-  .lg\:py-4 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-
-  .lg\:px-4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .lg\:py-5 {
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-  }
-
-  .lg\:px-5 {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-
-  .lg\:py-6 {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
-
-  .lg\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-
-  .lg\:py-8 {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-
-  .lg\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .lg\:py-10 {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-  }
-
-  .lg\:px-10 {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
-
-  .lg\:py-12 {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-
-  .lg\:px-12 {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-
-  .lg\:py-16 {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-
-  .lg\:px-16 {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-
-  .lg\:py-20 {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
-
-  .lg\:px-20 {
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
-
-  .lg\:py-24 {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-  }
-
-  .lg\:px-24 {
-    padding-left: 6rem;
-    padding-right: 6rem;
-  }
-
-  .lg\:py-32 {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-  }
-
-  .lg\:px-32 {
-    padding-left: 8rem;
-    padding-right: 8rem;
-  }
-
-  .lg\:py-40 {
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-  }
-
-  .lg\:px-40 {
-    padding-left: 10rem;
-    padding-right: 10rem;
-  }
-
-  .lg\:py-48 {
-    padding-top: 12rem;
-    padding-bottom: 12rem;
-  }
-
-  .lg\:px-48 {
-    padding-left: 12rem;
-    padding-right: 12rem;
-  }
-
-  .lg\:py-56 {
-    padding-top: 14rem;
-    padding-bottom: 14rem;
-  }
-
-  .lg\:px-56 {
-    padding-left: 14rem;
-    padding-right: 14rem;
-  }
-
-  .lg\:py-64 {
-    padding-top: 16rem;
-    padding-bottom: 16rem;
-  }
-
-  .lg\:px-64 {
-    padding-left: 16rem;
-    padding-right: 16rem;
-  }
-
-  .lg\:py-72 {
-    padding-top: 18rem;
-    padding-bottom: 18rem;
-  }
-
-  .lg\:px-72 {
-    padding-left: 18rem;
-    padding-right: 18rem;
-  }
-
-  .lg\:py-84 {
-    padding-top: 21rem;
-    padding-bottom: 21rem;
-  }
-
-  .lg\:px-84 {
-    padding-left: 21rem;
-    padding-right: 21rem;
-  }
-
-  .lg\:py-96 {
-    padding-top: 24rem;
-    padding-bottom: 24rem;
-  }
-
-  .lg\:px-96 {
-    padding-left: 24rem;
-    padding-right: 24rem;
-  }
-
-  .lg\:py-px {
-    padding-top: 1px;
-    padding-bottom: 1px;
-  }
-
-  .lg\:px-px {
-    padding-left: 1px;
-    padding-right: 1px;
-  }
-
-  .lg\:pt-0 {
-    padding-top: 0;
-  }
-
-  .lg\:pr-0 {
-    padding-right: 0;
-  }
-
-  .lg\:pb-0 {
-    padding-bottom: 0;
-  }
-
-  .lg\:pl-0 {
-    padding-left: 0;
-  }
-
-  .lg\:pt-1 {
-    padding-top: 0.25rem;
-  }
-
-  .lg\:pr-1 {
-    padding-right: 0.25rem;
-  }
-
-  .lg\:pb-1 {
-    padding-bottom: 0.25rem;
-  }
-
-  .lg\:pl-1 {
-    padding-left: 0.25rem;
-  }
-
-  .lg\:pt-2 {
-    padding-top: 0.5rem;
-  }
-
-  .lg\:pr-2 {
-    padding-right: 0.5rem;
-  }
-
-  .lg\:pb-2 {
-    padding-bottom: 0.5rem;
-  }
-
-  .lg\:pl-2 {
-    padding-left: 0.5rem;
-  }
-
-  .lg\:pt-3 {
-    padding-top: 0.75rem;
-  }
-
-  .lg\:pr-3 {
-    padding-right: 0.75rem;
-  }
-
-  .lg\:pb-3 {
-    padding-bottom: 0.75rem;
-  }
-
-  .lg\:pl-3 {
-    padding-left: 0.75rem;
-  }
-
-  .lg\:pt-4 {
-    padding-top: 1rem;
-  }
-
-  .lg\:pr-4 {
-    padding-right: 1rem;
-  }
-
-  .lg\:pb-4 {
-    padding-bottom: 1rem;
-  }
-
-  .lg\:pl-4 {
-    padding-left: 1rem;
-  }
-
-  .lg\:pt-5 {
-    padding-top: 1.25rem;
-  }
-
-  .lg\:pr-5 {
-    padding-right: 1.25rem;
-  }
-
-  .lg\:pb-5 {
-    padding-bottom: 1.25rem;
-  }
-
-  .lg\:pl-5 {
-    padding-left: 1.25rem;
-  }
-
-  .lg\:pt-6 {
-    padding-top: 1.5rem;
-  }
-
-  .lg\:pr-6 {
-    padding-right: 1.5rem;
-  }
-
-  .lg\:pb-6 {
-    padding-bottom: 1.5rem;
-  }
-
-  .lg\:pl-6 {
-    padding-left: 1.5rem;
-  }
-
-  .lg\:pt-8 {
-    padding-top: 2rem;
-  }
-
-  .lg\:pr-8 {
-    padding-right: 2rem;
-  }
-
-  .lg\:pb-8 {
-    padding-bottom: 2rem;
-  }
-
-  .lg\:pl-8 {
-    padding-left: 2rem;
-  }
-
-  .lg\:pt-10 {
-    padding-top: 2.5rem;
-  }
-
-  .lg\:pr-10 {
-    padding-right: 2.5rem;
-  }
-
-  .lg\:pb-10 {
-    padding-bottom: 2.5rem;
-  }
-
-  .lg\:pl-10 {
-    padding-left: 2.5rem;
-  }
-
-  .lg\:pt-12 {
-    padding-top: 3rem;
-  }
-
-  .lg\:pr-12 {
-    padding-right: 3rem;
-  }
-
-  .lg\:pb-12 {
-    padding-bottom: 3rem;
-  }
-
-  .lg\:pl-12 {
-    padding-left: 3rem;
-  }
-
-  .lg\:pt-16 {
-    padding-top: 4rem;
-  }
-
-  .lg\:pr-16 {
-    padding-right: 4rem;
-  }
-
-  .lg\:pb-16 {
-    padding-bottom: 4rem;
-  }
-
-  .lg\:pl-16 {
-    padding-left: 4rem;
-  }
-
-  .lg\:pt-20 {
-    padding-top: 5rem;
-  }
-
-  .lg\:pr-20 {
-    padding-right: 5rem;
-  }
-
-  .lg\:pb-20 {
-    padding-bottom: 5rem;
-  }
-
-  .lg\:pl-20 {
-    padding-left: 5rem;
-  }
-
-  .lg\:pt-24 {
-    padding-top: 6rem;
-  }
-
-  .lg\:pr-24 {
-    padding-right: 6rem;
-  }
-
-  .lg\:pb-24 {
-    padding-bottom: 6rem;
-  }
-
-  .lg\:pl-24 {
-    padding-left: 6rem;
-  }
-
-  .lg\:pt-32 {
-    padding-top: 8rem;
-  }
-
-  .lg\:pr-32 {
-    padding-right: 8rem;
-  }
-
-  .lg\:pb-32 {
-    padding-bottom: 8rem;
-  }
-
-  .lg\:pl-32 {
-    padding-left: 8rem;
-  }
-
-  .lg\:pt-40 {
-    padding-top: 10rem;
-  }
-
-  .lg\:pr-40 {
-    padding-right: 10rem;
-  }
-
-  .lg\:pb-40 {
-    padding-bottom: 10rem;
-  }
-
-  .lg\:pl-40 {
-    padding-left: 10rem;
-  }
-
-  .lg\:pt-48 {
-    padding-top: 12rem;
-  }
-
-  .lg\:pr-48 {
-    padding-right: 12rem;
-  }
-
-  .lg\:pb-48 {
-    padding-bottom: 12rem;
-  }
-
-  .lg\:pl-48 {
-    padding-left: 12rem;
-  }
-
-  .lg\:pt-56 {
-    padding-top: 14rem;
-  }
-
-  .lg\:pr-56 {
-    padding-right: 14rem;
-  }
-
-  .lg\:pb-56 {
-    padding-bottom: 14rem;
-  }
-
-  .lg\:pl-56 {
-    padding-left: 14rem;
-  }
-
-  .lg\:pt-64 {
-    padding-top: 16rem;
-  }
-
-  .lg\:pr-64 {
-    padding-right: 16rem;
-  }
-
-  .lg\:pb-64 {
-    padding-bottom: 16rem;
-  }
-
-  .lg\:pl-64 {
-    padding-left: 16rem;
-  }
-
-  .lg\:pt-72 {
-    padding-top: 18rem;
-  }
-
-  .lg\:pr-72 {
-    padding-right: 18rem;
-  }
-
-  .lg\:pb-72 {
-    padding-bottom: 18rem;
-  }
-
-  .lg\:pl-72 {
-    padding-left: 18rem;
-  }
-
-  .lg\:pt-84 {
-    padding-top: 21rem;
-  }
-
-  .lg\:pr-84 {
-    padding-right: 21rem;
-  }
-
-  .lg\:pb-84 {
-    padding-bottom: 21rem;
-  }
-
-  .lg\:pl-84 {
-    padding-left: 21rem;
-  }
-
-  .lg\:pt-96 {
-    padding-top: 24rem;
-  }
-
-  .lg\:pr-96 {
-    padding-right: 24rem;
-  }
-
-  .lg\:pb-96 {
-    padding-bottom: 24rem;
-  }
-
-  .lg\:pl-96 {
-    padding-left: 24rem;
-  }
-
-  .lg\:pt-px {
-    padding-top: 1px;
-  }
-
-  .lg\:pr-px {
-    padding-right: 1px;
-  }
-
-  .lg\:pb-px {
-    padding-bottom: 1px;
-  }
-
-  .lg\:pl-px {
-    padding-left: 1px;
-  }
-
   .lg\:placeholder-transparent::-moz-placeholder {
     color: transparent;
   }
@@ -91690,6 +90646,98 @@ video {
   .lg\:animate-bounce {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
+  }
+
+  .lg\:line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+
+  .lg\:line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .lg\:line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  .lg\:line-clamp-4 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+  }
+
+  .lg\:line-clamp-5 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+  }
+
+  .lg\:line-clamp-6 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+  }
+
+  .lg\:line-clamp-none {
+    -webkit-line-clamp: unset;
+  }
+
+  .lg\:hover\:line-clamp-1:hover {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+
+  .lg\:hover\:line-clamp-2:hover {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .lg\:hover\:line-clamp-3:hover {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  .lg\:hover\:line-clamp-4:hover {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+  }
+
+  .lg\:hover\:line-clamp-5:hover {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+  }
+
+  .lg\:hover\:line-clamp-6:hover {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+  }
+
+  .lg\:hover\:line-clamp-none:hover {
+    -webkit-line-clamp: unset;
   }
 
   .lg\:animate__animated {
@@ -103999,666 +103047,6 @@ video {
     overscroll-behavior-x: none;
   }
 
-  .xl\:p-0 {
-    padding: 0;
-  }
-
-  .xl\:p-1 {
-    padding: 0.25rem;
-  }
-
-  .xl\:p-2 {
-    padding: 0.5rem;
-  }
-
-  .xl\:p-3 {
-    padding: 0.75rem;
-  }
-
-  .xl\:p-4 {
-    padding: 1rem;
-  }
-
-  .xl\:p-5 {
-    padding: 1.25rem;
-  }
-
-  .xl\:p-6 {
-    padding: 1.5rem;
-  }
-
-  .xl\:p-8 {
-    padding: 2rem;
-  }
-
-  .xl\:p-10 {
-    padding: 2.5rem;
-  }
-
-  .xl\:p-12 {
-    padding: 3rem;
-  }
-
-  .xl\:p-16 {
-    padding: 4rem;
-  }
-
-  .xl\:p-20 {
-    padding: 5rem;
-  }
-
-  .xl\:p-24 {
-    padding: 6rem;
-  }
-
-  .xl\:p-32 {
-    padding: 8rem;
-  }
-
-  .xl\:p-40 {
-    padding: 10rem;
-  }
-
-  .xl\:p-48 {
-    padding: 12rem;
-  }
-
-  .xl\:p-56 {
-    padding: 14rem;
-  }
-
-  .xl\:p-64 {
-    padding: 16rem;
-  }
-
-  .xl\:p-72 {
-    padding: 18rem;
-  }
-
-  .xl\:p-84 {
-    padding: 21rem;
-  }
-
-  .xl\:p-96 {
-    padding: 24rem;
-  }
-
-  .xl\:p-px {
-    padding: 1px;
-  }
-
-  .xl\:py-0 {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  .xl\:px-0 {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .xl\:py-1 {
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-  }
-
-  .xl\:px-1 {
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
-  }
-
-  .xl\:py-2 {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-
-  .xl\:px-2 {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-
-  .xl\:py-3 {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-  }
-
-  .xl\:px-3 {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-  }
-
-  .xl\:py-4 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-
-  .xl\:px-4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .xl\:py-5 {
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-  }
-
-  .xl\:px-5 {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-
-  .xl\:py-6 {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
-
-  .xl\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-
-  .xl\:py-8 {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-
-  .xl\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .xl\:py-10 {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-  }
-
-  .xl\:px-10 {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
-
-  .xl\:py-12 {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-
-  .xl\:px-12 {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-
-  .xl\:py-16 {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-
-  .xl\:px-16 {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-
-  .xl\:py-20 {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
-
-  .xl\:px-20 {
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
-
-  .xl\:py-24 {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-  }
-
-  .xl\:px-24 {
-    padding-left: 6rem;
-    padding-right: 6rem;
-  }
-
-  .xl\:py-32 {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-  }
-
-  .xl\:px-32 {
-    padding-left: 8rem;
-    padding-right: 8rem;
-  }
-
-  .xl\:py-40 {
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-  }
-
-  .xl\:px-40 {
-    padding-left: 10rem;
-    padding-right: 10rem;
-  }
-
-  .xl\:py-48 {
-    padding-top: 12rem;
-    padding-bottom: 12rem;
-  }
-
-  .xl\:px-48 {
-    padding-left: 12rem;
-    padding-right: 12rem;
-  }
-
-  .xl\:py-56 {
-    padding-top: 14rem;
-    padding-bottom: 14rem;
-  }
-
-  .xl\:px-56 {
-    padding-left: 14rem;
-    padding-right: 14rem;
-  }
-
-  .xl\:py-64 {
-    padding-top: 16rem;
-    padding-bottom: 16rem;
-  }
-
-  .xl\:px-64 {
-    padding-left: 16rem;
-    padding-right: 16rem;
-  }
-
-  .xl\:py-72 {
-    padding-top: 18rem;
-    padding-bottom: 18rem;
-  }
-
-  .xl\:px-72 {
-    padding-left: 18rem;
-    padding-right: 18rem;
-  }
-
-  .xl\:py-84 {
-    padding-top: 21rem;
-    padding-bottom: 21rem;
-  }
-
-  .xl\:px-84 {
-    padding-left: 21rem;
-    padding-right: 21rem;
-  }
-
-  .xl\:py-96 {
-    padding-top: 24rem;
-    padding-bottom: 24rem;
-  }
-
-  .xl\:px-96 {
-    padding-left: 24rem;
-    padding-right: 24rem;
-  }
-
-  .xl\:py-px {
-    padding-top: 1px;
-    padding-bottom: 1px;
-  }
-
-  .xl\:px-px {
-    padding-left: 1px;
-    padding-right: 1px;
-  }
-
-  .xl\:pt-0 {
-    padding-top: 0;
-  }
-
-  .xl\:pr-0 {
-    padding-right: 0;
-  }
-
-  .xl\:pb-0 {
-    padding-bottom: 0;
-  }
-
-  .xl\:pl-0 {
-    padding-left: 0;
-  }
-
-  .xl\:pt-1 {
-    padding-top: 0.25rem;
-  }
-
-  .xl\:pr-1 {
-    padding-right: 0.25rem;
-  }
-
-  .xl\:pb-1 {
-    padding-bottom: 0.25rem;
-  }
-
-  .xl\:pl-1 {
-    padding-left: 0.25rem;
-  }
-
-  .xl\:pt-2 {
-    padding-top: 0.5rem;
-  }
-
-  .xl\:pr-2 {
-    padding-right: 0.5rem;
-  }
-
-  .xl\:pb-2 {
-    padding-bottom: 0.5rem;
-  }
-
-  .xl\:pl-2 {
-    padding-left: 0.5rem;
-  }
-
-  .xl\:pt-3 {
-    padding-top: 0.75rem;
-  }
-
-  .xl\:pr-3 {
-    padding-right: 0.75rem;
-  }
-
-  .xl\:pb-3 {
-    padding-bottom: 0.75rem;
-  }
-
-  .xl\:pl-3 {
-    padding-left: 0.75rem;
-  }
-
-  .xl\:pt-4 {
-    padding-top: 1rem;
-  }
-
-  .xl\:pr-4 {
-    padding-right: 1rem;
-  }
-
-  .xl\:pb-4 {
-    padding-bottom: 1rem;
-  }
-
-  .xl\:pl-4 {
-    padding-left: 1rem;
-  }
-
-  .xl\:pt-5 {
-    padding-top: 1.25rem;
-  }
-
-  .xl\:pr-5 {
-    padding-right: 1.25rem;
-  }
-
-  .xl\:pb-5 {
-    padding-bottom: 1.25rem;
-  }
-
-  .xl\:pl-5 {
-    padding-left: 1.25rem;
-  }
-
-  .xl\:pt-6 {
-    padding-top: 1.5rem;
-  }
-
-  .xl\:pr-6 {
-    padding-right: 1.5rem;
-  }
-
-  .xl\:pb-6 {
-    padding-bottom: 1.5rem;
-  }
-
-  .xl\:pl-6 {
-    padding-left: 1.5rem;
-  }
-
-  .xl\:pt-8 {
-    padding-top: 2rem;
-  }
-
-  .xl\:pr-8 {
-    padding-right: 2rem;
-  }
-
-  .xl\:pb-8 {
-    padding-bottom: 2rem;
-  }
-
-  .xl\:pl-8 {
-    padding-left: 2rem;
-  }
-
-  .xl\:pt-10 {
-    padding-top: 2.5rem;
-  }
-
-  .xl\:pr-10 {
-    padding-right: 2.5rem;
-  }
-
-  .xl\:pb-10 {
-    padding-bottom: 2.5rem;
-  }
-
-  .xl\:pl-10 {
-    padding-left: 2.5rem;
-  }
-
-  .xl\:pt-12 {
-    padding-top: 3rem;
-  }
-
-  .xl\:pr-12 {
-    padding-right: 3rem;
-  }
-
-  .xl\:pb-12 {
-    padding-bottom: 3rem;
-  }
-
-  .xl\:pl-12 {
-    padding-left: 3rem;
-  }
-
-  .xl\:pt-16 {
-    padding-top: 4rem;
-  }
-
-  .xl\:pr-16 {
-    padding-right: 4rem;
-  }
-
-  .xl\:pb-16 {
-    padding-bottom: 4rem;
-  }
-
-  .xl\:pl-16 {
-    padding-left: 4rem;
-  }
-
-  .xl\:pt-20 {
-    padding-top: 5rem;
-  }
-
-  .xl\:pr-20 {
-    padding-right: 5rem;
-  }
-
-  .xl\:pb-20 {
-    padding-bottom: 5rem;
-  }
-
-  .xl\:pl-20 {
-    padding-left: 5rem;
-  }
-
-  .xl\:pt-24 {
-    padding-top: 6rem;
-  }
-
-  .xl\:pr-24 {
-    padding-right: 6rem;
-  }
-
-  .xl\:pb-24 {
-    padding-bottom: 6rem;
-  }
-
-  .xl\:pl-24 {
-    padding-left: 6rem;
-  }
-
-  .xl\:pt-32 {
-    padding-top: 8rem;
-  }
-
-  .xl\:pr-32 {
-    padding-right: 8rem;
-  }
-
-  .xl\:pb-32 {
-    padding-bottom: 8rem;
-  }
-
-  .xl\:pl-32 {
-    padding-left: 8rem;
-  }
-
-  .xl\:pt-40 {
-    padding-top: 10rem;
-  }
-
-  .xl\:pr-40 {
-    padding-right: 10rem;
-  }
-
-  .xl\:pb-40 {
-    padding-bottom: 10rem;
-  }
-
-  .xl\:pl-40 {
-    padding-left: 10rem;
-  }
-
-  .xl\:pt-48 {
-    padding-top: 12rem;
-  }
-
-  .xl\:pr-48 {
-    padding-right: 12rem;
-  }
-
-  .xl\:pb-48 {
-    padding-bottom: 12rem;
-  }
-
-  .xl\:pl-48 {
-    padding-left: 12rem;
-  }
-
-  .xl\:pt-56 {
-    padding-top: 14rem;
-  }
-
-  .xl\:pr-56 {
-    padding-right: 14rem;
-  }
-
-  .xl\:pb-56 {
-    padding-bottom: 14rem;
-  }
-
-  .xl\:pl-56 {
-    padding-left: 14rem;
-  }
-
-  .xl\:pt-64 {
-    padding-top: 16rem;
-  }
-
-  .xl\:pr-64 {
-    padding-right: 16rem;
-  }
-
-  .xl\:pb-64 {
-    padding-bottom: 16rem;
-  }
-
-  .xl\:pl-64 {
-    padding-left: 16rem;
-  }
-
-  .xl\:pt-72 {
-    padding-top: 18rem;
-  }
-
-  .xl\:pr-72 {
-    padding-right: 18rem;
-  }
-
-  .xl\:pb-72 {
-    padding-bottom: 18rem;
-  }
-
-  .xl\:pl-72 {
-    padding-left: 18rem;
-  }
-
-  .xl\:pt-84 {
-    padding-top: 21rem;
-  }
-
-  .xl\:pr-84 {
-    padding-right: 21rem;
-  }
-
-  .xl\:pb-84 {
-    padding-bottom: 21rem;
-  }
-
-  .xl\:pl-84 {
-    padding-left: 21rem;
-  }
-
-  .xl\:pt-96 {
-    padding-top: 24rem;
-  }
-
-  .xl\:pr-96 {
-    padding-right: 24rem;
-  }
-
-  .xl\:pb-96 {
-    padding-bottom: 24rem;
-  }
-
-  .xl\:pl-96 {
-    padding-left: 24rem;
-  }
-
-  .xl\:pt-px {
-    padding-top: 1px;
-  }
-
-  .xl\:pr-px {
-    padding-right: 1px;
-  }
-
-  .xl\:pb-px {
-    padding-bottom: 1px;
-  }
-
-  .xl\:pl-px {
-    padding-left: 1px;
-  }
-
   .xl\:placeholder-transparent::-moz-placeholder {
     color: transparent;
   }
@@ -113784,6 +112172,98 @@ video {
   .xl\:animate-bounce {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
+  }
+
+  .xl\:line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+
+  .xl\:line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .xl\:line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  .xl\:line-clamp-4 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+  }
+
+  .xl\:line-clamp-5 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+  }
+
+  .xl\:line-clamp-6 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+  }
+
+  .xl\:line-clamp-none {
+    -webkit-line-clamp: unset;
+  }
+
+  .xl\:hover\:line-clamp-1:hover {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+
+  .xl\:hover\:line-clamp-2:hover {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .xl\:hover\:line-clamp-3:hover {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  .xl\:hover\:line-clamp-4:hover {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+  }
+
+  .xl\:hover\:line-clamp-5:hover {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+  }
+
+  .xl\:hover\:line-clamp-6:hover {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+  }
+
+  .xl\:hover\:line-clamp-none:hover {
+    -webkit-line-clamp: unset;
   }
 
   .xl\:animate__animated {

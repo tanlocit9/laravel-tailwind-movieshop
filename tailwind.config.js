@@ -16,16 +16,14 @@ module.exports = {
             '96': '24rem',
             },
         },
-        },
-        variants: {
-            extend: {
-                padding: ['hover'],
-                transitions: ['responsive', 'before', 'after', 'hover', 'focus'],
-                textOverflow: ['hover', 'focus'],
-                overflow: ['hover', 'focus'],
-            }
-        },
-        plugins: [
+    },
+    variants: {
+        padding: ['hover'],
+        transitions: ['responsive', 'before', 'after', 'hover', 'focus'],
+        lineClamp:['responsive', 'hover']
+    },
+    plugins: [
+        require('@tailwindcss/line-clamp'),
         require('tailwindcss-animatecss')({
             settings: {
             animatedSpeed: 1000,
@@ -37,9 +35,9 @@ module.exports = {
             },
             variants: ['responsive'],
         }),
-        ],
+    ],
     corePlugins: {
         // ...
         textOverflow: true,
         }
-    }
+}

@@ -14,14 +14,14 @@
                 <div>
                 <table class="w-full mt-5 text-center">
                     <thead>
-                        <tr class="divide-y divide-x divide-red-800 text-left">
+                        <tr class="divide-y divide-x divide-red-800 text-center">
                             <th hidden></th>
                             <th>Title</th>
                             <th>duration</th>
                             <th>release date</th>
                             <th>country</th>
                             <th>age limit</th>
-                            <th class="w-2/6 ">description</th>
+                            <th class="w-2/6 m-0 ">description</th>
                             <th>average rate</th>
                             <th>main genre</th>
                             <th class="invisible"></th>
@@ -36,7 +36,7 @@
                             <td>{{$movie->release_date}}</td>
                             <td>{{$movie->country->country_name}}</td>
                             <td>{{$movie->age_limit}}</td>
-                            <td class="truncate max-w-xs hover:text-red-500 break-normal text-left">
+                            <td class="line-clamp-2 hover:line-clamp-none mx-auto hover:text-red-500 break-normal text-left">
                                 {{$movie->description}}
                             </td>
                             @if($movie->avg_rate())
