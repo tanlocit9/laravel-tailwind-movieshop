@@ -53,6 +53,15 @@
                             </a>
                         @endif
                     </div>
+                    <a href="{{ route('login_with_socialite',['provider'=>'google']) }}"
+                        class="text-center w-full bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline">
+                        Login with Google
+                    </a>
+                    <a href="{{ route('login_with_socialite',['provider'=>'facebook']) }}"
+                        class="text-center w-full bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline"
+                        >
+                        Login with Facebook
+                    </a>
                     {{-- @if (Route::has('password.request'))
                             <a class="text-lg text-red-500" href="{{ route('password.request') }}">
                                 {{ __('Forgot Your Password?') }}
@@ -69,4 +78,5 @@
         </div>
     </div>
 </div>
+@include('components.alert')
 @endsection

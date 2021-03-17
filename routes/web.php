@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -15,10 +16,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/login','HomeController@login');
+Route::prefix('auth')->group(function () {
+    Route::get('{provider}','SocialiteController@redirect')->name('login_with_socialite');
+    Route::get('{provider}/callback', 'SocialiteController@handleCallback');
+});
 
 Auth::routes();
 Route::prefix('')->group(function () {
-    Route::get('/','CustomerController@index');
+    Route::get('/','CustomerController@index')->name('home_page');
     Route::get('/movie/{movie}','MovieController@show')->name('show_movie');
 });
 Route::prefix('admin')->group(function () {
