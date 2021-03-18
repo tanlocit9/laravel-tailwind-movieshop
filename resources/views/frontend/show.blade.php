@@ -14,7 +14,16 @@
                     <span class="mx-2">|</span>
                     <span>{{$movie->release_date}}</span>
                     <span class="mx-2">|</span>
-                    <span>Action, Thriller, Comedy</span>
+                    <span>
+                        @forelse($movie->sub_genre as $genre)
+                            @if ($loop->last)
+                                {{$genre->genre_name}}.
+                            @else {{$genre->genre_name}},
+                            @endif
+                        @empty
+                            Movie doesn't have sub genres.
+                        @endforelse
+                    </span>
                 </div>
                 <p class="text-gray-300 mt-8">
                     {{$movie->description}}
