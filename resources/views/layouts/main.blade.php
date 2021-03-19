@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="/css/app.css">
     <script src="https://use.fontawesome.com/692bdfc97d.js"></script>
+    @livewireStyles
 </head>
 <body class="font-sans bg-gray-900 text-white ml-5">
     <nav class="border-b border-gray-800 ">
@@ -24,6 +25,7 @@
                 <li class="ml-6 md:mt-3">
                     <a href="#" class="hover:text-gray-300">Actors</a>
                 </li>
+                @livewire('search-bar')
             </ul>
             <div class="flex flex-row md:flex-col items-center mr-5">
                 <ul class="flex flex-row md:flex-col items-center">
@@ -70,6 +72,6 @@
     </nav>
 
     @yield('content')
-
+    @livewireScripts
 </body>
 </html>
