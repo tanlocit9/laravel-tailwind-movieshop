@@ -28,6 +28,7 @@ class Movie extends Model
     public function ratings(){
         return $this->belongsToMany(Rating::class,'ratings');
     }
+
     public function genres(){
         return $this->belongsToMany(Genre::class,'genre_movie')->withPivot(['is_main']);
     }

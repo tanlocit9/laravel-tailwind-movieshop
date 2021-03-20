@@ -36,7 +36,7 @@ class DatatablesMovie extends LivewireDatatable
             NumberColumn::name('age_limit')->label('Age limit'),
 
             // NumberColumn::name('ratings.star:avg')->filterable()->label('Average Rated'),
-            NumberColumn::callback(['id'],function($id){
+            Column::callback(['id'],function($id){
                 return round(Rating::where('movie_id',$id)->avg('star'),1);
             })->label('Average rated'),
         ];
