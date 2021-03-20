@@ -26,6 +26,7 @@ Route::prefix('')->group(function () {
     Route::get('/','CustomerController@index')->name('home_page');
     Route::get('/movie/{movie}','MovieController@show')->name('show_movie');
 });
+
 Route::prefix('admin')->group(function () {
     Route::get('/','HomeController@admin')->name('admin');
     Route::get('/user','HomeController@users')->name('manage_user');

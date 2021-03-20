@@ -1,3 +1,6 @@
+[x-cloak] {
+    display: none;
+}
 @tailwind base;
 
 @tailwind components;

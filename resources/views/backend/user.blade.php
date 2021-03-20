@@ -4,7 +4,7 @@
 <!-- strat content -->
 <div class="bg-gray-100 flex-1 p-6 md:mt-16">
     <!-- best seller & traffic -->
-    <div class="grid grid-cols-1 gap-5">
+    {{-- <div class="grid grid-cols-1 gap-5">
         <div class="card">
             <div class="card-body">
                 <div class="flex flex-row justify-between items-center">
@@ -29,7 +29,12 @@
                         @endforeach
                     </tbody>
                 </table>
-            </div>
+            </div> --}}
+
+<div class="grid grid-cols-1 gap-5">
+    <div class="card">
+        <div class="card-body">
+            <livewire:datatables-user exportable />
         </div>
     </div>
 </div>
