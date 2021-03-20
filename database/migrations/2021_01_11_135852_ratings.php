@@ -30,6 +30,6 @@ class Ratings extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ratings');
+        Schema::dropIfExists('movie_user');
     }
 }

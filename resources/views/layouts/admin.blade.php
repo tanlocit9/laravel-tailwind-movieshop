@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.12.1/css/pro.min.css">
     <link rel="stylesheet" type="text/css" href="{{asset('/backend/css/style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('/css/app.css')}}">
-    @livewireStyles
     <script src="{{asset('/js/app.js')}}" type="text/javascript"></script>
+    @livewireStyles
     <title>BakaMovie Admin</title>
 </head>
 <body class="bg-gray-800">
@@ -205,5 +205,7 @@
 
 <!-- end script -->
 @livewireScripts
+
+
 </body>
 </html>

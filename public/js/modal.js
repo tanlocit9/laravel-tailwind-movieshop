@@ -36,4 +36,6 @@ var openmodal = document.querySelectorAll('.modal-open')
         modal.classList.toggle('pointer-events-none')
         body.classList.toggle('modal-active')
         paginate.classList.toggle('opacity-100')
+        const datatable = document.getElementById('datatable')
+        datatable.classList.add("invisible");
     }

@@ -48,6 +48,9 @@ class User extends Authenticatable
     public function role(){
         return $this->belongsTo(Role::class);
     }
+    public function ratings(){
+        return $this->belongsToMany(Rating::class);
+    }
     // public function admins(){
     //     return $this->roles()->where('role_name','admin');
     // }

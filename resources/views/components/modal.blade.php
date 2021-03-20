@@ -3,7 +3,7 @@
         {{$action}} {{$title}}
     </button>
     <!--Modal-->
-    <div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
+    <div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center z-50">
         <div class="modal-overlay"></div>
         <div class="modal-container w-1/2 md:max-w-md">
             {{-- <div id="modal-close" class="modal-esc">

@@ -15,11 +15,13 @@ class MovieSeeder extends Seeder
     public function run()
     {
         $movies = Movie::factory()
-                    ->count(5)
+                    ->count(50)
                     ->create();
         foreach($movies as $movie){
+            //add genres
             $arr_genres=[];
             $arr_actors=[];
+            $arr_rating=[];
             $main_id=rand(1,21);
             $movie->genres()->attach($main_id,['is_main'=>1]);
             array_push($arr_genres,$main_id);
@@ -30,11 +32,21 @@ class MovieSeeder extends Seeder
                     array_push($arr_genres,$sub_id);
                 }
             }
+            //add actors
             for ($j=0; $j < rand(1,10); $j++) {
                 $id=rand(1,20);
-                if(!in_array($sub_id, $arr_actors)){
-                    $movie->actors()->attach($id,['role_id'=>rand(3,4)]);
+                if(!in_array($id, $arr_actors)){
+                    $movie->actors()->attach($id,['role_id'=>rand(3, 4)]);
                     array_push($arr_actors,$id);
+                }
+            }
+
+            //add ratings
+            for ($k=0; $k < rand(1,100); $k++) {
+                $user_id=rand(1,20);
+                if(!in_array($user_id, $arr_rating)){
+                    $movie->ratings()->attach($user_id,['star'=>rand(10,50)/10]);
+                    array_push($arr_rating,$user_id);
                 }
             }
         }
