@@ -26,9 +26,11 @@ class Movie extends Model
         return $this->belongsTo(Country::class);
     }
     public function ratings(){
-        return $this->belongsToMany(Rating::class,'ratings');
+        return $this->belongsToMany(Rating::class,'ratings')->withPivot(['is_main']);
     }
-
+    public function avg_rate(){
+        return $this->ratings()->avg('star');
+    }
     public function genres(){
         return $this->belongsToMany(Genre::class,'genre_movie')->withPivot(['is_main']);
     }

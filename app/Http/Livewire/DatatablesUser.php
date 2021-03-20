@@ -27,10 +27,12 @@ class DatatablesUser extends LivewireDatatable
                 ->editable()
                 ->label('Name'),
 
-            Column::name('email'),
+            Column::name('email')->editable(),
 
             DateColumn::name('created_at')
-                ->label('Creation Date')
+                ->label('Creation Date'),
+
+            Column::delete()->label('delete')
         ];
     }
 }

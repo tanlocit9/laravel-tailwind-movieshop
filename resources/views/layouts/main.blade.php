@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Baka Movie</title>
+    @hasSection('title')
+    <title>@yield('title') - {{ config('app.name') }}</title>
+    @else
+    <title>{{ config('app.name') }}</title>
+    @endif
 
     <link rel="stylesheet" href="/css/app.css">
     <script src="https://use.fontawesome.com/692bdfc97d.js"></script>

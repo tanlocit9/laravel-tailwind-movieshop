@@ -49,7 +49,10 @@ class User extends Authenticatable
         return $this->belongsTo(Role::class);
     }
     public function ratings(){
-        return $this->belongsToMany(Rating::class);
+        return $this->belongsToMany(Rating::class,'ratings')->withPivot(['is_main']);
+    }
+    public function avg_rate(){
+        return $this->ratings()->avg('star');
     }
     // public function admins(){
     //     return $this->roles()->where('role_name','admin');

@@ -19,7 +19,7 @@ class Ratings extends Migration
             $table->float('star');
             $table->timestamps();
 
-            $table->primary(array('movie_id', 'user_id'));
+            // $table->primary(array('movie_id', 'user_id'));
         });
     }
 
@@ -30,6 +30,6 @@ class Ratings extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('movie_user');
+        Schema::dropIfExists('ratings');
     }
 }

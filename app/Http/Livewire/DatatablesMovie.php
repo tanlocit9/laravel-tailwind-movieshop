@@ -12,10 +12,7 @@ use Mediconesystems\LivewireDatatables\Http\Livewire\LivewireDatatable;
 
 class DatatablesMovie extends LivewireDatatable
 {
-    public function builder()
-    {
-        return Movie::query();
-    }
+    public $model = Movie::class;
 
     public function columns()
     {
@@ -35,10 +32,10 @@ class DatatablesMovie extends LivewireDatatable
 
             NumberColumn::name('age_limit')->label('Age limit'),
 
-            // NumberColumn::name('ratings.star:avg')->filterable()->label('Average Rated'),
             Column::callback(['id'],function($id){
                 return round(Rating::where('movie_id',$id)->avg('star'),1);
             })->label('Average rated'),
+            Column::delete('id')->label('delete')
         ];
     }
 }
