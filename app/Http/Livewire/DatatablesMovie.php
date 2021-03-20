@@ -3,7 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\Movie;
-use App\Models\Ratings;
+use App\Models\Rating;
 use Mediconesystems\LivewireDatatables\Column;
 use Mediconesystems\LivewireDatatables\TimeColumn;
 use Mediconesystems\LivewireDatatables\NumberColumn;
@@ -20,7 +20,7 @@ class DatatablesMovie extends LivewireDatatable
     public function columns()
     {
         return [
-            NumberColumn::name('id')->label('ID')->linkTo('movies'),
+            NumberColumn::name('id')->label('ID')->linkTo('movies')->defaultSort('asc'),
 
             Column::name('title')
                     ->editable()
@@ -36,6 +36,9 @@ class DatatablesMovie extends LivewireDatatable
             NumberColumn::name('age_limit')->label('Age limit'),
 
             // NumberColumn::name('ratings.star:avg')->filterable()->label('Average Rated'),
+            NumberColumn::callback(['id'],function($id){
+                return round(Rating::where('movie_id',$id)->avg('star'),1);
+            })->label('Average rated'),
         ];
     }
 }
