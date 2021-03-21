@@ -12,7 +12,10 @@ use Mediconesystems\LivewireDatatables\NumberColumn;
 class DatatablesMovieGenre extends LivewireDatatable
 {
     public $model = Movie::class;
-
+    public function builder()
+    {
+        return Movie::with(['main_genre','sub_genre','genres']);
+    }
     public function columns()
     {
         return [
