@@ -11,7 +11,10 @@
                     <h1 class="font-extrabold text-lg">Movies - Genres</h1>
                     @include('components.modal',['action'=>'Modify','title'=>$title])
                 </div>
-                <table class="text-left w-full mt-5 ">
+                <div>
+                    <livewire:datatables-movie-genre searchable="title" exportable/>
+                </div>
+                {{-- <table class="text-left w-full mt-5 ">
                     <thead>
                         <tr>
                             <th>title</th>
@@ -45,7 +48,7 @@
                 </table>
                 <div>
                     {{$movies->links()}}
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>

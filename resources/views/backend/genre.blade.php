@@ -11,7 +11,8 @@
                     <h1 class="font-extrabold text-lg">Genres available</h1>
                     @include('components.modal',['action'=>'Add','title'=>$title])
                 </div>
-                <table class="text-left w-full mt-5 ">
+                <livewire:datatables-genre searchable="genre_name" exportable/>
+                {{-- <table class="text-left w-full mt-5 ">
                     <thead>
                         <tr>
                             <th>Genre name</th>
@@ -31,7 +32,7 @@
                 </table>
                 <div>
                     {{$genres->links()}}
-                </div>
+                </div> --}}
             </div>
         </div>
 

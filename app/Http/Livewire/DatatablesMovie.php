@@ -35,7 +35,7 @@ class DatatablesMovie extends LivewireDatatable
             Column::callback(['id'],function($id){
                 return round(Rating::where('movie_id',$id)->avg('star'),1);
             })->label('Average rated'),
-            Column::delete('id')->label('delete')
+            Column::delete()->label('delete')
         ];
     }
 }

@@ -46,4 +46,11 @@ class Movie extends Model
     public function sub_actor(){
         return $this->actors()->wherePivot('role_id',4);
     }
+    public function scopeSelectGroupedSubGenres($query, $alias)
+    {
+        $query->addSelect([
+            $alias => Movie::with('genres')::selectRaw('GROUP_CONCAT(genre_name SEPARATOR " | ")')->where('movie_id','id')
+
+        ]);
+    }
 }
