@@ -11,7 +11,8 @@
                     <h1 class="font-extrabold text-lg">actors info</h1>
                     @include('components.modal',['action'=>'Add','title'=>$title])
                 </div>
-                <table class="text-left w-full mt-5 ">
+                <livewire:datatables-actor exportable/>
+                {{-- <table class="text-left w-full mt-5 ">
                     <thead>
                         <tr>
                             <th>Name</th>
@@ -33,7 +34,7 @@
                 </table>
                 <div>
                     {{$actors->links()}}
-                </div>
+                </div> --}}
             </div>
         </div>
         <div class="grid grid-cols-1 gap-5">

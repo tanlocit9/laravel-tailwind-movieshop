@@ -11,7 +11,7 @@
                     <h1 class="font-extrabold text-lg">Theaters info</h1>
                     @include('components.modal',['action'=>'Add','title'=>$title])
                 </div>
-                <livewire:datatables-theater search="name" exportable/>
+                <livewire:datatables-theater  exportable/>
                 {{-- <table class="text-left w-full mt-5">
                     <thead>
                         <tr>
