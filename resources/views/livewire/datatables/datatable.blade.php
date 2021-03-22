@@ -15,23 +15,21 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                             </svg>
                         </div>
-                        <input wire:model.debounce.500ms="search" class="form-input block bg-gray-50 focus:outline-none focus:shadow-outline focus:border-gray-900 focus:bg-white w-full rounded-md pl-10 transition ease-in-out duration-150 sm:text-sm sm:leading-5" placeholder="Search in {{ $this->searchableColumns()->map->label->join(', ') }}" />
+                        <input wire:model.debounce.500ms="search" class="form-input block bg-gray-50 focus:outline-none focus:shadow-outline shadow-md focus:border-gray-900 focus:bg-white w-full rounded-md pl-10 transition ease-in-out duration-150 sm:text-sm sm:leading-5" placeholder="Search in {{ $this->searchableColumns()->map->label->join(', ') }}" />
                         <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
-                            <button wire:click="$set('search', null)" class="text-gray-300 hover:text-red-600 focus:outline-none">
+                            <button wire:click="$set('search', null)" class="text-gray-800 hover:text-red-600 focus:outline-none">
                                 <x-icons.x-circle class="h-5 w-5 stroke-current" />
                             </button>
                         </div>
                     </div>
                 </div>
                 @endif
-                <div class="w-96 flex rounded-lg shadow-sm">
-                    <div class="relative flex-grow focus-within:z-10 h-6 w-full">
-                        {{-- <div class="md:w-2/3">
-                            <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="perPage">
-                                Per page
+                <div class="w-60 flex rounded-lg shadow-sm h-6">
+                    <div class="relative flex-grow focus-within:z-10 w-full">
+                        <div class="ml-5 shadow-md outline-none rounded-md">
+                            <label class="inline text-nomal text-gray-800 font-bold md:text-right mb-1 md:mb-0 pr-4" for="perPage">
+                                Per page:
                             </label>
-                        </div> --}}
-                        <div class="md:w-1/3">
                             <select id="perPage" name="perPage" class="form-select inline pl-3 pr-10 text-base leading-6 border-gray-900 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5" wire:model="perPage">
                                 <option value="10">10</option>
                                 <option value="25">25</option>
@@ -43,7 +41,7 @@
                     </div>
                 </div>
             </div>
-
+            <!-- Export -->
             <div class="flex items-center space-x-1">
                 <x-icons.cog wire:loading class="h-9 w-9 animate-spin text-gray-400" />
 
@@ -73,7 +71,7 @@
         </div>
         @endif
 
-        <div class="rounded-lg shadow-lg bg-white max-w-screen overflow-x-scroll">
+        <div class="rounded-lg shadow-xl bg-white max-w-screen overflow-x-scroll">
             <div class="rounded-lg @unless($this->hidePagination) rounded-b-none @endif">
                 <div class="table align-middle min-w-full">
                     @unless($this->hideHeader)
