@@ -5,9 +5,8 @@ namespace App\Http\Livewire;
 use App\Models\Movie;
 use Mediconesystems\LivewireDatatables\Column;
 use Mediconesystems\LivewireDatatables\Http\Livewire\LivewireDatatable;
-use Mediconesystems\LivewireDatatables\NumberColumn;
 
-class DatatablesMovieGenre extends LivewireDatatable
+class DatatablesMovieActor extends LivewireDatatable
 {
     public $model = Movie::class;
     public function builder()
@@ -17,20 +16,23 @@ class DatatablesMovieGenre extends LivewireDatatable
     public function columns()
     {
         return [
-            NumberColumn::name('id')->label('ID')->defaultSort('asc'),
-
             Column::name('title')
                     ->editable()
                     ->label('Title')
                     ->linkTo('movies')
                     ->searchable(),
-
             Column::callback(['id'],function($id){
-                return Movie::find($id)->main_genre->first()->genre_name;
-            })->label('Main genre'),
+                if(Movie::find($id)->main_actor()->count())
+                    return Movie::find($id)->main_actor()->pluck('full_name')->join(', ').'.';
+                else
+                    return "No data.";
+            })->label('Directors')->searchable(),
             Column::callback(['id','title'],function($id){
-                return Movie::find($id)->sub_genre()->pluck('genre_name')->join(', ').'.';
-            })->label('Sub genres'),
+                if(Movie::find($id)->sub_actor()->count())
+                    return Movie::find($id)->sub_actor()->pluck('full_name')->join(', ').'.';
+                else
+                    return "No data.";
+            })->label('Casts')->searchable(),
             Column::delete()->label('delete')
         ];
     }
