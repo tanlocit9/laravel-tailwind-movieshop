@@ -42,6 +42,9 @@ Route::prefix('admin')->group(function () {
     Route::post('/theater_add','TheaterController@store')->name('theater_add');
     Route::post('/genre_add','GenreController@store')->name('genre_add');
     Route::post('/genre_modify','MovieController@updateGenres')->name('genre_modify');
+
+    //view only
+    Route::get('/movie/edit/modal/genres/{id}','MovieController@editModalGenres')->name('modal_movie_edit_genres');
 });
 
 

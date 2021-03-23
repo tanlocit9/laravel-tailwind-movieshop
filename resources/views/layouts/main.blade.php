@@ -11,6 +11,7 @@
     @endif
 
     <link rel="stylesheet" href="/css/app.css">
+
     <script src="https://use.fontawesome.com/692bdfc97d.js"></script>
     @livewireStyles
 </head>

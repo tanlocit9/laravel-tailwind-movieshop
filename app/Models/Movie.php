@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use PDO;
+
 class Movie extends Model
 {
     use HasFactory;
@@ -46,11 +48,13 @@ class Movie extends Model
     public function sub_actor(){
         return $this->actors()->wherePivot('role_id',4);
     }
-    public function scopeSelectGroupedSubGenres($query, $alias)
+    public function scopeFilterGenres($query, $value)
     {
-        $query->addSelect([
-            $alias => Movie::with('genres')::selectRaw('GROUP_CONCAT(genre_name SEPARATOR " | ")')->where('movie_id','id')
-
-        ]);
+        $query->whereHas('genre_movie', function ($query) use ($value) {
+            $query->where('genre_movie.is_main', $value);
+        });
+    }
+    public function type(){
+        return $this->belongsTo(Type::class);
     }
 }

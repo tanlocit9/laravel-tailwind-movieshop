@@ -119,32 +119,11 @@ class MovieController extends Controller
      * @param  \App\Models\Movie  $movie
      * @return \Illuminate\Http\Response
      */
-    public function edit(Movie $movie)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Movie  $movie
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Movie $movie)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Movie  $movie
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Movie $movie)
-    {
-        //
+    public function editModalGenres($id){
+        $movie = Movie::find($id);
+        $title = 'Edit genres of movie '.$movie->title;
+        $action = 'edit';
+        return view('livewire.modal',compact('movie','title','action'));
     }
 
 }

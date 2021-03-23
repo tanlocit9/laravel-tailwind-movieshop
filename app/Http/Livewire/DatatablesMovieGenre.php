@@ -12,7 +12,7 @@ class DatatablesMovieGenre extends LivewireDatatable
     public $model = Movie::class;
     public function builder()
     {
-        return Movie::with(['main_genre','sub_genre','genres']);
+        return Movie::with(['genres']);
     }
     public function columns()
     {
@@ -24,14 +24,17 @@ class DatatablesMovieGenre extends LivewireDatatable
                     ->label('Title')
                     ->linkTo('movies')
                     ->searchable(),
-
-            Column::callback(['id'],function($id){
-                return Movie::find($id)->main_genre->first()->genre_name;
-            })->label('Main genre'),
-            Column::callback(['id','title'],function($id){
-                return Movie::find($id)->sub_genre()->pluck('genre_name')->join(', ').'.';
-            })->label('Sub genres'),
-            Column::delete()->label('delete')
+            Column::name('genres.genre_name')
+                    ->label('Genres'),
+            // Column::callback(['id'],function($id){
+            //     return Movie::find($id)->main_genre->first()->genre_name;
+            // })->label('Main genre'),
+            // Column::callback(['id','title'],function($id){
+            //     return Movie::find($id)->sub_genre()->pluck('genre_name')->join(', ').'.';
+            // })->label('Sub genres'),
+            Column::callback(['id'], function ($id) {
+                return view('livewire.actions.action-edit-genres', ['id' => $id]);
+            })
         ];
     }
 }
