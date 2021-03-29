@@ -22,10 +22,9 @@ class DatatablesMovieGenre extends LivewireDatatable
             Column::name('title')
                     ->editable()
                     ->label('Title')
-                    ->linkTo('movies')
                     ->searchable(),
-            Column::name('genres.genre_name')
-                    ->label('Genres'),
+            // Column::name('genres.genre_name')
+            //         ->label('Genres'),
             // Column::callback(['id'],function($id){
             //     return Movie::find($id)->main_genre->first()->genre_name;
             // })->label('Main genre'),

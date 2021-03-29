@@ -11,7 +11,7 @@ class SearchBar extends Component
 
     public function render()
     {
-        $movies = Movie::where('title','like','%' .$this->search. '%')->get();
+        $movies = Movie::where('title','like','%' .$this->search. '%')->limit(5)->get();
         return view('livewire.search-bar',compact('movies'));
     }
 }

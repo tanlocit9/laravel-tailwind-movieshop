@@ -9,7 +9,6 @@
             <div class="card-body">
                 <div class="flex flex-row justify-between items-center">
                     <h1 class="font-extrabold text-lg">Users</h1>
-                    @include('components.modal',['action'=>'Add','title'=>$title])
                 </div>
                 <div id="datatable" class="z-0">
                     <livewire:datatables-user exportable />

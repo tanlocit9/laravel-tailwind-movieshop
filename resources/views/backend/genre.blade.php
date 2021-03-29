@@ -9,7 +9,7 @@
             <div class="card-body">
                 <div class="flex flex-row justify-between items-center">
                     <h1 class="font-extrabold text-lg">Genres available</h1>
-                    @include('components.modal',['action'=>'Add','title'=>$title])
+                    {{-- @include('components.modal',['action'=>'Add','title'=>$title]) --}}
                 </div>
                 <livewire:datatables-genre searchable="genre_name" exportable/>
                 {{-- <table class="text-left w-full mt-5 ">

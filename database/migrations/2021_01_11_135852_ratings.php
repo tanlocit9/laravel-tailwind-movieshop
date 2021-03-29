@@ -19,7 +19,7 @@ class Ratings extends Migration
             $table->float('star');
             $table->timestamps();
 
-            // $table->primary(array('movie_id', 'user_id'));
+            $table->primary(array('movie_id', 'user_id'));
         });
     }
 

@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use Exception;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth as FacadesAuth;
-use Illuminate\Support\Facades\Hash;
 use Laravel\Socialite\Facades\Socialite as FacadesSocialite;
 
 class SocialiteController extends Controller
@@ -20,7 +19,6 @@ class SocialiteController extends Controller
     {
         return FacadesSocialite::driver($provider)->redirect();
     }
-
     /**
      * Create a new controller instance.
      *
@@ -31,7 +29,6 @@ class SocialiteController extends Controller
         try {
             $user = FacadesSocialite::driver($provider)->user();
             $finduser = User::where('email',$user->email)->first();
-
             if($finduser){
                 if($finduser->social_type!=$provider)
                     return redirect('/login')->with('auth_msg','This account email have been used in '.$finduser->social_type.' login.');
@@ -50,9 +47,7 @@ class SocialiteController extends Controller
                     'social_type'=> $provider,
                     'password' => encrypt('my-google')
                 ]);
-
                 FacadesAuth::login($newUser);
-
                 return redirect('/');
             }
 

@@ -24,7 +24,7 @@ class CreateUsersTable extends Migration
             $table->timestamps();
             $table->integer('log_count')->default(0);
 
-            $table->foreignId('role_id')->constrained('roles')->onDelete('cascade');
+            $table->foreignId('role_id')->default(2)->constrained('roles')->onDelete('cascade');
         });
         $user = User::create([
             'name' => 'Loc',

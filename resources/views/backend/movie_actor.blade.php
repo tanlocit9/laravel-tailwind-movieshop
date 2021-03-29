@@ -9,7 +9,7 @@
             <div class="card-body">
                 <div class="flex flex-row justify-between items-center">
                     <h1 class="font-extrabold text-lg">Movies - Genres</h1>
-                    @include('components.modal',['action'=>'Modify','title'=>$title])
+                    {{-- @include('components.modal',['action'=>'Modify','title'=>$title]) --}}
                 </div>
                 <livewire:datatables-movie-actor exportable/>
                 {{-- <table class="text-left w-full mt-5 ">
