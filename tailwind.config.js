@@ -20,7 +20,8 @@ module.exports = {
     variants: {
         padding: ['hover'],
         transitions: ['responsive', 'before', 'after', 'hover', 'focus'],
-        lineClamp:['responsive', 'hover']
+        lineClamp:['responsive', 'hover'],
+        cursor: ['hover'],
     },
     plugins: [
         require('@tailwindcss/line-clamp'),

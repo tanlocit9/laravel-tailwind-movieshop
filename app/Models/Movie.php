@@ -4,12 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use PDO;
 
 class Movie extends Model
 {
     use HasFactory;
-
     protected $fillable = [
         'title',
         'description',
@@ -47,12 +45,6 @@ class Movie extends Model
     }
     public function sub_actor(){
         return $this->actors()->wherePivot('role_id',4);
-    }
-    public function scopeFilterGenres($query, $value)
-    {
-        $query->whereHas('genre_movie', function ($query) use ($value) {
-            $query->where('genre_movie.is_main', $value);
-        });
     }
     public function type(){
         return $this->belongsTo(Type::class);

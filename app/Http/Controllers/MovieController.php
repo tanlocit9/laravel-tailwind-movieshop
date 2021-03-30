@@ -123,7 +123,7 @@ class MovieController extends Controller
         $movie = Movie::find($id);
         $title = 'Edit genres of movie '.$movie->title;
         $action = 'edit';
-        return view('livewire.modal',compact('movie','title','action'));
+        dd($movie);
     }
 
 }
