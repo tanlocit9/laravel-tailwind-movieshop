@@ -23,7 +23,7 @@
                         <div class="flex items-center space-x-4">
                             <div class="flex flex-col w-1/2">
                                 <label class="leading-relaxed" for="main_genre">Main genre</label>
-                                <select wire:model="main_genre_id" name="main_genre" id="main_genre" class="input-text">
+                                <select wire:model="main_genre_id" wire:change='removeFocus' name="main_genre" id="main_genre" class="input-text">
                                     @foreach($genres as $genre)
                                         <option value="{{$genre->id}}"
                                             {{ strval($genre->id) == strval($main_genre_id)  ? 'selected' : '' }}
@@ -37,6 +37,9 @@
                                     <i class="fa fa-pencil" aria-hidden="true"></i>
                                 </button>
                             </div>
+                            <div wire:loading wire:target="main_genre_id">
+                                Updating main genre
+                            </div>
                         </div>
 
                         <div class="flex items-center space-x-4">
@@ -49,6 +52,7 @@
                                     @endforeach
                                 </select>
                             </div>
+
                             <div class="mt-6 flex flex-col w-1/4">
                                 <button wire:click="addSubGenre" class="focus:outline-none inline-flex items-center justify-center w-15 h-10 mr-2 text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800">
                                     <span class="pr-2">Add</span>
@@ -104,4 +108,6 @@
             <!--/Dialog -->
         </div><!-- /Overlay -->
     </section>
+
 </div>
+

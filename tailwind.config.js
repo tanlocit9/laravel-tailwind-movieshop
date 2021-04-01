@@ -11,17 +11,27 @@ module.exports = {
         },
         extend: {
             spacing: {
-            '72': '18rem',
-            '84': '21rem',
-            '96': '24rem',
+                '72': '18rem',
+                '84': '21rem',
+                '96': '24rem',
             },
+            inset: {
+                '2':'0.5rem',
+                '4':'1rem',
+                '8':'1.5rem',
+            }
         },
+
     },
     variants: {
         padding: ['hover'],
         transitions: ['responsive', 'before', 'after', 'hover', 'focus'],
         lineClamp:['responsive', 'hover'],
         cursor: ['hover'],
+        inset: ['hover'],
+        visibility: ['hover'],
+        zIndex: ['responsive', 'hover', 'focus'],
+        display: ['responsive', 'group-hover', 'group-focus'],
     },
     plugins: [
         require('@tailwindcss/line-clamp'),

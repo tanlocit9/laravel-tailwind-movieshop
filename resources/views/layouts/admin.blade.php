@@ -207,6 +207,11 @@
 
 <!-- end script -->
 
+<script>
+    livewire.on('removeFocus', function () {
+        $("#main_genre").blur();
+    });
 
+</script>
 </body>
 </html>
