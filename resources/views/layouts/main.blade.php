@@ -16,7 +16,7 @@
     @livewireStyles
 </head>
 <body class="font-sans bg-gray-900 text-white ml-5">
-    <section class="border-b border-gray-800 ">
+    <div class="border-b border-gray-800 ">
         <div class="container mx-auto flex flex-row md:flex-col items-center justify-between px-4 py-6">
             <ul class="flex flex-row md:flex-col items-center uppercase ">
                 <li>
@@ -26,11 +26,21 @@
                 </li>
                 @livewire('search-bar')
             </ul>
-            @include('layouts.auth_login')
+            @include('layouts.frontend.auth_login')
         </div>
-    </section>
-    @include('layouts.navigator')
-    @yield('content')
+    </div>
+    <div>
+        @include('layouts.frontend.navigator')
+    </div>
+    <div class="mb-auto h-screen">
+    {{-- @yield('content') --}}
+
+    </div>
+
     @livewireScripts
 </body>
+<footer>
+    @include('layouts.frontend.footer')
+</footer>
+
 </html>
