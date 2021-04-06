@@ -1,11 +1,11 @@
 <?php
 
-use App\Models\Type;
+use App\Models\RoomStatus;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Types extends Migration
+class RoomStatuses extends Migration
 {
     /**
      * Run the migrations.
@@ -14,16 +14,16 @@ class Types extends Migration
      */
     public function up()
     {
-        Schema::create('types', function (Blueprint $table) {
+        Schema::create('room_statuses', function (Blueprint $table) {
             $table->id();
-            $table->string('type');
+            $table->string('status');
         });
-        $data =[
-            ['type'=>'movie'],
-            ['type'=>'tvshow'],
+        $data=[
+            ['status'=>'empty'],
+            ['status'=>'spare'],
+            ['status'=>'full'],
         ];
-        Type::insert($data);
-
+        RoomStatus::insert($data);
     }
 
     /**
@@ -33,6 +33,6 @@ class Types extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('types');
+        Schema::dropIfExists('room_statuses');
     }
 }

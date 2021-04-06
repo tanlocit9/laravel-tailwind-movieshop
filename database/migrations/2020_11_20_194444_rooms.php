@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class MovieTheaters extends Migration
+class Rooms extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,13 @@ class MovieTheaters extends Migration
      */
     public function up()
     {
-        Schema::create('movie_theater', function (Blueprint $table) {
+        Schema::create('rooms', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->integer('slot')->default(60);
+
             $table->foreignId('theater_id')->constrained('theaters')->onDelete('cascade');
-            $table->foreignId('movie_id')->constrained('movies')->onDelete('cascade');
-            $table->timestamps();
+            $table->foreignId('status_id')->constrained('room_statuses')->onDelete('cascade');
         });
     }
 
@@ -27,6 +30,6 @@ class MovieTheaters extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('movie_theater');
+        Schema::dropIfExists('rooms');
     }
 }

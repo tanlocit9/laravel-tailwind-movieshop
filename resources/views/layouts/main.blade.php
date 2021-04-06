@@ -15,7 +15,7 @@
     <script src="https://use.fontawesome.com/692bdfc97d.js"></script>
     @livewireStyles
 </head>
-<body class="font-sans bg-gray-900 text-white ml-5">
+<body class="font-sans bg-gray-900 text-white ml-5 flex flex-col h-screen">
     <div class="border-b border-gray-800 ">
         <div class="container mx-auto flex flex-row md:flex-col items-center justify-between px-4 py-6">
             <ul class="flex flex-row md:flex-col items-center uppercase ">
@@ -32,8 +32,8 @@
     <div>
         @include('layouts.frontend.navigator')
     </div>
-    <div class="mb-auto h-screen">
-    {{-- @yield('content') --}}
+    <div class="mb-8 flex-grow">
+    @yield('content')
 
     </div>
 

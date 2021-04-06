@@ -1,0 +1,40 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class Sessions extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('sessions', function (Blueprint $table) {
+            $table->id();
+            // $table->foreignId('movie_id')->constrained('movies')->onDelete('cascade');
+            // $table->foreignId('theater_id')->constrained('theaters')->onDelete('cascade');
+
+            $table->time('time_start');
+            $table->integer('slot_remain')->default(40);
+
+            $table->foreignId('price_id')->constrained('prices')->onDelete('cascade');
+            // $table->foreignId('room_id')->constrained('rooms')->onDelete('cascade');
+            $table->foreignId('schedule_id')->constrained('schedules')->onDelete('cascade');
+            // $table->primary(array('id','movie_id', 'theater_id', 'room_id'));
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('sessions');
+    }
+}

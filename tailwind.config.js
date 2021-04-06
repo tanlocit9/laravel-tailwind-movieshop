@@ -32,6 +32,7 @@ module.exports = {
         visibility: ['hover'],
         zIndex: ['responsive', 'hover', 'focus'],
         display: ['responsive', 'group-hover', 'group-focus'],
+        borderWidth: ['hover'],
     },
     plugins: [
         require('@tailwindcss/line-clamp'),

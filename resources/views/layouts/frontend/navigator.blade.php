@@ -1,7 +1,7 @@
 <nav class="border-b border-gray-800 mx-auto items-center px-4 py-6 ">
     <ul class="flex flex-row md:flex-col items-center uppercase justify-between">
         <li class="ml-16 md:mt-3 md:ml-6 ">
-            <a href="#" class="hover:text-orange-500">Buy ticket</a>
+            <a href="{{route('showtime')}}" class="hover:text-orange-500">Buy ticket</a>
         </li>
         <li class="ml-6 md:mt-3 relative group">
             <span class="hover:text-orange-500 cursor-pointer">

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Tickets extends Migration
+class Schedules extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class Tickets extends Migration
      */
     public function up()
     {
-        Schema::create('tickets', function (Blueprint $table) {
+        Schema::create('schedules', function (Blueprint $table) {
             $table->id();
-            $table->string('ticket_name');
-            $table->string('ticket_type');
-            $table->timestamps();
+            $table->date('date');
+            $table->foreignId('theater_id')->constrained('theaters')->onDelete('cascade');
+            $table->foreignId('movie_id')->constrained('movies')->onDelete('cascade');
         });
     }
 
@@ -28,7 +28,6 @@ class Tickets extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('screenings');
-        Schema::dropIfExists('tickets');
+        Schema::dropIfExists('schedules');
     }
 }

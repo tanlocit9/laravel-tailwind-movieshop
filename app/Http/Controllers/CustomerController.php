@@ -8,7 +8,7 @@ class CustomerController extends Controller
 {
     public function index()
     {
-        $movies = Movie::all();
+        $movies = Movie::limit(8)->get();
         return view('welcome',compact('movies'));
     }
 }

@@ -29,7 +29,6 @@ class MovieFactory extends Factory
             'age_limit'=>$this->faker->numberBetween(8,18),
             'poster'=>'TTM_poster.jpg',
             'country_id'=>$this->faker->numberBetween(1,150),
-            'type_id'=>1
         ];
     }
 }

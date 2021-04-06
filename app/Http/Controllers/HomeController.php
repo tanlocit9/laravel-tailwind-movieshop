@@ -7,6 +7,7 @@ use App\Models\Country;
 use App\Models\Movie;
 use App\Models\Theater;
 use App\Models\Genre;
+use App\Models\Schedule;
 use App\Models\User;
 
 class HomeController extends Controller
@@ -76,6 +77,11 @@ class HomeController extends Controller
         $actors = Actor::all();
         $title = 'actor';
         return view('backend.movie_actor',compact('movies','title','actors'));
+    }
+    public function schedules()
+    {
+        $schedules = Schedule::all();
+        return view('backend.schedule',compact('schedules'));
     }
 
 }

@@ -1,10 +1,11 @@
 <?php
 
+use App\Models\Price;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Rooms extends Migration
+class TicketPrices extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +14,16 @@ class Rooms extends Migration
      */
     public function up()
     {
-        Schema::create('rooms', function (Blueprint $table) {
+        Schema::create('prices', function (Blueprint $table) {
             $table->id();
-            $table->string('room_name');
-            $table->integer('slot_max');
-
-            $table->foreignId('theater_id')->constrained('theaters')->onDelete('cascade');
+            $table->string('type');
+            $table->integer('price');
         });
+        $data =[
+            ['type'=>'2D','price'=>'45000'],
+            ['type'=>'3D','price'=>'55000'],
+        ];
+        Price::insert($data);
     }
 
     /**
@@ -29,6 +33,6 @@ class Rooms extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rooms');
+        Schema::dropIfExists('prices');
     }
 }

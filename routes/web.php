@@ -23,8 +23,9 @@ Route::prefix('auth')->group(function () {
 });
 
 Auth::routes();
-Route::prefix('')->group(function () {
+Route::group([],function () {
     Route::get('/','CustomerController@index')->name('home_page');
+    Route::get('/showtime','SessionController@index')->name('showtime');
     Route::get('/movie/{movie}','MovieController@show')->name('show_movie');
 });
 
@@ -37,6 +38,7 @@ Route::prefix('admin')->group(function () {
     Route::get('/theater','HomeController@theaters')->name('manage_theater');
     Route::get('/actor','HomeController@actors')->name('manage_actor');
     Route::get('/movie_actor','HomeController@movies_actors')->name('manage_movie_actor');
+    Route::get('/schedule','HomeController@schedules')->name('manage_schedule');
 
     Route::post('/user_add','UserController@store')->name('user_add');
     Route::post('/movie_add','MovieController@store')->name('movie_add');
@@ -45,7 +47,6 @@ Route::prefix('admin')->group(function () {
     Route::post('/genre_modify','MovieController@updateGenres')->name('genre_modify');
 
     //view only
-    Route::get('/movie/edit/modal/genres/{id}','MovieController@editModalGenres')->name('modal_movie_edit_genres');
 });
 
 

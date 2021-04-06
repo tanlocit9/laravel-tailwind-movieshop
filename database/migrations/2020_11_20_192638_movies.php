@@ -24,7 +24,6 @@ class Movies extends Migration
             $table->string('poster');
 
             $table->foreignId('country_id')->constrained('countries')->onDelete('cascade');
-            $table->foreignId('type_id')->constrained('types')->onDelete('cascade');
             $table->timestamps();
         });
         // $now = date('Y-m-d H:i:s');

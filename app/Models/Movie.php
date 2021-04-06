@@ -16,7 +16,6 @@ class Movie extends Model
         'release_date',
         'poster',
         'country_id',
-        'type_id'
     ];
 
     public function actors(){
@@ -27,6 +26,9 @@ class Movie extends Model
     }
     public function ratings(){
         return $this->belongsToMany(Rating::class,'ratings','movie_id','user_id');
+    }
+    public function schedules(){
+        return $this->belongsToMany(Theater::class,'schedules');
     }
     public function avg_rate(){
         return $this->ratings()->avg('star');
@@ -46,7 +48,5 @@ class Movie extends Model
     public function sub_actor(){
         return $this->actors()->wherePivot('role_id',4);
     }
-    public function type(){
-        return $this->belongsTo(Type::class);
-    }
+
 }

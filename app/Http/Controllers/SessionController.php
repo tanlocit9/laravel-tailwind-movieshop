@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ShowTime;
 use Illuminate\Http\Request;
 
-class ShowTimeController extends Controller
+class SessionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +13,7 @@ class ShowTimeController extends Controller
      */
     public function index()
     {
-        //
+        return view('frontend.showtime');
     }
 
     /**
@@ -41,10 +40,10 @@ class ShowTimeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\ShowTime  $showTime
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(ShowTime $showTime)
+    public function show($id)
     {
         //
     }
@@ -52,10 +51,10 @@ class ShowTimeController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\ShowTime  $showTime
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(ShowTime $showTime)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +63,10 @@ class ShowTimeController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\ShowTime  $showTime
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ShowTime $showTime)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +74,10 @@ class ShowTimeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\ShowTime  $showTime
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ShowTime $showTime)
+    public function destroy($id)
     {
         //
     }
