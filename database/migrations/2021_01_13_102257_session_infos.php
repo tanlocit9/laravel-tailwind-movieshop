@@ -15,12 +15,12 @@ class SessionInfos extends Migration
     public function up()
     {
         Schema::create('session_infos', function (Blueprint $table) {
-            $table->id();
-            $table->timestamp("time_start")->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->timestamp("time_end")->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->time("time_total")->default(0);
+            // $table->id();
+            // $table->timestamp("time_start")->default(DB::raw('CURRENT_TIMESTAMP'));
+            // $table->timestamp("time_end")->default(DB::raw('CURRENT_TIMESTAMP'));
+            // $table->time("time_total")->default(0001-01-01);
 
-            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
+            // $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
         });
     }
 
