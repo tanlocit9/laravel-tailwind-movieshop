@@ -19,6 +19,10 @@ module.exports = {
                 '2':'0.5rem',
                 '4':'1rem',
                 '8':'1.5rem',
+            },
+            outline: {
+                'dash-gray': '2px solid #4B5563',
+                'dash-black': '2px solid #000000',
             }
         },
 

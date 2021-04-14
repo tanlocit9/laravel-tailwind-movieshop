@@ -1,5 +1,5 @@
 [x-cloak] {
-  display: none;
+  display: none !important;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -12502,6 +12502,16 @@ video {
   outline-offset: 2px;
 }
 
+.outline-dash-gray {
+  outline: 2px solid #4B5563;
+  outline-offset: 0;
+}
+
+.outline-dash-black {
+  outline: 2px solid #000000;
+  outline-offset: 0;
+}
+
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -12515,6 +12525,16 @@ video {
 .focus\:outline-black:focus {
   outline: 2px dotted black;
   outline-offset: 2px;
+}
+
+.focus\:outline-dash-gray:focus {
+  outline: 2px solid #4B5563;
+  outline-offset: 0;
+}
+
+.focus\:outline-dash-black:focus {
+  outline: 2px solid #000000;
+  outline-offset: 0;
 }
 
 .overflow-auto {
@@ -27338,6 +27358,42 @@ video {
   outline-offset: 2px
 }
 
+.input-login{
+  padding-left: 2rem;
+  outline: 2px solid #4B5563;
+  outline-offset: 0;
+  width: 100%;
+  height: 2rem;
+}
+
+.input-login:focus{
+  outline: 2px solid #000000;
+  outline-offset: 0;
+}
+
+.btn-login{
+  font-size: 1.125rem;
+  font-weight: 700;
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+  --bg-opacity: 1;
+  background-color: #dd6b20;
+  background-color: rgba(221, 107, 32, var(--bg-opacity));
+  text-align: center;
+  width: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem
+}
+
+.btn-login:focus{
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5)
+}
+
 @media (max-width: 639px) {
   .sm\:container {
     width: 100%;
@@ -38995,6 +39051,16 @@ video {
     outline-offset: 2px;
   }
 
+  .sm\:outline-dash-gray {
+    outline: 2px solid #4B5563;
+    outline-offset: 0;
+  }
+
+  .sm\:outline-dash-black {
+    outline: 2px solid #000000;
+    outline-offset: 0;
+  }
+
   .sm\:focus\:outline-none:focus {
     outline: 2px solid transparent;
     outline-offset: 2px;
@@ -39008,6 +39074,16 @@ video {
   .sm\:focus\:outline-black:focus {
     outline: 2px dotted black;
     outline-offset: 2px;
+  }
+
+  .sm\:focus\:outline-dash-gray:focus {
+    outline: 2px solid #4B5563;
+    outline-offset: 0;
+  }
+
+  .sm\:focus\:outline-dash-black:focus {
+    outline: 2px solid #000000;
+    outline-offset: 0;
   }
 
   .sm\:overflow-auto {
@@ -60527,6 +60603,16 @@ video {
     outline-offset: 2px;
   }
 
+  .md\:outline-dash-gray {
+    outline: 2px solid #4B5563;
+    outline-offset: 0;
+  }
+
+  .md\:outline-dash-black {
+    outline: 2px solid #000000;
+    outline-offset: 0;
+  }
+
   .md\:focus\:outline-none:focus {
     outline: 2px solid transparent;
     outline-offset: 2px;
@@ -60540,6 +60626,16 @@ video {
   .md\:focus\:outline-black:focus {
     outline: 2px dotted black;
     outline-offset: 2px;
+  }
+
+  .md\:focus\:outline-dash-gray:focus {
+    outline: 2px solid #4B5563;
+    outline-offset: 0;
+  }
+
+  .md\:focus\:outline-dash-black:focus {
+    outline: 2px solid #000000;
+    outline-offset: 0;
   }
 
   .md\:overflow-auto {
@@ -82059,6 +82155,16 @@ video {
     outline-offset: 2px;
   }
 
+  .lg\:outline-dash-gray {
+    outline: 2px solid #4B5563;
+    outline-offset: 0;
+  }
+
+  .lg\:outline-dash-black {
+    outline: 2px solid #000000;
+    outline-offset: 0;
+  }
+
   .lg\:focus\:outline-none:focus {
     outline: 2px solid transparent;
     outline-offset: 2px;
@@ -82072,6 +82178,16 @@ video {
   .lg\:focus\:outline-black:focus {
     outline: 2px dotted black;
     outline-offset: 2px;
+  }
+
+  .lg\:focus\:outline-dash-gray:focus {
+    outline: 2px solid #4B5563;
+    outline-offset: 0;
+  }
+
+  .lg\:focus\:outline-dash-black:focus {
+    outline: 2px solid #000000;
+    outline-offset: 0;
   }
 
   .lg\:overflow-auto {
@@ -103591,6 +103707,16 @@ video {
     outline-offset: 2px;
   }
 
+  .xl\:outline-dash-gray {
+    outline: 2px solid #4B5563;
+    outline-offset: 0;
+  }
+
+  .xl\:outline-dash-black {
+    outline: 2px solid #000000;
+    outline-offset: 0;
+  }
+
   .xl\:focus\:outline-none:focus {
     outline: 2px solid transparent;
     outline-offset: 2px;
@@ -103604,6 +103730,16 @@ video {
   .xl\:focus\:outline-black:focus {
     outline: 2px dotted black;
     outline-offset: 2px;
+  }
+
+  .xl\:focus\:outline-dash-gray:focus {
+    outline: 2px solid #4B5563;
+    outline-offset: 0;
+  }
+
+  .xl\:focus\:outline-dash-black:focus {
+    outline: 2px solid #000000;
+    outline-offset: 0;
   }
 
   .xl\:overflow-auto {
@@ -113465,4 +113601,3 @@ video {
             animation-name: backOutRight;
   }
 }
-

@@ -1,6 +1,6 @@
 
 [x-cloak] {
-    display: none;
+    display: none !important;
 }
 @tailwind base;
 
@@ -61,3 +61,15 @@
     @apply border-gray-900 outline-none
 }
 
+.input-login{
+    @apply pl-8 outline-dash-gray w-full h-8;
+}
+.input-login:focus{
+    @apply outline-dash-black;
+}
+.btn-login{
+    @apply text-lg font-bold text-white bg-orange-600 text-center w-full py-2 px-4
+}
+.btn-login:focus{
+    @apply outline-none shadow-outline
+}

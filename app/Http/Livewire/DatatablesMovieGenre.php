@@ -26,12 +26,12 @@ class DatatablesMovieGenre extends LivewireDatatable
                     ->searchable(),
             // Column::name('genres.genre_name')
             //         ->label('Genres'),
-            Column::callback(['id','title'],function($id){
-                return Movie::find($id)->main_genre->first()->genre_name;
-            })->label('Main genre'),
-            Column::callback(['id','type_id'],function($id){
-                return Movie::find($id)->sub_genre()->pluck('genre_name')->join(', ').'.';
-            })->label('Sub genres'),
+            // Column::callback(['id','title'],function($id,$title){
+            //     return Movie::find($id)->main_genre->first()->genre_name;
+            // })->label('Main genre'),
+            // Column::callback(['id','country_id'],function($id,$country_id){
+            //     return Movie::find($id)->sub_genre()->pluck('genre_name')->join(', ').'.';
+            // })->label('Sub genres'),
             Column::callback(['id'], function ($id) {
                 return view('livewire.actions.action-edit-genres', ['id' => $id]);
             })

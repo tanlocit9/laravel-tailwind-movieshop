@@ -7,7 +7,6 @@ use App\Models\Schedule;
 use App\Models\Session;
 use App\Models\Theater;
 use Livewire\Component;
-
 class ShowTime extends Component
 {
     public $tab='byMovie';
@@ -22,7 +21,7 @@ class ShowTime extends Component
     {
         // Hiển thị danh sách phim đang chiếu.
         if($this->tab=='byMovie'){
-            $this->movie_ids=Schedule::all()->pluck('movie_id');
+            $this->movie_ids=Schedule::all()->pluck('movie_id')->take(8);
         }else $this->theater_ids= Schedule::all()->pluck('theater_id');
 
         // Hiển thị rạp nào đang chiếu phim đó.

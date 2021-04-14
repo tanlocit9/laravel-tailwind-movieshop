@@ -28,7 +28,7 @@
                     <h1 class="font-extrabold text-lg">Movies - Genres</h1>
                 </div>
                 <div>
-                    <livewire:form-movie-edit-genre>
+                    <livewire:form-movie-edit-genre >
                 </div>
             </div>
         </div>
