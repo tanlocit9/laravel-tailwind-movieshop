@@ -3,7 +3,7 @@
         {{-- <input class="text-red-500" wire:model="something"> --}}
         @guest
             <li class="nav-item">
-                <a class="nav-link cursor-pointer" wire:click="openLoginForm()">{{ __('Login') }}</a>
+                <a id="login" class="nav-link cursor-pointer" @click="$wire.emit('openLoginForm')" wire:click="openLoginForm()">{{ __('Login') }}</a>
             </li>
         @else
             <li class="nav-item dropdown">

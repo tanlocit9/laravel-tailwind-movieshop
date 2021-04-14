@@ -8,3 +8,4 @@
     alert('{{Session::get("auth_msg")}}')
 </script>
 @endif
+

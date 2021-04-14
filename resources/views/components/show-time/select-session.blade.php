@@ -8,7 +8,7 @@
                 <div>{{date('l, d/m/Y', strtotime($dates->first()->schedule->date))}}</div>
                 <div class="mt-3 ml-12 mr-8 grid grid-cols-3 gap-3 text-center">
                     @foreach ($dates as $session)
-                        <span class="border border-white p-1">{{ date('H:i', strtotime($session->time_start))}}</span>
+                        <span class="border border-white p-1 cursor-pointer">{{ date('H:i', strtotime($session->time_start))}}</span>
                     @endforeach
                 </div>
             </div>

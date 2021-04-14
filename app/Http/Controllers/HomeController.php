@@ -9,6 +9,8 @@ use App\Models\Theater;
 use App\Models\Genre;
 use App\Models\Schedule;
 use App\Models\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class HomeController extends Controller
 {
@@ -19,16 +21,22 @@ class HomeController extends Controller
      */
     public function __construct()
     {
+
         $this->middleware('auth');
+
     }
+
     /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
 
-    public function admin()
+    public function admin(Request $request)
     {
+        if($request->getSession()->all()['_previous']['url'] == env('APP_URL').'/admin' && Session::has('login')){
+            $request->session()->flash('login');
+        };
         return view('backend.index');
     }
     public function users()

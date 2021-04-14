@@ -34,7 +34,7 @@
                                 </div>
                                 <div class="mt-4">
                                     <i class="fa fa-lock absolute pt-2 pl-3" aria-hidden="true"></i>
-                                    <input id="password" type="password"
+                                    <input id="password" type="password" name="password"
                                     class="input-login" required placeholder="************">
                                 </div>
                                 <button type="submit" class="text-lg font-bold text-white bg-orange-600 text-center w-full focus:outline-none focus:shadow-outline py-2 px-4">

@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/login','HomeController@login');
+// Route::get('/login','HomeController@login');
 
 Route::prefix('auth')->group(function () {
     Route::get('{provider}','SocialiteController@redirect')->name('login_with_socialite');

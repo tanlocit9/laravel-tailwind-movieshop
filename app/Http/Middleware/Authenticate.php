@@ -2,7 +2,9 @@
 
 namespace App\Http\Middleware;
 
+use App\Events\LoginEvent;
 use Illuminate\Auth\Middleware\Authenticate as Middleware;
+use Illuminate\Support\Facades\Auth;
 
 class Authenticate extends Middleware
 {
@@ -15,7 +17,10 @@ class Authenticate extends Middleware
     protected function redirectTo($request)
     {
         if (! $request->expectsJson()) {
-            return route('login');
+            if($request->getSession());
+                $request->session()->flash('login', 'Task was successful!');
+
+            return route('home_page');
         }
     }
 }

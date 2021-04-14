@@ -11,7 +11,6 @@
     @endif
 
     <link rel="stylesheet" href="/css/app.css">
-    <script src="{{asset('/js/app.js')}}" type="text/javascript"></script>
     <script src="https://use.fontawesome.com/692bdfc97d.js"></script>
     @livewireStyles
 </head>
@@ -40,16 +39,22 @@
     </div>
 
     @livewireScripts
-    <script src="{{asset('/js/modal.js')}}"></script>
+    {{-- <script src="{{asset('/js/modal.js')}}"></script> --}}
+
+    <script src="{{asset('/js/app.js')}}" type="text/javascript"></script>
+    @if(Session::has('login'))
+        <script>
+            $( document ).ready(function() {
+                console.log( "ready!" );
+                $('#login').get(0).click();
+            });
+        </script>
+        {{Session::forget('login')}}
+    @endif
 </body>
 <footer>
     @include('layouts.frontend.footer')
 </footer>
 @livewire('login-form')
-
 </html>
-<script>
-    Livewire.on('openLoginForm',function(){
-        alert('aaaaaaa')
-    })
-</script>
+
