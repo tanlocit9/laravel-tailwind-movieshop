@@ -32,6 +32,11 @@ class CreateUsersTable extends Migration
             'password' => Hash::make('123456789'),
             'role_id'=>1,
         ]);
+        $user = User::create([
+            'name' => 'Loc',
+            'email' => 'test@gmail.com',
+            'password' => Hash::make('123456789'),
+        ]);
     }
 
     /**

@@ -34,9 +34,7 @@ class HomeController extends Controller
 
     public function admin(Request $request)
     {
-        if($request->getSession()->all()['_previous']['url'] == env('APP_URL').'/admin' && Session::has('login')){
-            $request->session()->flash('login');
-        };
+
         return view('backend.index');
     }
     public function users()

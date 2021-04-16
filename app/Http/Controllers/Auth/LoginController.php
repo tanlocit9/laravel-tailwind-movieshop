@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Events\LoginEvent;
 use App\Http\Controllers\Controller;
-use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+
 class LoginController extends Controller
 {
     /*
@@ -20,7 +20,15 @@ class LoginController extends Controller
     */
 
     use AuthenticatesUsers;
-
+    protected function authenticated(Request $request, $user)
+    {
+        if(in_array('url',$request->getSession()->all()))
+        if($intended = $request->getSession()->all()['url']['intended'])
+            if( $intended == route('admin'))
+                if($user->role_id==1)
+                    return redirect()->route('admin');
+                else abort(403, "You don't have permissions to access this area");
+    }
     /**
      * Where to redirect users after login.
      *

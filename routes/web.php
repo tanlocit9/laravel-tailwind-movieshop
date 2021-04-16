@@ -28,7 +28,7 @@ Route::group([],function () {
     Route::get('/movie/{movie}','MovieController@show')->name('show_movie');
 });
 
-Route::prefix('admin')->group(function () {
+Route::group(['middleware'=>'checkadmin','prefix'=>'admin'],function () {
     Route::get('/','HomeController@admin')->name('admin');
     Route::get('/user','HomeController@users')->name('manage_user');
     Route::get('/movie','HomeController@movies')->name('manage_movie');
