@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
-class CheckAdmin
+class RedirectBookTicket
 {
     /**
      * Handle an incoming request.
@@ -16,9 +16,8 @@ class CheckAdmin
      */
     public function handle(Request $request, Closure $next)
     {
-        // dd($request->user()->role_id);
-        abort_if($request->user()->role_id!=1, 404, "Page not found");
-
+        // return redirect($request->getPathInfo());
+        $request->session()->flash('login');
         return $next($request);
     }
 }

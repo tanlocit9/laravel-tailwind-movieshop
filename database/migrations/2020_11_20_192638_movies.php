@@ -17,6 +17,7 @@ class Movies extends Migration
         Schema::create('movies', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->string('slug');
             $table->string('description')->default("The movie do not have description");
             $table->string('duration');
             $table->integer('age_limit');

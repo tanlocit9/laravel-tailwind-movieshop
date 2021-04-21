@@ -17,6 +17,7 @@ class ShowTime extends Component
     public $theaters;
     public $movies;
     public $sessions;
+    public $movie;
     public function render()
     {
         // Hiển thị danh sách phim đang chiếu.
@@ -43,10 +44,12 @@ class ShowTime extends Component
             $this->selectedMovie=$id;
             $this->sessions='';
             $this->theater_ids = Schedule::where('movie_id',$id)->pluck('theater_id');
+            $this->movie = Movie::find($id);
         }
         else{
             $schedule_ids = Schedule::where('theater_id',$this->selectedTheater)->where('movie_id',$id)->pluck('id');
             $this->sessions = Session::with('schedule')->whereIn('schedule_id',$schedule_ids)->get()->groupBy('schedule.date')->collect();
+            $this->movie = Movie::find($id);
             }
     }
     public function selectTheater($id)

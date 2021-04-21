@@ -2,19 +2,26 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Movie;
+use App\Models\Session;
 use App\Models\Ticket;
 use Illuminate\Http\Request;
 
 class TicketController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('bookticket');
+    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($slug, Session $session)
     {
-        //
+
+        return view('frontend.bookticket');
     }
 
     /**

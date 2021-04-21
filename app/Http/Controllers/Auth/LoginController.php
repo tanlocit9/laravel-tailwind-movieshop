@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class LoginController extends Controller
@@ -20,15 +21,7 @@ class LoginController extends Controller
     */
 
     use AuthenticatesUsers;
-    protected function authenticated(Request $request, $user)
-    {
-        if(in_array('url',$request->getSession()->all()))
-        if($intended = $request->getSession()->all()['url']['intended'])
-            if( $intended == route('admin'))
-                if($user->role_id==1)
-                    return redirect()->route('admin');
-                else abort(403, "You don't have permissions to access this area");
-    }
+
     /**
      * Where to redirect users after login.
      *
@@ -44,5 +37,22 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
         //dd(Auth::user());
+    }
+
+    //Override redirect
+    protected function sendLoginResponse(Request $request)
+    {
+        $request->session()->regenerate();
+
+        $this->clearLoginAttempts($request);
+
+        if ($response = $this->authenticated($request, $this->guard()->user())) {
+            return $response;
+        }
+        if(!in_array('url',$request->getSession()->all()))
+            return $request->wantsJson()
+                        ? new JsonResponse([], 204)
+                        : redirect($request->getSession()->all()['_previous']['url']);
+        return redirect()->intended($this->redirectPath());
     }
 }

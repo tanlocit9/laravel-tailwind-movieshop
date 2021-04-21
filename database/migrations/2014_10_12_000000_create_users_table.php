@@ -23,7 +23,8 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
             $table->integer('log_count')->default(0);
-
+            $table->string('social_id')->nullable();
+            $table->string('social_type')->nullable();
             $table->foreignId('role_id')->default(2)->constrained('roles')->onDelete('cascade');
         });
         $user = User::create([

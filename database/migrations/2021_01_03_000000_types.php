@@ -1,11 +1,11 @@
 <?php
 
-use App\Models\Price;
+use App\Models\Type;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class TicketPrices extends Migration
+class Types extends Migration
 {
     /**
      * Run the migrations.
@@ -14,16 +14,16 @@ class TicketPrices extends Migration
      */
     public function up()
     {
-        Schema::create('prices', function (Blueprint $table) {
+        Schema::create('types', function (Blueprint $table) {
             $table->id();
             $table->string('type');
-            $table->integer('price');
         });
         $data =[
-            ['type'=>'2D','price'=>'45000'],
-            ['type'=>'3D','price'=>'55000'],
+            ['type'=>'movie'],
+            ['type'=>'ticket'],
+            ['type'=>'food']
         ];
-        Price::insert($data);
+        Type::insert($data);
     }
 
     /**
@@ -33,6 +33,6 @@ class TicketPrices extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('prices');
+        Schema::dropIfExists('types');
     }
 }

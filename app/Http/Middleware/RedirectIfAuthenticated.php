@@ -19,15 +19,6 @@ class RedirectIfAuthenticated
      */
     public function handle(Request $request, Closure $next, ...$guards)
     {
-        $guards = empty($guards) ? [null] : $guards;
-        foreach ($guards as $guard) {
-            if (Auth::guard($guard)->check()) {
-                if(!$request->getSession()->all()['_previous']['url'] != env('APP_URL').'/admin')
-                    return redirect()->route('home_page');
-                return redirect($request->getSession()->all()['_previous']['url']);
-            }
-        }
-
         return $next($request);
     }
 }
