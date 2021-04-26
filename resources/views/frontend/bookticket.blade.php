@@ -1,5 +1,5 @@
 @extends('layouts.main')
 
 @section('content')
-@livewire('book-ticket')
+@livewire('book-ticket', ['movie' => $movie])
 @endsection

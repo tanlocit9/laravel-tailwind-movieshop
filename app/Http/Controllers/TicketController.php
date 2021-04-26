@@ -21,7 +21,8 @@ class TicketController extends Controller
     public function index($slug, Session $session)
     {
 
-        return view('frontend.bookticket');
+        $movie = Movie::findBySlug($slug);
+        return view('frontend.bookticket',compact('movie'));
     }
 
     /**

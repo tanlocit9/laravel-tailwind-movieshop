@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Exception;
 use App\Models\User;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth as FacadesAuth;
 use Laravel\Socialite\Facades\Socialite as FacadesSocialite;
 
@@ -31,7 +33,7 @@ class SocialiteController extends Controller
             $finduser = User::where('email',$user->email)->first();
             if($finduser){
                 if($finduser->social_type!=$provider)
-                    return redirect('/login')->with('auth_msg','This account email have been used in '.$finduser->social_type.' login.');
+                    return redirect('/')->with('auth_msg','This account email have been used in '.$finduser->social_type.' login.');
                 else{
                     FacadesAuth::login($finduser);
 

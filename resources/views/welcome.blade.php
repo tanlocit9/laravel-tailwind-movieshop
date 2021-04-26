@@ -12,7 +12,7 @@
                 {{-- Card --}}
                 <div class="mt-6">
                     <a href="{{route('show_movie',$movie)}}">
-                        <img src="{{asset('storage/img')}}/{{$movie->poster}}" alt="{{$movie->title}}" class="w-64">
+                        <img src="{{asset('storage/posters')}}/{{$movie->poster}}" alt="{{$movie->title}}" class="w-56">
                     </a>
                     <div class="mt-2">
                     <a href="{{route('show_movie',$movie)}}" class="text-lg mt-2 hover:text-gray-300">{{$movie->title}}</a>

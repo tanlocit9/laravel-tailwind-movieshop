@@ -54,6 +54,9 @@ class User extends Authenticatable
     public function avg_rate(){
         return $this->ratings()->avg('star');
     }
+    public function cart_items(){
+        return $this->belongsToMany(Price::class,"cart_items","user_id","price_id");
+    }
     // public function admins(){
     //     return $this->roles()->where('role_name','admin');
     // }

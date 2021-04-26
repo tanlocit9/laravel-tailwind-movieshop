@@ -39,11 +39,11 @@ Route::group(['middleware'=>'checkadmin','prefix'=>'admin'],function () {
     Route::get('/movie_actor','HomeController@movies_actors')->name('manage_movie_actor');
     Route::get('/schedule','HomeController@schedules')->name('manage_schedule');
 
-    Route::post('/user_add','UserController@store')->name('user_add');
-    Route::post('/movie_add','MovieController@store')->name('movie_add');
-    Route::post('/theater_add','TheaterController@store')->name('theater_add');
-    Route::post('/genre_add','GenreController@store')->name('genre_add');
-    Route::post('/genre_modify','MovieController@updateGenres')->name('genre_modify');
+    Route::post('/user/add','UserController@store')->name('user_add');
+    Route::post('/movie/add','MovieController@store')->name('movie_add');
+    Route::post('/theater/add','TheaterController@store')->name('theater_add');
+    Route::post('/genre/add','GenreController@store')->name('genre_add');
+    Route::post('/genre/modify','MovieController@updateGenres')->name('genre_modify');
 
     //view only
 });

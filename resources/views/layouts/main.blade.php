@@ -57,4 +57,5 @@
 </footer>
 @livewire('login-form')
 </html>
+@include('components.alert')
 
