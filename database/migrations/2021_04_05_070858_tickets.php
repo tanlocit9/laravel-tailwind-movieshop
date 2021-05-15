@@ -16,7 +16,7 @@ class Tickets extends Migration
         Schema::create('tickets', function (Blueprint $table) {
             $table->id();
 
-            $table->foreignId('session_id')->constrained('sessions')->onDelete('cascade');
+            $table->foreignId('calendar_id')->constrained('calendars')->onDelete('cascade');
             $table->timestamps();
         });
     }

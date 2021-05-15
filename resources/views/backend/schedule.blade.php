@@ -11,7 +11,7 @@
                     <h1 class="font-extrabold text-lg">Schedules</h1>
                 </div>
                 <div class="z-0">
-                    <livewire:datatables-schedule exportable />
+                    <livewire:backend.datatable.d-t-schedule exportable />
                 </div>
             </div>
         </div>

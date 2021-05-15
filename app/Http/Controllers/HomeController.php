@@ -34,7 +34,6 @@ class HomeController extends Controller
 
     public function admin(Request $request)
     {
-
         return view('backend.index');
     }
     public function users()
