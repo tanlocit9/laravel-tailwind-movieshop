@@ -25,8 +25,8 @@ Auth::routes();
 Route::group([],function () {
     Route::get('/','CustomerController@index')->name('home_page');
     Route::get('/movie/{movie}','MovieController@show')->name('show_movie');
-    Route::get('show-time/','SessionController@index')->name('showtime');
-    Route::get('book-ticket/{movie_slug}/{session}','TicketController@index')->name('book_ticket');
+    Route::get('show-time/','CalendarController@index')->name('showtime');
+    Route::get('book-ticket/{movie_slug}/{calendar}','TicketController@index')->name('book_ticket');
 });
 Route::group(['middleware'=>'checkadmin','prefix'=>'admin'],function () {
     Route::get('/','HomeController@admin')->name('admin');

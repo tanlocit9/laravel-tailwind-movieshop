@@ -12,7 +12,7 @@
                     <h1 class="font-extrabold text-lg">Movies - Genres</h1>
                 </div>
                 <div>
-                    <livewire:datatables-movie-genre searchable="title" exportable/>
+                    <livewire:backend.datatable.d-t-movie-genre searchable="title" exportable/>
                 </div>
                 {{-- <div>
                     <livewire:form-movie-edit-genre>
@@ -28,7 +28,7 @@
                     <h1 class="font-extrabold text-lg">Movies - Genres</h1>
                 </div>
                 <div>
-                    <livewire:form-movie-edit-genre >
+                    <livewire:backend.modal-edit.m-e-movie-edit-genre >
                 </div>
             </div>
         </div>

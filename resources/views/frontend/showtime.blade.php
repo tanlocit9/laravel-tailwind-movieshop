@@ -1,5 +1,5 @@
 @extends('layouts.main')
 
 @section('content')
-@livewire('show-time')
+@livewire('frontend.show-time')
 @endsection

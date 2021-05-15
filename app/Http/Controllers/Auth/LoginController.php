@@ -55,4 +55,11 @@ class LoginController extends Controller
                         : redirect($request->getSession()->all()['_previous']['url']);
         return redirect()->intended($this->redirectPath());
     }
+
+    public function showLoginForm(Request $request)
+    {
+        $request->session()->flash('login');
+
+        return redirect()->route('home_page');
+    }
 }

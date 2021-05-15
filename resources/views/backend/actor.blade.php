@@ -11,7 +11,7 @@
                     <h1 class="font-extrabold text-lg">actors info</h1>
                     {{-- @include('components.modal',['action'=>'Add','title'=>$title]) --}}
                 </div>
-                <livewire:datatables-actor exportable/>
+                <livewire:backend.datatable.d-t-actor exportable/>
                 {{-- <table class="text-left w-full mt-5 ">
                     <thead>
                         <tr>

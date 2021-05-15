@@ -11,7 +11,7 @@
                     <h1 class="font-extrabold text-lg">Users</h1>
                 </div>
                 <div id="datatable" class="z-0">
-                    <livewire:datatables-user exportable />
+                    <livewire:backend.datatable.d-t-user exportable />
                 </div>
             </div>
         </div>

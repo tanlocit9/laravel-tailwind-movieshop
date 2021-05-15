@@ -14,10 +14,10 @@ class Schedule extends Model
         'movie_id',
         'theater_id',
     ];
-    public function sessions(){
-        return $this->hasMany(Session::class);
+    public function calendars(){
+        return $this->hasMany(Calendar::class);
     }
     public function showtime($movie_id,$theater_id){
-        return $this->sessions()->where('movie_id',$movie_id)->where('theater_id',$theater_id)->get();
+        return $this->calendars()->where('movie_id',$movie_id)->where('theater_id',$theater_id)->get();
     }
 }

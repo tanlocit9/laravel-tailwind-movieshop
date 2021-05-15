@@ -16,7 +16,7 @@ class ScheduleSeeder extends Seeder
     {
         $movies = Schedule::factory()
                     ->count(50)
-                    ->hasSessions(5)
+                    ->hasCalendars(5)
                     ->create();
     }
 }
