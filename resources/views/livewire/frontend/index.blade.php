@@ -1,6 +1,4 @@
-@extends('layouts.main')
-
-@section('content')
+<div class="mb-8 flex-grow">
     <div class="container mx-auto px-4 pt-10">
         <div class="popular-movies">
             <h2 class="uppercase tracking-wider text-orange-500 text-lg text-semibold">
@@ -11,11 +9,11 @@
                 @foreach($movies as $movie)
                 {{-- Card --}}
                 <div class="mt-6">
-                    <a href="{{route('show_movie',$movie)}}">
+                    <a class="cursor-pointer" wire:click.prevent="$emit('openSpecificMovie','{{$movie->slug}}')">
                         <img src="{{asset('storage/posters')}}/{{$movie->poster}}" alt="{{$movie->title}}" class="w-56">
                     </a>
                     <div class="mt-2">
-                    <a href="{{route('show_movie',$movie)}}" class="text-lg mt-2 hover:text-gray-300">{{$movie->title}}</a>
+                    <a wire:click.prevent="$emit('openSpecificMovie','{{$movie->slug}}')" class="cursor-pointer text-lg mt-2 hover:text-gray-300">{{$movie->title}}</a>
                     </div>
                     {{-- Movie Info --}}
                     <div >
@@ -42,5 +40,4 @@
             {{-- End Grid --}}
         </div>
     </div>
-@endsection
-
+</div>
