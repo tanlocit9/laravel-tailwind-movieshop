@@ -11,28 +11,7 @@
                     <h1 class="font-extrabold text-lg">Genres available</h1>
                     {{-- @include('components.modal',['action'=>'Add','title'=>$title]) --}}
                 </div>
-                <livewire:datatables-genre searchable="genre_name" exportable/>
-                {{-- <table class="text-left w-full mt-5 ">
-                    <thead>
-                        <tr>
-                            <th>Genre name</th>
-                            <th>Genre description</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-sm normal-case">
-                        @foreach($genres as $genre)
-                        <tr class="capitalize">
-                            <td>{{$genre->genre_name}}</td>
-                            <td>{{$genre->genre_description}}</td>
-                            <td>Modify</td>
-                        <tr>
-                        @endforeach
-                    </tbody>
-                </table>
-                <div>
-                    {{$genres->links()}}
-                </div> --}}
+                <livewire:backend.datatable.d-t-genre searchable="genre_name" exportable/>
             </div>
         </div>
 

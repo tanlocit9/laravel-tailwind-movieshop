@@ -12,7 +12,7 @@
                         {{-- @include('components.modal',['action'=>'Add','title'=>$title]) --}}
                     </div>
                     <div id="datatable" class="z-0">
-                        <livewire:datatables-movie exportable />
+                        <livewire:backend.datatable.d-t-movie exportable />
                     </div>
                 </div>
             </div>

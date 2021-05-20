@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Calendar;
 use App\Models\Movie;
-use App\Models\Session;
 use App\Models\Ticket;
 use Illuminate\Http\Request;
 
@@ -18,7 +18,7 @@ class TicketController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($slug, Session $session)
+    public function index($slug, Calendar $session)
     {
 
         $movie = Movie::findBySlug($slug);

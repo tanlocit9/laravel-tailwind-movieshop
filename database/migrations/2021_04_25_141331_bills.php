@@ -20,7 +20,7 @@ class Bills extends Migration
             $table->boolean('is_pay')->default(0);
             $table->timestamps();
 
-            $table->foreignId('session_id')->constrained('sessions')->onDelete('cascade');
+            $table->foreignId('calendar_id')->constrained('calendars')->onDelete('cascade');
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->foreignId('paymode_id')->constrained('pay_modes')->onDelete('cascade');
         });

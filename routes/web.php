@@ -13,20 +13,17 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-// Route::get('/login','HomeController@login');
-
 Route::prefix('auth')->group(function () {
     Route::get('{provider}','SocialiteController@redirect')->name('login_with_socialite');
     Route::get('{provider}/callback', 'SocialiteController@handleCallback');
 });
 
-Auth::routes();
+// Auth::routes();
 Route::group([],function () {
     Route::get('/','CustomerController@index')->name('home_page');
     Route::get('/movie/{movie}','MovieController@show')->name('show_movie');
-    Route::get('show-time/','SessionController@index')->name('showtime');
-    Route::get('book-ticket/{movie_slug}/{session}','TicketController@index')->name('book_ticket');
+    Route::get('show-time/','CalendarController@index')->name('showtime');
+    Route::get('book-ticket/{movie_slug}/{calendar}','TicketController@index')->name('book_ticket');
 });
 Route::group(['middleware'=>'checkadmin','prefix'=>'admin'],function () {
     Route::get('/','HomeController@admin')->name('admin');
@@ -44,8 +41,4 @@ Route::group(['middleware'=>'checkadmin','prefix'=>'admin'],function () {
     Route::post('/theater/add','TheaterController@store')->name('theater_add');
     Route::post('/genre/add','GenreController@store')->name('genre_add');
     Route::post('/genre/modify','MovieController@updateGenres')->name('genre_modify');
-
-    //view only
 });
-
-
