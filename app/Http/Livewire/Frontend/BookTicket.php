@@ -17,8 +17,9 @@ class BookTicket extends Component
     public $prices;
     public $total_ticket;
     public $total_combo;
-    public function mount()
+    public function mount($movie)
     {
+        $this->movie = $movie;
         $this->amount = array_fill(1,Price::all()->count(),0);
         $this->total_price = array_fill(1,Price::all()->count(),0);
         $this->user= Auth::user();
@@ -34,6 +35,7 @@ class BookTicket extends Component
         $this->amount[$price_id]++;
     }
     public function decrease($price_id){
+        if($this->amount[$price_id]!=0)
         $this->amount[$price_id]--;
     }
     public function countPrice($prices){

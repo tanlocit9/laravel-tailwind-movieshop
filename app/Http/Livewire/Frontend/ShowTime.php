@@ -4,7 +4,7 @@ namespace App\Http\Livewire\Frontend;
 
 use App\Models\Movie;
 use App\Models\Schedule;
-use App\Models\Session;
+use App\Models\Calendar;
 use App\Models\Theater;
 use Livewire\Component;
 class ShowTime extends Component
@@ -16,7 +16,7 @@ class ShowTime extends Component
     public $movie_ids;
     public $theaters;
     public $movies;
-    public $sessions;
+    public $calendars;
     public $movie;
     public function render()
     {
@@ -36,19 +36,19 @@ class ShowTime extends Component
     }
     public function changeTab($tab){
         $this->tab=$tab;
-        $this->sessions='';
+        $this->calendars='';
     }
     public function selectMovie($id)
     {
         if($this->tab=="byMovie"){
             $this->selectedMovie=$id;
-            $this->sessions='';
+            $this->calendars='';
             $this->theater_ids = Schedule::where('movie_id',$id)->pluck('theater_id');
             $this->movie = Movie::find($id);
         }
         else{
             $schedule_ids = Schedule::where('theater_id',$this->selectedTheater)->where('movie_id',$id)->pluck('id');
-            $this->sessions = Session::with('schedule')->whereIn('schedule_id',$schedule_ids)->get()->groupBy('schedule.date')->collect();
+            $this->calendars = Calendar::with('schedule')->whereIn('schedule_id',$schedule_ids)->get()->groupBy('schedule.date')->collect();
             $this->movie = Movie::find($id);
             }
     }
@@ -56,11 +56,11 @@ class ShowTime extends Component
     {
         if($this->tab=="byMovie"){
             $schedule_ids = Schedule::where('movie_id',$this->selectedMovie)->where('theater_id',$id)->pluck('id');
-            $this->sessions = Session::with('schedule')->whereIn('schedule_id',$schedule_ids)->get()->groupBy('schedule.date')->collect();
+            $this->calendars = Calendar::with('schedule')->whereIn('schedule_id',$schedule_ids)->get()->groupBy('schedule.date')->collect();
         }
         else{
             $this->selectedTheater=$id;
-            $this->sessions='';
+            $this->calendars='';
             $this->movie_ids = Schedule::where('theater_id',$id)->pluck('movie_id');
             }
     }

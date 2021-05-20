@@ -38,28 +38,4 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
         //dd(Auth::user());
     }
-
-    //Override redirect
-    protected function sendLoginResponse(Request $request)
-    {
-        $request->session()->regenerate();
-
-        $this->clearLoginAttempts($request);
-
-        if ($response = $this->authenticated($request, $this->guard()->user())) {
-            return $response;
-        }
-        if(!in_array('url',$request->getSession()->all()))
-            return $request->wantsJson()
-                        ? new JsonResponse([], 204)
-                        : redirect($request->getSession()->all()['_previous']['url']);
-        return redirect()->intended($this->redirectPath());
-    }
-
-    public function showLoginForm(Request $request)
-    {
-        $request->session()->flash('login');
-
-        return redirect()->route('home_page');
-    }
 }

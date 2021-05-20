@@ -26,7 +26,7 @@
             </div>
             <div class="w-96 justify-self-end">
                 <h4 class="bg-orange-700 py-1">Select Session</h4>
-                @include('components.show-time.select-session')
+                @include('components.show-time.select-calendar')
             </div>
         </div>
         @else
@@ -46,7 +46,7 @@
             </div>
             <div class="w-96 justify-self-end">
                 <h4 class="bg-orange-700 py-1">Select Session</h4>
-                @include('components.show-time.select-session')
+                @include('components.show-time.select-calendar')
             </div>
 
         </div>

@@ -3,7 +3,7 @@
         {{-- <input class="text-red-500" wire:model="something"> --}}
         @guest
             <li class="nav-item">
-                <a id="login" class="nav-link cursor-pointer" @click="$wire.emit('openLoginForm')" wire:click="openLoginForm()">{{ __('Login') }}</a>
+                <a id="login" class="nav-link cursor-pointer" wire:click="openLoginForm()">{{ __('Login') }}</a>
             </li>
         @else
             <li class="nav-item dropdown">
@@ -17,16 +17,8 @@
 
                         <a class="mx-5" href="{{ route('admin') }}">{{ __('Admin') }}</a>
                     @endif
-
-                        <a class="dropdown-item"
-                            href="{{ route('logout') }}"
-                            onclick="event.preventDefault();
-                            document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
+                        <a class="cursor-pointer" id="logout" wire:click.prevent="logout">{{ __('Logout') }}
                         </a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
                 </div>
             </li>
         @endguest
