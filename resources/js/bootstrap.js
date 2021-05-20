@@ -1,5 +1,4 @@
 window._ = require('lodash');
-window.jQuery = window.$ = require('jquery');
 window.bodyScrollLock = require('body-scroll-lock');
 
 /**
