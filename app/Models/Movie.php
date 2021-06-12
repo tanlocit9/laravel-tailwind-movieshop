@@ -9,7 +9,8 @@ use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
 
 class Movie extends Model
 {
-    use HasFactory, Sluggable, SluggableScopeHelpers ;
+    use HasFactory, Sluggable, SluggableScopeHelpers;
+    public $keyType = 'string';
     protected $fillable = [
         'title',
         'slug',
@@ -45,7 +46,7 @@ class Movie extends Model
         return $this->belongsToMany(Theater::class,'schedules');
     }
     public function avg_rate(){
-        return $this->ratings()->avg('star');
+        return $this->hasMany(Rating::class)->avg('star');
     }
     public function genres(){
         return $this->belongsToMany(Genre::class,'genre_movie')->withPivot(['is_main']);

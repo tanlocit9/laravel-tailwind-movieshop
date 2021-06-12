@@ -6,11 +6,12 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Laravel\Scout\Searchable;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable;
-
+    use HasFactory, Notifiable, Searchable;
+    public $keyType = 'string';
     /**
      * The attributes that are mass assignable.
      *
@@ -36,7 +37,14 @@ class User extends Authenticatable
         'social_id',
         'social_type'
     ];
+    public function toSearchableArray()
+    {
+        $array = $this->toArray();
 
+        // Customize the data array...
+
+        return $array;
+    }
     /**
      * The attributes that should be cast to native types.
      *

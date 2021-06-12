@@ -18,7 +18,7 @@ class SessionInfos extends Migration
             $table->id();
             $table->timestamp("time_start")->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp("time_end")->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->time("time_total")->default(0001-01-01);
+            // $table->time("time_total")->default(0000-00-00);
 
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
         });

@@ -1,5 +1,7 @@
-window._ = require('lodash');
-window.bodyScrollLock = require('body-scroll-lock');
+window._ = require("lodash");
+window.bodyScrollLock = require("body-scroll-lock");
+window.jQuery = window.$ = require("jquery");
+var dt = require( 'datatables.net' );
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests

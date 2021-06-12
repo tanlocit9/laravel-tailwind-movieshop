@@ -7,68 +7,96 @@
 
 @tailwind utilities;
 
-.btn{
-    @apply font-bold py-1 px-3 rounded-full outline-none;
-}
-
-.btn-edit:hover{
-    @apply bg-green-600 text-white;
-}
-.modal{
-    @apply transition-opacity duration-300 ease-in-out;
-}
-.modal-active{
-    @apply overflow-x-hidden overflow-y-visible !important;
-}
-.modal-overlay{
-    @apply absolute w-full h-full bg-gray-900 opacity-50 ;
-}
-.modal-container{
-    @apply bg-white mx-auto rounded shadow-lg z-50 overflow-y-auto;
-}
-.modal-esc{
-    @apply absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50;
-}
-.modal-create{
-    @apply px-4 bg-blue-500 p-3 rounded-lg text-white flex justify-center items-center w-full;
-}
-.modal-create:focus{
-    @apply outline-none
-}
-.modal-create:hover{
-    @apply bg-blue-400
-}
-.modal-open{
-    @apply bg-transparent border border-gray-500 text-gray-500 font-bold py-2 px-4 rounded-full flex justify-center items-center w-full;
-}
-.modal-open:focus{
-    @apply outline-none
-}
-.modal-open:hover{
-    @apply border-indigo-500 text-indigo-500;
-}
-.modal-submit{
-    @apply px-4 bg-transparent p-3 rounded-lg text-indigo-500 mr-8;
-}
-.modal-submit:hover{
-    @apply text-indigo-400 bg-gray-200;
-}
-.input-text{
-    @apply px-4 py-2 border w-full border-gray-300 rounded-md text-gray-600
-}
-.input-text:focus{
-    @apply border-gray-900 outline-none
-}
-
-.input-login{
+.input-login {
     @apply pl-8 outline-dash-gray w-full h-8;
 }
-.input-login:focus{
+.input-login:focus {
     @apply outline-dash-black;
 }
-.btn-login{
-    @apply text-lg font-bold text-white bg-orange-600 text-center w-full py-2 px-4
+.btn-login {
+    @apply text-lg font-bold text-white bg-orange-600 text-center w-full py-2 px-4;
 }
-.btn-login:focus{
-    @apply outline-none shadow-outline
+.btn-login:focus {
+    @apply outline-none shadow-outline;
+}
+.dataTables_wrapper select,
+.dataTables_wrapper .dataTables_filter input {
+    color: #4a5568; /*text-gray-700*/
+    padding-left: 1rem; /*pl-4*/
+    padding-right: 1rem; /*pl-4*/
+    padding-top: 0.5rem; /*pl-2*/
+    padding-bottom: 0.5rem; /*pl-2*/
+    margin-left: 0.5rem;
+    line-height: 1.25; /*leading-tight*/
+    border-width: 2px; /*border-2*/
+    border-radius: 0.25rem;
+    border-color: #edf2f7; /*border-gray-200*/
+    background-color: #edf2f7; /*bg-gray-200*/
+}
+table.dataTable.hover tbody tr:hover,
+table.dataTable.display tbody tr:hover {
+    background-color: #ebf4ff; /*bg-indigo-100*/
+}
+.dataTables_wrapper{
+    min-height: 720px;
+}
+
+.dataTables_wrapper .dataTables_length {
+    float: left;
+}
+
+.dataTables_wrapper .dataTables_filter {
+    float: right;
+    text-align: right;
+}
+.dataTables_wrapper .dataTables_info {
+    clear: both;
+    float: left;
+    padding-top: 0.25em;
+}
+.dataTables_wrapper .dataTables_paginate {
+    float: right;
+    text-align: right;
+    padding-top: 0.25em;
+}
+/*Pagination Buttons*/
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    font-weight: 700; /*font-bold*/
+    border-radius: 0.25rem; /*rounded*/
+    border: 1px solid transparent; /*border border-transparent*/
+    cursor: pointer;
+}
+
+/*Pagination Buttons - Current selected */
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    color: #fff !important; /*text-white*/
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); /*shadow*/
+    font-weight: 700; /*font-bold*/
+    border-radius: 0.25rem; /*rounded*/
+    background: #667eea !important; /*bg-indigo-500*/
+    border: 1px solid transparent; /*border border-transparent*/
+    cursor: pointer;
+}
+
+/*Pagination Buttons - Hover */
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    color: #fff !important; /*text-white*/
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); /*shadow*/
+    font-weight: 700; /*font-bold*/
+    border-radius: 0.25rem; /*rounded*/
+    background: #667eea !important; /*bg-indigo-500*/
+    border: 1px solid transparent; /*border border-transparent*/
+}
+
+/*Add padding to bottom border */
+table.dataTable.no-footer {
+    border-bottom: 1px solid #e2e8f0; /*border-b-1 border-gray-300*/
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+}
+
+/*Change colour of responsive icon*/
+table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child:before,
+table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child:before {
+    background-color: #667eea !important; /*bg-indigo-500*/
 }

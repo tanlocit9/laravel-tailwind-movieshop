@@ -137,6 +137,8 @@ return [
     'providers' => [
 
         Laravel\Socialite\SocialiteServiceProvider::class,
+        Laravel\Scout\ScoutServiceProvider::class,
+        Yajra\DataTables\DataTablesServiceProvider::class,
         /*
          * Laravel Framework Service Providers...
          */
@@ -193,6 +195,7 @@ return [
     'aliases' => [
 
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'DataTables' => Yajra\DataTables\Facades\DataTables::class,
 
         'App' => Illuminate\Support\Facades\App::class,
         'Arr' => Illuminate\Support\Arr::class,

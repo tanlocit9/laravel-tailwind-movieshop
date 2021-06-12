@@ -18,7 +18,14 @@
 <footer>
     @include('layouts.frontend.footer')
 </footer>
-@livewire('frontend.form-login')
-
+{{-- @livewire('frontend.form-login') --}}
+@livewire('shared.auth-controller')
+<script type="text/javascript">
+    window.onscroll = function (ev) {
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+            window.livewire.emit('load-more');
+        }
+    };
+</script>
 </html>
 @include('components.alert')

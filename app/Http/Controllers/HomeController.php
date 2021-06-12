@@ -32,9 +32,9 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
 
-    public function admin(Request $request)
+    public function admin()
     {
-        return view('backend.index');
+        return view('layouts.admin');
     }
     public function users()
     {

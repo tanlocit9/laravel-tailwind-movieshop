@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Yajra\DataTables\Facades\DataTables;
+
 class UserController extends Controller
 {
     /**
@@ -15,8 +17,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $user = new User();
-        return view('frontend.index');
+        return Datatables::eloquent(User::query())->toJson();
     }
 
     /**

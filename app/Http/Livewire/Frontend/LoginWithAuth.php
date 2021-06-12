@@ -16,13 +16,14 @@ class LoginWithAuth extends Component
         $this->dispatchBrowserEvent('close-login-form');
     }
 
-    public function render()
-    {
-        return view('livewire.frontend.login-with-auth');
-    }
     public function logout(){
         Session::invalidate();
         Session::regenerateToken();
         $this->emit('changeTab','index');
+    }
+
+    public function render()
+    {
+        return view('livewire.frontend.login-with-auth');
     }
 }
