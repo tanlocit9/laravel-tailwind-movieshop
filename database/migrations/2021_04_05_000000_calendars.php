@@ -22,7 +22,7 @@ class Calendars extends Migration
             $table->integer('slot_remain')->default(40);
 
             $table->foreignId('price_id')->constrained('prices')->onDelete('cascade');
-            // $table->foreignId('room_id')->constrained('rooms')->onDelete('cascade');
+            $table->foreignId('calendar_status_id')->default(1)->constrained('calendar_statuses')->onDelete('cascade');
             $table->foreignId('schedule_id')->constrained('schedules')->onDelete('cascade');
             // $table->primary(array('id','movie_id', 'theater_id', 'room_id'));
         });

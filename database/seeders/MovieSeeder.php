@@ -36,7 +36,7 @@ class MovieSeeder extends Seeder
             for ($j=0; $j < rand(1,10); $j++) {
                 $id=rand(1,20);
                 if(!in_array($id, $arr_actors)){
-                    $movie->actors()->attach($id,['role_id'=>rand(3, 4)]);
+                    $movie->actors()->attach($id,['role_id'=>rand(1,2)]);
                     array_push($arr_actors,$id);
                 }
             }

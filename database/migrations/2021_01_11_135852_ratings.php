@@ -17,6 +17,7 @@ class Ratings extends Migration
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->foreignId('movie_id')->constrained('movies')->onDelete('cascade');
             $table->float('star');
+            $table->string('comment')->nullable();
             $table->timestamps();
 
             $table->primary(array('movie_id', 'user_id'));

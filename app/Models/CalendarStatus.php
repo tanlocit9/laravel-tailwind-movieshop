@@ -5,10 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Ticket extends Model
+class CalendarStatus extends Model
 {
     use HasFactory;
-    public function showtimes(){
-        return $this->hasMany(ShowTime::class);
-    }
 }

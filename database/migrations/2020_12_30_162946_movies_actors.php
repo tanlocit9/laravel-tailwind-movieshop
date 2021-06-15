@@ -16,7 +16,7 @@ class MoviesActors extends Migration
         Schema::create('actor_movie', function (Blueprint $table) {
             $table->foreignID('movie_id')->constrained()->onDelete('cascade');
             $table->foreignID('actor_id')->constrained()->onDelete('cascade');
-            $table->foreignID('role_id')->constrained('roles')->onDelete('cascade');
+            $table->foreignID('role_id')->constrained('movie_roles')->onDelete('cascade');
             $table->primary(array('movie_id', 'actor_id'));
 
             // $table->string('character');

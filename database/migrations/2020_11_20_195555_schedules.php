@@ -16,6 +16,7 @@ class Schedules extends Migration
         Schema::create('schedules', function (Blueprint $table) {
             $table->id();
             $table->date('date');
+            $table->foreignId('schedule_status_id')->default(1)->constrained('schedule_statuses')->onDelete('cascade');
             $table->foreignId('theater_id')->constrained('theaters')->onDelete('cascade');
             $table->foreignId('movie_id')->constrained('movies')->onDelete('cascade');
         });

@@ -19,7 +19,6 @@ class Types extends Migration
             $table->string('type');
         });
         $data =[
-            ['type'=>'movie'],
             ['type'=>'ticket'],
             ['type'=>'food']
         ];

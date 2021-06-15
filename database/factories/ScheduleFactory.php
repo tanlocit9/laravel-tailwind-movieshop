@@ -24,7 +24,7 @@ class ScheduleFactory extends Factory
         return [
             'date'=>$this->faker->dateTimeBetween('now', '+1 months'),
             'theater_id'=>rand(1,12),
-            'movie_id'=>rand(1,50),
+            'movie_id'=>rand(1,50)
         ];
     }
 }

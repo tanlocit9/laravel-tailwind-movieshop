@@ -19,7 +19,7 @@ class Rooms extends Migration
             $table->integer('slot')->default(60);
 
             $table->foreignId('theater_id')->constrained('theaters')->onDelete('cascade');
-            $table->foreignId('status_id')->constrained('room_statuses')->onDelete('cascade');
+            $table->foreignId('room_status_id')->constrained('room_statuses')->onDelete('cascade');
         });
     }
 
