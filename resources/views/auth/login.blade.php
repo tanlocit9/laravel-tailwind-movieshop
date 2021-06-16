@@ -17,7 +17,7 @@
                     <div class="mx-6">
                         <i class="fa fa-user fa-1x absolute pt-2 pl-3" aria-hidden="true"></i>
                         <input id="email" type="email"
-                        class="text-black bg-white rounded-full pl-8 focus:outline-none focus:shadow-outline w-full h-8
+                        class="text-black bg-white rounded-full pl-8 focus:outline-none focus:ring w-full h-8
                         @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}"
                         required autocomplete="email" autofocus
                         placeholder="Example@gmail.com">
@@ -33,7 +33,7 @@
                     <div class="mt-4 mx-6">
                         <i class="fa fa-lock absolute pt-2 pl-3" aria-hidden="true"></i>
                         <input id="password" type="password"
-                        class="text-black bg-white rounded-full pl-8 focus:outline-none focus:shadow-outline w-full h-8
+                        class="text-black bg-white rounded-full pl-8 focus:outline-none focus:ring w-full h-8
                         @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="******************">
                         @error('password')
                             <span class="" role="alert">
@@ -54,11 +54,11 @@
                         @endif
                     </div>
                     <a href="{{ route('login_with_socialite',['provider'=>'google']) }}"
-                        class="text-center w-full bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline">
+                        class="text-center w-full bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-4 focus:outline-none focus:ring">
                         Login with Google
                     </a>
                     <a href="{{ route('login_with_socialite',['provider'=>'facebook']) }}"
-                        class="text-center w-full bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline"
+                        class="text-center w-full bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 focus:outline-none focus:ring"
                         >
                         Login with Facebook
                     </a>

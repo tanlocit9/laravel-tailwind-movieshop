@@ -14,6 +14,7 @@
         @break
         @case('movie')
         @include('components.table.tb-movie',['items'=>$movies])
+        @livewire('backend.modal.movie-edit')
         @break
         @case('genre')
         @include('components.table.tb-genre',['items'=>$genres])

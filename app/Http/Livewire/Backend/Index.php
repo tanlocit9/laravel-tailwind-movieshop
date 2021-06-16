@@ -10,4 +10,5 @@ class Index extends Component
     {
         return view('livewire.backend.index');
     }
+
 }

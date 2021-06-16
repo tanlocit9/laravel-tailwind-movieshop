@@ -17,7 +17,7 @@
     @apply text-lg font-bold text-white bg-orange-600 text-center w-full py-2 px-4;
 }
 .btn-login:focus {
-    @apply outline-none shadow-outline;
+    @apply outline-none ring;
 }
 .dataTables_wrapper select,
 .dataTables_wrapper .dataTables_filter input {

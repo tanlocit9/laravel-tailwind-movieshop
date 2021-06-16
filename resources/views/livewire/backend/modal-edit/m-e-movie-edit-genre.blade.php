@@ -32,7 +32,7 @@
                                 </select>
                             </div>
                             <div class="mt-6 flex flex-col w-1/4">
-                                <button wire:click="editMainGenre" class="focus:outline-none inline-flex items-center justify-center w-15 h-10 mr-2 text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800">
+                                <button wire:click="editMainGenre" class="focus:outline-none inline-flex items-center justify-center w-15 h-10 mr-2 text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-lg focus:ring hover:bg-indigo-800">
                                     <span class="pr-2">Edit</span>
                                     <i class="fa fa-pencil" aria-hidden="true"></i>
                                 </button>
@@ -54,7 +54,7 @@
                             </div>
 
                             <div class="mt-6 flex flex-col w-1/4">
-                                <button wire:click="addSubGenre" class="focus:outline-none inline-flex items-center justify-center w-15 h-10 mr-2 text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800">
+                                <button wire:click="addSubGenre" class="focus:outline-none inline-flex items-center justify-center w-15 h-10 mr-2 text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-lg focus:ring hover:bg-indigo-800">
                                     <span class="pr-2">Add</span>
                                     <i class="fa fa-pencil" aria-hidden="true"></i>
                                 </button>

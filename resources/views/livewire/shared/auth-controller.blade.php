@@ -48,17 +48,17 @@
                                 </div>
                             @endif
                             <button type="submit"
-                                class="text-lg font-bold text-white bg-orange-600 text-center w-full focus:outline-none focus:shadow-outline py-2 px-4">
+                                class="text-lg font-bold text-white bg-orange-600 text-center w-full focus:outline-none focus:ring py-2 px-4">
                                 {{ __('Login') }}
                             </button>
                             <div class="text-center w-full text-lg font-bold text-black m-0">Or</div>
                             {{-- <a href="{{ route('login_with_socialite', ['provider' => 'google']) }}" --}}
                                 <a wire:click="redirect('google')"
-                                class="text-center w-full bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline">
+                                class="text-center w-full bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-4 focus:outline-none focus:ring">
                                 Login with Google
                             </a>
                             <a href="{{ route('login_with_socialite', ['provider' => 'facebook']) }}"
-                                class="text-center w-full bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline">
+                                class="text-center w-full bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 focus:outline-none focus:ring">
                                 Login with Facebook
                             </a>
                         </div>

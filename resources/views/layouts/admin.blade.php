@@ -18,8 +18,6 @@
     <livewire:backend.master />
     <!-- script -->
     @livewireScripts
-    <script src="{{ asset('backend/js/scripts.js') }}"></script>
-    <script src="{{ asset('/js/app.js') }}" type="text/javascript"></script>
     <script>
         Livewire.on("datatable", (tab) => {
             $('#'+tab).DataTable({
@@ -27,8 +25,10 @@
                 bDestroy: true
             }).columns.adjust();
         })
-
     </script>
+    <script src="{{ asset('backend/js/scripts.js') }}"></script>
+    <script src="{{ asset('/js/app.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('/js/scrollBlock.js') }}" type="text/javascript"></script>
 </body>
 @include('components.alert')
 
