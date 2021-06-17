@@ -20,9 +20,9 @@
             <tbody class="bg-white divide-y divide-gray-200">
                 @foreach ($items as $item)
                 <tr>
-                    <td class="px-6 py-4 whitespace-nowrap">{{ $item->date }}</td>
-                    <td class="px-6 py-4 whitespace-nowrap">{{ $item->theater->theater_name }}</td>
-                    <td class="px-6 py-4 whitespace-nowrap">{{ $item->movie->title }}</td>
+                    <td class="px-6 py-3 whitespace-nowrap">{{ $item->date }}</td>
+                    <td class="px-6 py-3 whitespace-nowrap">{{ $item->theater->theater_name }}</td>
+                    <td class="px-6 py-3 whitespace-nowrap">{{ $item->movie->title }}</td>
                 </tr>
                 @endforeach
             </tbody>

@@ -20,10 +20,10 @@
             <tbody class="bg-white divide-y divide-gray-200">
                 @foreach ($items as $item)
                 <tr>
-                    <td class="px-6 py-4 whitespace-nowrap">
+                    <td class="px-6 py-3 whitespace-nowrap">
                         {{$item->title}}
                     </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
+                    <td class="px-6 py-3 whitespace-nowrap">
                         @foreach($item->main_actor as $actor)
                         @if ($loop->last)
                         {{$actor->full_name}}.
@@ -31,7 +31,7 @@
                         @endif
                         @endforeach
                     </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
+                    <td class="px-6 py-3 whitespace-nowrap">
                         @foreach($item->sub_actor as $actor)
                         @if ($loop->last)
                         {{$actor->full_name}}.

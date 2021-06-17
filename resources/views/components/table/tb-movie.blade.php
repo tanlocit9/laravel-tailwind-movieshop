@@ -1,42 +1,42 @@
 <div class="container xl:w-3/5">
     <div id='recipients' class="p-8 m-2 rounded shadow bg-white">
-        <table id="movie" class="min-w-full divide-y divide-gray-200">
+        <table id="movie" class="display cell-border min-w-full divide-y divide-gray-200 normal-case">
             <thead class="bg-gray-50">
                 <tr>
                     <th
-                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer">
+                        class="px-6 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer">
                         title
                     </th>
                     <th
-                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer">
+                        class="px-6 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer">
                         duration
                     </th>
                     <th
-                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer">
+                        class="px-6 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer">
                         release date
                     </th>
                     <th
-                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer">
+                        class="px-6 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer">
                         country
                     </th>
                     <th
-                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer">
+                        class="px-6 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer">
                         age limit
                     </th>
                     <th
-                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer">
+                        class="px-6 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer">
                         Avg rate
                     </th>
                     <th
-                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer">
+                        class="px-6 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer">
                         Main genre
                     </th>
                     <th
-                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer">
+                        class="px-6 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer">
                         Edit
                     </th>
                     <th
-                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer">
+                        class="px-6 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer">
                         Delete
                     </th>
                 </tr>
@@ -44,18 +44,18 @@
             <tbody class="bg-white divide-y divide-gray-200">
                 @foreach ($items as $item)
                 <tr>
-                    <td class="px-6 py-4 whitespace-nowrap">{{ $item->title }}</td>
-                    <td class="px-6 py-4 whitespace-nowrap">{{ $item->duration }}</td>
-                    <td class=" px-6 py-4 whitespace-nowrap">{{ $item->release_date }}</td>
-                    <td class="px-6 py-4 whitespace-nowrap">{{ $item->country->country_name }}</td>
-                    <td class="px-6 py-4 whitespace-nowrap">{{ $item->age_limit }}</td>
-                    <td class=" px-6 py-4 whitespace-nowrap">
+                    <td class="px-6 py-3 whitespace-nowrap">{{ $item->title }}</td>
+                    <td class="px-6 py-3 whitespace-nowrap">{{ $item->duration }}</td>
+                    <td class=" px-6 py-3 whitespace-nowrap">{{ $item->release_date }}</td>
+                    <td class="px-6 py-3 whitespace-nowrap">{{ Illuminate\Support\Str::limit($item->country->country_name, 18, $end='...') }}</td>
+                    <td class="px-6 py-3 whitespace-nowrap">{{ $item->age_limit }}</td>
+                    <td class=" px-6 py-3 whitespace-nowrap">
                         {{ $item->avg_rate() ? number_format($item->avg_rate(), 2) : 'Not Rated' }}
                     </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
+                    <td class="px-6 py-3 whitespace-nowrap">
                         {{ $item->main_genre->first()->genre_name }}
                     </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
+                    <td class="px-6 py-3 whitespace-nowrap">
                         <button wire:click="$emit('openMovieEditModal',{{$item->id}})"
                             class="inline-flex items-center justify-center w-10 h-10 mr-2 text-gray-700 transition-colors duration-150 bg-white rounded-full focus:outline-none hover:bg-gray-200">
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
@@ -65,7 +65,7 @@
                             </svg>
                         </button>
                     </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
+                    <td class="px-6 py-3 whitespace-nowrap">
                     </td>
                 </tr>
 

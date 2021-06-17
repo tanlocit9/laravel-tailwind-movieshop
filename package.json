@@ -30,6 +30,7 @@
         "alpinejs": "^2.8.1",
         "body-scroll-lock": "^3.1.5",
         "datatables.net": "^1.10.25",
-        "tailwindcss-animatecss": "^1.0.7"
+        "tailwindcss-animatecss": "^1.0.7",
+        "tailwindcss-animations": "^2.0.0"
     }
 }

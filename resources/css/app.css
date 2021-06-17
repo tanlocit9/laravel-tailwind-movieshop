@@ -19,6 +19,9 @@
 .btn-login:focus {
     @apply outline-none ring;
 }
+.dataTable{
+    @apply w-10/12;
+}
 .dataTables_wrapper select,
 .dataTables_wrapper .dataTables_filter input {
     color: #4a5568; /*text-gray-700*/
@@ -38,7 +41,7 @@ table.dataTable.display tbody tr:hover {
     background-color: #ebf4ff; /*bg-indigo-100*/
 }
 .dataTables_wrapper{
-    min-height: 720px;
+    @apply h-full;
 }
 
 .dataTables_wrapper .dataTables_length {

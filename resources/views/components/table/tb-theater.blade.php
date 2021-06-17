@@ -20,12 +20,12 @@
             <tbody class="bg-white divide-y divide-gray-200">
                 @foreach ($items as $item)
                     <tr>
-                        <td class="px-6 py-4 whitespace-nowrap">{{$item->theater_name}}</td>
-                        <td class="px-6 py-4 whitespace-nowrap">{{$item->theater_address}}</td>
-                        <td class="px-6 py-4 whitespace-nowrap">{{$item->theater_phone}}</td>
-                        <td class="px-6 py-4 whitespace-nowrap">Việt Nam</td>
-                        <td class="px-6 py-4 whitespace-nowrap">16</td>
-                        <td class="px-6 py-4 whitespace-nowrap">16</td>
+                        <td class="px-6 py-3 whitespace-nowrap">{{$item->theater_name}}</td>
+                        <td class="px-6 py-3 whitespace-nowrap">{{$item->theater_address}}</td>
+                        <td class="px-6 py-3 whitespace-nowrap">{{$item->theater_phone}}</td>
+                        <td class="px-6 py-3 whitespace-nowrap">Việt Nam</td>
+                        <td class="px-6 py-3 whitespace-nowrap">16</td>
+                        <td class="px-6 py-3 whitespace-nowrap">16</td>
                     </tr>
                 @endforeach
             </tbody>

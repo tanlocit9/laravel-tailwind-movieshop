@@ -4,22 +4,22 @@
             <thead>
                 <tr>
                     <th
-                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer">
+                        class="px-6 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer">
                         Genre name</th>
                     <th
-                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer">
+                        class="px-6 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer">
                         Genre description</th>
                     <th
-                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer">
+                        class="px-6 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer">
                         Action</th>
                 </tr>
             </thead>
             <tbody class="bg-white divide-y divide-gray-200">
                 @foreach ($items as $item)
                     <tr class="capitalize">
-                        <td class="px-6 py-4 whitespace-nowrap">{{ $item->genre_name }}</td>
-                        <td class="px-6 py-4 whitespace-nowrap">{{ $item->genre_description }}</td>
-                        <td class="px-6 py-4 whitespace-nowrap">Modify</td>
+                        <td class="px-6 py-3 whitespace-nowrap">{{ $item->genre_name }}</td>
+                        <td class="px-6 py-3 whitespace-nowrap">{{ $item->genre_description }}</td>
+                        <td class="px-6 py-3 whitespace-nowrap">Modify</td>
                 @endforeach
             </tbody>
         </table>

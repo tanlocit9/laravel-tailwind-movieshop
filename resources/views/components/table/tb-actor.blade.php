@@ -16,8 +16,8 @@
             <tbody class="bg-white divide-y divide-gray-200">
                 @foreach ($items as $item)
                 <tr class="capitalize">
-                    <td class="px-6 py-4 whitespace-nowrap">{{$item->full_name}}</td>
-                    <td class="px-6 py-4 whitespace-nowrap">
+                    <td class="px-6 py-3 whitespace-nowrap">{{$item->full_name}}</td>
+                    <td class="px-6 py-3 whitespace-nowrap">
                     @if($item->gender) Male @else Female @endif
                     </td>
                 </tr>

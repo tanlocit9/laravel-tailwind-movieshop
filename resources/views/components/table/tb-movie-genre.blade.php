@@ -1,4 +1,4 @@
-<div class="container xl:w-3/5">
+<div class="container">
     <div id='recipients' class="p-8 m-2 rounded shadow bg-white">
         <table id="movie_genre" class="display cell-border min-w-full divide-y divide-gray-200 normal-case">
             <thead class="bg-gray-50">
@@ -20,9 +20,9 @@
             <tbody class="bg-white divide-y divide-gray-200">
                 @foreach ($items as $item)
                     <tr>
-                        <td class="px-6 py-4 whitespace-nowrap">{{ $item->title }}</td>
-                        <td class="px-6 py-4 whitespace-nowrap">{{ $item->main_genre->first()->genre_name }}</td>
-                        <td class="px-6 py-4 whitespace-nowrap">
+                        <td class="px-6 py-3 whitespace-nowrap">{{ $item->title }}</td>
+                        <td class="px-6 py-3 whitespace-nowrap">{{ $item->main_genre->first()->genre_name }}</td>
+                        <td class="px-6 py-3 whitespace-nowrap">
                             @forelse($item->sub_genre as $genre)
                                 @if ($loop->last)
                                     {{ $genre->genre_name }}.
@@ -33,7 +33,7 @@
                                 Movie doesn't have sub Genres
                             @endforelse
                         </td>
-                        <td class="px-6 py-4 whitespace-nowrap">Modify</td>
+                        <td class="px-6 py-3 whitespace-nowrap">Modify</td>
                     </tr>
                 @endforeach
             </tbody>
