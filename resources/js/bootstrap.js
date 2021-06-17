@@ -2,7 +2,7 @@ window._ = require("lodash");
 window.bodyScrollLock = require("body-scroll-lock");
 window.jQuery = window.$ = require("jquery");
 var dt = require( 'datatables.net' );
-
+window.Pikaday = require ('pikaday/pikaday');
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
  * to our Laravel back-end. This library automatically handles sending the

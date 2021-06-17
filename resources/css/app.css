@@ -19,8 +19,13 @@
 .btn-login:focus {
     @apply outline-none ring;
 }
-.dataTable{
+.dataTable {
     @apply w-10/12;
+}
+.ui-datepicker {
+    position: absolute;
+    margin-left: 100px;
+    z-index: 1000;
 }
 .dataTables_wrapper select,
 .dataTables_wrapper .dataTables_filter input {
@@ -40,7 +45,7 @@ table.dataTable.hover tbody tr:hover,
 table.dataTable.display tbody tr:hover {
     background-color: #ebf4ff; /*bg-indigo-100*/
 }
-.dataTables_wrapper{
+.dataTables_wrapper {
     @apply h-full;
 }
 

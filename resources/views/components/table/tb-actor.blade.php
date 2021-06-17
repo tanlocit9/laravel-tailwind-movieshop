@@ -1,4 +1,4 @@
-<div class="container xl:w-3/5">
+<div class="container xl:w-3/5 ">
     <div id='recipients' class="p-8 m-2 rounded shadow bg-white">
         <table id="actor" class="display cell-border min-w-full divide-y divide-gray-200 normal-case">
             <thead class="bg-gray-50">

@@ -14,7 +14,9 @@ mix.js('resources/js/app.js','public/js/app.js')
     .postCss('resources/css/app.css', 'public/css', [
         require('tailwindcss'),
     ])
-    .sass('resources/sass/app.scss', 'public/css');
+    .sass('resources/sass/app.scss', 'public/css')
+    .copy('resources/css/pikaday.css', 'public/css/pikaday.css');
+
     // .copy(
     //     'node_modules/@fortawesome/fontawesome-free/webfonts',
     //     'public/webfonts'

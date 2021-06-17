@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="{{ asset('/backend/img/fav.png') }}" type="image/x-icon">
     <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.12.1/css/pro.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/app.css') }}">
-
+    <link rel="stylesheet" type="text/css" href="{{ asset('/css/pikaday.css') }}">
     @livewireStyles
     <title>BakaMovie Admin</title>
 </head>
@@ -24,11 +24,19 @@
                 responsive: true,
                 bDestroy: true
             }).columns.adjust();
+
         })
     </script>
     <script src="{{ asset('backend/js/scripts.js') }}"></script>
     <script src="{{ asset('/js/app.js') }}" type="text/javascript"></script>
     <script src="{{ asset('/js/scrollBlock.js') }}" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $( "#adatepicker" ).datepicker({
+                format: 'dd-mm-yyyy'
+            });
+        });
+    </script>
 </body>
 @include('components.alert')
 

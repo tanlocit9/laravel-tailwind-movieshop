@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Backend;
 
 use App\Models\Actor;
+use App\Models\Country;
 use App\Models\Genre;
 use App\Models\Movie;
 use App\Models\Schedule;
@@ -34,13 +35,15 @@ class Master extends Component
         $theaters = Theater::all();
         $actors = Actor::all();
         $schedules = Schedule::all();
+        $countries = Country::all();
         return view('livewire.backend.master', compact(
             'users',
             'movies',
             'genres',
             'theaters',
             'actors',
-            'schedules'
+            'schedules',
+            'countries'
         ));
     }
 }

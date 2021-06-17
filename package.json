@@ -17,6 +17,7 @@
         "jquery": "^3.6.0",
         "laravel-mix": "^6.0.20",
         "lodash": "^4.17.21",
+        "pikaday": "^1.8.2",
         "postcss": "^8.3.4",
         "resolve-url-loader": "^3.1.0",
         "sass": "^1.32.13",
@@ -30,6 +31,7 @@
         "alpinejs": "^2.8.1",
         "body-scroll-lock": "^3.1.5",
         "datatables.net": "^1.10.25",
+        "moment": "^2.29.1",
         "tailwindcss-animatecss": "^1.0.7",
         "tailwindcss-animations": "^2.0.0"
     }
