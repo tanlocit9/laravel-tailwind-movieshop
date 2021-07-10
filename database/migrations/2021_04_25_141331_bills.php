@@ -16,13 +16,15 @@ class Bills extends Migration
         Schema::create('bills', function (Blueprint $table) {
             $table->id();
             $table->integer('total_price')->default(0);
-            $table->date('pay_day')->nullable();
-            $table->timestamps();
+            $table->integer('amount')->default(0);
+
+            $table->foreignId('price_id')->constrained('prices')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
+            $table->foreignId('calendar_id')->constrained('calendars')->onDelete('cascade');
 
             $table->foreignId('bill_status_id')->default(1)->constrained('bill_statuses')->onDelete('cascade');
-            $table->foreignId('calendar_id')->constrained('calendars')->onDelete('cascade');
-            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
-            $table->foreignId('paymode_id')->constrained('pay_modes')->onDelete('cascade');
+
+            $table->timestamps();
         });
     }
 

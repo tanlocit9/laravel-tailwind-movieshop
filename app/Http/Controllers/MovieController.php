@@ -68,7 +68,6 @@ class MovieController extends Controller
                             ->with('status', 'successed');
 
         } catch (\Throwable $th) {
-            dd($th);
             return redirect()->route('manage_movie')
                         ->with('type', 'Add')
                         ->with('status', 'failed');

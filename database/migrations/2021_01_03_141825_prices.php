@@ -19,15 +19,15 @@ class Prices extends Migration
             $table->string('name');
             $table->integer('price');
             $table->string('description')->nullable();
-            $table->foreignId('type_id')->constrained('types')->onDelete('cascade');
+            $table->foreignId('price_type_id')->constrained('price_types')->onDelete('cascade');
         });
-        $data =[
-            ['type_id'=>1,'name'=>'Adult without membership','description'=>'Default ticket','price'=>'70000'],
-            ['type_id'=>1,'name'=>'Adult with membership','description'=>'Membership ticket','price'=>'65000'],
-            ['type_id'=>1,'name'=>'Couple','description'=>'Include 2 tickets','price'=>'150000'],
-            ['type_id'=>2,'name'=>'Combo Solo','description'=>'1 popcorn + 1 coke (32 oz)','price'=>'72000'],
-            ['type_id'=>2,'name'=>'Combo Dual','description'=>'1 popcorn + 2 coke (32 oz)','price'=>'83000'],
-            ['type_id'=>2,'name'=>'Combo Family','description'=>'2 popcorn + 4 coke (32 oz) + 2 snacks','price'=>'179000'],
+        $data = [
+            ['price_type_id' => 1, 'name' => 'Adult with membership', 'description' => 'Membership ticket', 'price' => '70000'],
+            ['price_type_id' => 1, 'name' => 'Adult with membership', 'description' => 'Membership ticket', 'price' => '70000'],
+            ['price_type_id' => 1, 'name' => 'Adult with membership', 'description' => 'Membership ticket', 'price' => '70000'],
+            ['price_type_id' => 2, 'name' => 'Combo Solo', 'description' => '1 popcorn + 1 coke (32 oz)', 'price' => '72000'],
+            ['price_type_id' => 2, 'name' => 'Combo Dual', 'description' => '1 popcorn + 2 coke (32 oz)', 'price' => '83000'],
+            ['price_type_id' => 2, 'name' => 'Combo Family', 'description' => '2 popcorn + 4 coke (32 oz) + 2 snacks', 'price' => '179000'],
         ];
         Price::insert($data);
     }

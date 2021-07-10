@@ -16,6 +16,7 @@ class TheaterSeeder extends Seeder
     {
         $theaters=Theater::factory()
                     ->count(20)
+                    ->hasRooms(5)
                     ->create();
     }
 }

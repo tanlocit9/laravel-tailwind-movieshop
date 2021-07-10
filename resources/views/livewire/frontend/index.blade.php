@@ -13,7 +13,7 @@
                         <img src="{{asset('storage/posters')}}/{{$movie->poster}}" alt="{{$movie->title}}" class="w-56">
                     </a>
                     <div class="mt-2">
-                    <a wire:click.prevent="$emit('openSpecificMovie','{{$movie->slug}}')" class="cursor-pointer text-lg mt-2 hover:text-gray-300">{{$movie->title}}</a>
+                    <a wire:click.prevent="$emit('openSpecificMovie','{{$movie->slug}}')" class="cursor-pointer text-xl mt-2 hover:text-gray-300">{{$movie->title}}</a>
                     </div>
                     {{-- Movie Info --}}
                     <div >

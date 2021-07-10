@@ -23,7 +23,7 @@ class CalendarFactory extends Factory
     {
         return [
             'time_start'=>$this->faker->time('H:i','now'),
-            'price_id'=>rand(1,2)
+            'room_id'=>rand(1,20)
         ];
     }
 }

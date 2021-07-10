@@ -17,6 +17,7 @@ class RoomStatuses extends Migration
         Schema::create('room_statuses', function (Blueprint $table) {
             $table->id();
             $table->string('status');
+            $table->string('status_description')->nullable();
         });
         $data=[
             ['status'=>'empty'],

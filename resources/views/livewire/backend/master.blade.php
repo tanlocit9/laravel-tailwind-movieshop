@@ -6,7 +6,7 @@
         <div class="w-2/12">
             @include('layouts.backend.sidebar')
         </div>
-        <div class="w-10/12 h-full">
+        <div class="w-10/12">
             @switch($tab)
             @case('default')
             <livewire:backend.index />

@@ -38,38 +38,61 @@ class User extends Authenticatable
         'social_id',
         'social_type'
     ];
-    public function toSearchableArray()
-    {
-        $array = $this->toArray();
 
-        // Customize the data array...
-
-        return $array;
-    }
     /**
      * The attributes that should be cast to native types.
      *
      * @var array
      */
+
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    public function role(){
+
+    public function role()
+    {
         return $this->belongsTo(Role::class);
     }
-    public function ratings(){
-        return $this->belongsToMany(Rating::class,'ratings')->withPivot(['is_main']);
+
+    public function ratings()
+    {
+        return $this->belongsToMany(Rating::class, 'ratings')->withPivot(['is_main']);
     }
-    public function avg_rate(){
+
+    public function avg_rate()
+    {
         return $this->ratings()->avg('star');
     }
-    public function cart_items(){
-        return $this->belongsToMany(Price::class,"cart_items","user_id","price_id");
+
+    public function prices()
+    {
+        return $this->belongsToMany(Price::class, "bills", "user_id", "price_id");
     }
-    // public function admins(){
-    //     return $this->roles()->where('role_name','admin');
-    // }
-    // public function customers(){
-    //     return $this->roles()->where('role_name','customer');
-    // }
+
+    public function bills()
+    {
+        return $this->hasMany(Bill::class);
+    }
+
+    public function getBillAmountByCalendar($calendaId)
+    {
+        $bill = $this->bills()->where('calendar_id', $calendaId)->get();
+        $array = array_fill(1, Price::all()->count(), 0);
+        foreach ($bill as $billItem) {
+            $array[$billItem->price_id] = $billItem->amount;
+        }
+        return $array;
+    }
+
+    public function getTotalTicketSelected($calendaId)
+    {
+        $bill = $this->bills()->where('calendar_id', $calendaId)->get();
+        $sum = 0;
+        foreach ($bill as $billItem) {
+            if (Price::find($billItem->price_id)->price_type_id == 1) {
+                $sum+=$billItem->amount;
+            }
+        }
+        return $sum;
+    }
 }

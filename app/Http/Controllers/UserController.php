@@ -56,7 +56,6 @@ class UserController extends Controller
                         ->with('type', 'Add')
                         ->with('status', 'successed');
         } catch (\Throwable $th) {
-            dd($th);
             return redirect()->route('manage_user')
                         ->with('type', 'Add')
                         ->with('status', 'failed');

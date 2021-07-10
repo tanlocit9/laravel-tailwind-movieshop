@@ -18,7 +18,6 @@
 <footer>
     @include('layouts.frontend.footer')
 </footer>
-{{-- @livewire('frontend.form-login') --}}
 @livewire('shared.auth-controller')
 <script type="text/javascript">
     window.onscroll = function (ev) {
