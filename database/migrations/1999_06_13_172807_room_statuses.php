@@ -15,9 +15,9 @@ class RoomStatuses extends Migration
     public function up()
     {
         Schema::create('room_statuses', function (Blueprint $table) {
-            $table->id();
-            $table->string('status');
-            $table->string('status_description')->nullable();
+            $table->id()->comment("Mã trạng thái phòng");
+            $table->string('status',30)->comment("Tên trạng thái phòng");
+            $table->string('description')->comment("Mô tả trạng thái")->nullable();
         });
         $data=[
             ['status'=>'empty'],

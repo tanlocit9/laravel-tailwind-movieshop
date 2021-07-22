@@ -15,8 +15,8 @@ class CreatePriceTypesTable extends Migration
     public function up()
     {
         Schema::create('price_types', function (Blueprint $table) {
-            $table->id();
-            $table->string('type');
+            $table->id()->comment("Mã loại giá tiền");
+            $table->string('type')->comment("Loại giá tiền");
         });
         $data =[
             ['type'=>'ticket'],

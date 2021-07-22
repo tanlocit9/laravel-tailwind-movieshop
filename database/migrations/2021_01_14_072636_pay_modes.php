@@ -14,8 +14,8 @@ class PayModes extends Migration
     public function up()
     {
         Schema::create('pay_modes', function (Blueprint $table) {
-            $table->id();
-            $table->string('mode');
+            $table->id()->comment("Mã phương thức thanh toán");
+            $table->string('mode')->comment("Phương thức thanh toán");
         });
     }
 

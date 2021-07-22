@@ -16,9 +16,9 @@ class Countries extends Migration
     {
         Schema::dropIfExists('countries');
         Schema::create('countries', function (Blueprint $table) {
-            $table->id();
-            $table->string('country_name');
-            $table->string('country_code',2);
+            $table->id()->comment("Mã lưu quốc gia");
+            $table->string('country_name')->comment('Tên quốc gia');
+            $table->string('country_code', 2)->comment('Mã quốc gia');
         });
         $arr = array(
             'AF' => 'Afghanistan',
@@ -268,10 +268,10 @@ class Countries extends Migration
             'ZM' => 'Zambia',
             'ZW' => 'Zimbabwe'
         );
-        foreach ($arr as $key=>$value){
+        foreach ($arr as $key => $value) {
             Country::create([
-                'country_name'=>$value,
-                'country_code'=>$key,
+                'country_name' => $value,
+                'country_code' => $key,
             ]);
         }
     }

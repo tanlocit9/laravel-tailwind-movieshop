@@ -14,11 +14,11 @@ class Schedules extends Migration
     public function up()
     {
         Schema::create('schedules', function (Blueprint $table) {
-            $table->id();
-            $table->date('date');
-            $table->foreignId('schedule_status_id')->default(1)->constrained('schedule_statuses')->onDelete('cascade');
-            $table->foreignId('theater_id')->constrained('theaters')->onDelete('cascade');
-            $table->foreignId('movie_id')->constrained('movies')->onDelete('cascade');
+            $table->id()->comment("Mã lịch chiếu");
+            $table->date('date')->comment("Ngày chiếu");
+            $table->foreignId('schedule_status_id')->comment("Mã trạng thái lịch chiếu")->default(1)->constrained('schedule_statuses')->onDelete('cascade');
+            $table->foreignId('theater_id')->comment("Mã rạp phim")->constrained('theaters')->onDelete('cascade');
+            $table->foreignId('movie_id')->comment("Mã phim")->constrained('movies')->onDelete('cascade');
         });
     }
 

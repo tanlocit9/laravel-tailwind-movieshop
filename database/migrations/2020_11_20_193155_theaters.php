@@ -15,10 +15,10 @@ class Theaters extends Migration
     public function up()
     {
         Schema::create('theaters', function (Blueprint $table) {
-            $table->id();
-            $table->string('theater_name');
-            $table->string('theater_address');
-            $table->string('theater_phone')->default('0368823899');
+            $table->id()->comment("Mã rạp phim");
+            $table->string('theater_name')->comment("Tên rạp phim");
+            $table->string('theater_address')->comment("Địa chỉ rạp phim");
+            $table->string('theater_phone')->comment("SĐT rạp phim")->default('0368823899');
             // $table->string('manager_id');
             $table->timestamps();
         });

@@ -15,15 +15,15 @@ class CreateCalendarStatusesTable extends Migration
     public function up()
     {
         Schema::create('calendar_statuses', function (Blueprint $table) {
-            $table->id();
-            $table->string('status_name', 30);
-            $table->string('status_description')->nullable();
+            $table->id()->comment("Mã trạng thái suất chiếu");
+            $table->string('status',30)->comment("Tên trạng thái suất chiếu");
+            $table->string('description')->comment("Mô tả trạng thái")->nullable();
         });
         $data = [
-            ['status_name' => 'new'],
-            ['status_name' => 'active'],
-            ['status_name' => 'upcomming'],
-            ['status_name' => 'showing'],
+            ['status' => 'new'],
+            ['status' => 'active'],
+            ['status' => 'upcomming'],
+            ['status' => 'showing'],
         ];
         CalendarStatus::insert($data);
     }

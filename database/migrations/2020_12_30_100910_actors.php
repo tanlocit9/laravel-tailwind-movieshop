@@ -15,9 +15,9 @@ class Actors extends Migration
     public function up()
     {
         Schema::create('actors', function (Blueprint $table) {
-            $table->id();
-            $table->string('full_name');
-            $table->boolean('gender');
+            $table->id()->comment("Mã diễn viên");
+            $table->string('full_name')->comment("Tên diễn viên");
+            $table->boolean('gender')->comment("Giới tính diễn viên T/F <=> Name/Nữ");
         });
     }
 

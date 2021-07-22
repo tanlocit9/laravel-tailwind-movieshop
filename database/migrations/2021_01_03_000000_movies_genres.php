@@ -14,9 +14,9 @@ class MoviesGenres extends Migration
     public function up()
     {
         Schema::create('genre_movie', function (Blueprint $table) {
-            $table->foreignId('genre_id')->constrained('genres')->onDelete('cascade');
-            $table->foreignId('movie_id')->constrained('movies')->onDelete('cascade');
-            $table->boolean('is_main')->default(0);
+            $table->foreignId('genre_id')->comment("Mã thể loại")->constrained('genres')->onDelete('cascade');
+            $table->foreignId('movie_id')->comment("Mã phim")->constrained('movies')->onDelete('cascade');
+            $table->boolean('is_main')->comment("Thể loại chính T/F Phụ/Chính")->default(0);
             $table->primary(array('movie_id', 'genre_id'));
         });
     }

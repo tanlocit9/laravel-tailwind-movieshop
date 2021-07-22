@@ -15,11 +15,11 @@ class Prices extends Migration
     public function up()
     {
         Schema::create('prices', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->integer('price');
-            $table->string('description')->nullable();
-            $table->foreignId('price_type_id')->constrained('price_types')->onDelete('cascade');
+            $table->id()->comment("Mã giá tiền");
+            $table->string('name')->comment("Tên giá tiền");
+            $table->integer('price')->comment("Giá");
+            $table->string('description')->comment("Mô tả giá tiền")->nullable();
+            $table->foreignId('price_type_id')->comment("Mã loại giá tiền")->constrained('price_types')->onDelete('cascade');
         });
         $data = [
             ['price_type_id' => 1, 'name' => 'Adult with membership', 'description' => 'Membership ticket', 'price' => '70000'],

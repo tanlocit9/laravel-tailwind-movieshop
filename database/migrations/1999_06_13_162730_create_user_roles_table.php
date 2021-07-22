@@ -15,13 +15,13 @@ class CreateUserRolesTable extends Migration
     public function up()
     {
         Schema::create('user_roles', function (Blueprint $table) {
-            $table->id();
-            $table->string('role_name',30);
-            $table->string('role_description')->nullable();
+            $table->id()->comment("Mã vai trò người dùng");
+            $table->string('role', 30)->comment("Tên vai trò người dùng trong hệ thống");
+            $table->string('description')->comment("Mô tả vai trò")->nullable();
         });
         $data = [
-            ['role_name'=>'admin','role_description'=>null],
-            ['role_name'=>'customer','role_description'=>null],
+            ['role' => 'admin', 'description' => null],
+            ['role' => 'customer', 'description' => null],
         ];
         UserRole::insert($data);
     }

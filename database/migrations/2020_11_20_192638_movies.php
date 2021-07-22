@@ -15,16 +15,16 @@ class Movies extends Migration
     public function up()
     {
         Schema::create('movies', function (Blueprint $table) {
-            $table->id();
-            $table->string('title');
-            $table->string('slug');
-            $table->string('description')->default("The movie do not have description");
-            $table->string('duration');
-            $table->integer('age_limit');
-            $table->string('release_date');
-            $table->string('poster');
+            $table->id()->comment("Mã phim");
+            $table->string('title')->comment('Tiêu đề phim');
+            $table->string('slug')->comment('Slug của phim');
+            $table->string('description')->comment('Mô tả phim')->default("The movie do not have description");
+            $table->string('duration')->comment('Thời lượng phim');
+            $table->integer('age_limit')->comment('Độ tuổi giới hạn');
+            $table->string('release_date')->comment('Ngày ra mắt phim');
+            $table->string('poster')->comment('Đường dẫn poster của phim');
 
-            $table->foreignId('country_id')->constrained('countries')->onDelete('cascade');
+            $table->foreignId('country_id')->comment('Mã quốc gia')->constrained('countries')->onDelete('cascade');
             $table->timestamps();
         });
         // $now = date('Y-m-d H:i:s');

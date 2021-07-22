@@ -15,13 +15,13 @@ class CreateMovieRolesTable extends Migration
     public function up()
     {
         Schema::create('movie_roles', function (Blueprint $table) {
-            $table->id();
-            $table->string('role_name',30);
-            $table->string('role_description')->nullable();
+            $table->id()->comment("Mã vai trò trong phim");
+            $table->string('role', 30)->comment("Vài trò trong phim");
+            $table->string('description')->comment("Mô tả vai trò")->nullable();
         });
         $data = [
-            ['role_name'=>'actor_main','role_description'=>null],
-            ['role_name'=>'actor_support','role_description'=>null],
+            ['role' => 'actor_main', 'description' => null],
+            ['role' => 'actor_support', 'description' => null],
         ];
         MovieRole::insert($data);
     }

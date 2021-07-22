@@ -14,10 +14,10 @@ class Ratings extends Migration
     public function up()
     {
         Schema::create('ratings', function (Blueprint $table) {
-            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
-            $table->foreignId('movie_id')->constrained('movies')->onDelete('cascade');
-            $table->float('star');
-            $table->string('comment')->nullable();
+            $table->foreignId('user_id')->comment("Mã người dùng")->constrained('users')->onDelete('cascade');
+            $table->foreignId('movie_id')->comment("Mã phim")->constrained('movies')->onDelete('cascade');
+            $table->float('star')->comment("Số sao đánh giá");
+            $table->string('comment')->comment("Bình luận")->nullable();
             $table->timestamps();
 
             $table->primary(array('movie_id', 'user_id'));

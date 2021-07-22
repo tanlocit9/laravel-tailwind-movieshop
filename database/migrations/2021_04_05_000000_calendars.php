@@ -14,13 +14,13 @@ class Calendars extends Migration
     public function up()
     {
         Schema::create('calendars', function (Blueprint $table) {
-            $table->id();
-            $table->time('time_start');
-            $table->integer('slot_remain')->default(100);
+            $table->id()->comment("Mã suất chiếu");
+            $table->time('time_start')->comment("Thời gian bắt đầu");
+            $table->integer('slot_remain')->comment("Lượng ghế còn lại")->default(100);
 
-            $table->foreignId('room_id')->constrained('rooms')->onDelete('cascade');
-            $table->foreignId('calendar_status_id')->default(1)->constrained('calendar_statuses')->onDelete('cascade');
-            $table->foreignId('schedule_id')->constrained('schedules')->onDelete('cascade');
+            $table->foreignId('room_id')->comment("Mã phòng")->constrained('rooms')->onDelete('cascade');
+            $table->foreignId('calendar_status_id')->comment("Mã trạng thái suất chiếu")->default(1)->constrained('calendar_statuses')->onDelete('cascade');
+            $table->foreignId('schedule_id')->comment("Mã trạng thái lịch chiếu")->constrained('schedules')->onDelete('cascade');
         });
     }
 

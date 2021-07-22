@@ -2,15 +2,13 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Laravel\Scout\Searchable;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable, Searchable;
+    use HasFactory, Notifiable;
     public $keyType = 'string';
     /**
      * The attributes that are mass assignable.
@@ -21,6 +19,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'id_card_number',
         'phone_number',
         'role_id',
         'social_id',
@@ -66,31 +65,31 @@ class User extends Authenticatable
 
     public function prices()
     {
-        return $this->belongsToMany(Price::class, "bills", "user_id", "price_id");
+        return $this->belongsToMany(Price::class, "tickets", "user_id", "price_id");
     }
 
-    public function bills()
+    public function tickets()
     {
-        return $this->hasMany(Bill::class);
+        return $this->hasMany(Ticket::class);
     }
 
-    public function getBillAmountByCalendar($calendaId)
+    public function getTicketAmountByCalendar($calendaId)
     {
-        $bill = $this->bills()->where('calendar_id', $calendaId)->get();
+        $ticket = $this->tickets()->where('calendar_id', $calendaId)->get();
         $array = array_fill(1, Price::all()->count(), 0);
-        foreach ($bill as $billItem) {
-            $array[$billItem->price_id] = $billItem->amount;
+        foreach ($ticket as $ticketItem) {
+            $array[$ticketItem->price_id] = $ticketItem->amount;
         }
         return $array;
     }
 
     public function getTotalTicketSelected($calendaId)
     {
-        $bill = $this->bills()->where('calendar_id', $calendaId)->get();
+        $ticket = $this->tickets()->where('calendar_id', $calendaId)->get();
         $sum = 0;
-        foreach ($bill as $billItem) {
-            if (Price::find($billItem->price_id)->price_type_id == 1) {
-                $sum+=$billItem->amount;
+        foreach ($ticket as $ticketItem) {
+            if (Price::find($ticketItem->price_id)->price_type_id == 1) {
+                $sum+=$ticketItem->amount;
             }
         }
         return $sum;

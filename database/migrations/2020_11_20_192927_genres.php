@@ -15,8 +15,8 @@ class Genres extends Migration
     public function up()
     {
         Schema::create('genres', function (Blueprint $table) {
-            $table->id();
-            $table->string('genre_name');
+            $table->id()->comment("Mã thể loại");
+            $table->string('genre_name')->comment('Tên thể loại');
             $table->string('genre_description')->comment('Mô tả');
         });
         $data = [

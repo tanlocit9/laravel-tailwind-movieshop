@@ -14,12 +14,12 @@ class Rooms extends Migration
     public function up()
     {
         Schema::create('rooms', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->integer('slot')->default(60);
+            $table->id()->comment("Mã phòng");
+            $table->string('name')->comment("Tên phòng");
+            $table->integer('slot')->comment("Số lượng ghế")->default(60);
 
-            $table->foreignId('theater_id')->constrained('theaters')->onDelete('cascade');
-            $table->foreignId('room_status_id')->default(1)->constrained('room_statuses')->onDelete('cascade');
+            $table->foreignId('theater_id')->comment("Mã rạp phim")->constrained('theaters')->onDelete('cascade');
+            $table->foreignId('room_status_id')->comment("Mã trạng thái phòng")->default(1)->constrained('room_statuses')->onDelete('cascade');
             $table->timestamps();
         });
     }

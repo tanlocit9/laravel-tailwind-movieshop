@@ -14,9 +14,9 @@ class MoviesActors extends Migration
     public function up()
     {
         Schema::create('actor_movie', function (Blueprint $table) {
-            $table->foreignID('movie_id')->constrained()->onDelete('cascade');
-            $table->foreignID('actor_id')->constrained()->onDelete('cascade');
-            $table->foreignID('role_id')->constrained('movie_roles')->onDelete('cascade');
+            $table->foreignID('movie_id')->comment("Mã phim")->constrained()->onDelete('cascade');
+            $table->foreignID('actor_id')->comment("Mã diễn viên")->constrained()->onDelete('cascade');
+            $table->foreignID('role_id')->comment("Mã vai trò phim")->constrained('movie_roles')->onDelete('cascade');
             $table->primary(array('movie_id', 'actor_id'));
 
             // $table->string('character');
