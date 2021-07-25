@@ -36,6 +36,10 @@
             @case('schedule')
             @include('components.table.tb-schedule',['items'=>$schedules])
             @break
+            @case('ticket')
+            @include('components.table.tb-ticket',['items'=>$tickets])
+            @livewire('backend.modal.ticket-edit')
+            @break
             @default
             <livewire:backend.index />
             @endswitch

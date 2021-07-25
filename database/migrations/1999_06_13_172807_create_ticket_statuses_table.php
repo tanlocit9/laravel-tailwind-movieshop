@@ -20,9 +20,9 @@ class CreateTicketStatusesTable extends Migration
             $table->string('description')->comment("Mô tả trạng thái")->nullable();
         });
         $data =[
-            ['status'=>'new'],
-            ['status'=>'canceled'],
-            ['status'=>'payed']
+            ['status'=>'New'],
+            ['status'=>'Canceled'],
+            ['status'=>'Payed']
         ];
         TicketStatus::insert($data);
     }

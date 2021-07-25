@@ -14,11 +14,12 @@ class CreateTicketInfosTable extends Migration
     public function up()
     {
         Schema::create('ticket_infos', function (Blueprint $table) {
-            $table->id()->comment("Mã thông tin vé");
-            $table->string('seat', 2)->comment("Tên ghế");
-            $table->integer('price')->comment("Giá");
+            $table->string('name')->comment("Tên vé");
+            $table->string('seat')->comment("Vị trí ghế");
+            $table->string('amount')->comment("Số lượng vé");
             $table->foreignId('ticket_id')->comment("Mã vé")->constrained('tickets')->onDelete('cascade');
-            $table->timestamps();
+            $table->foreignId('price_id')->comment("Mã giá")->nullable()->constrained('prices')->onDelete('cascade');
+            $table->primary(array('ticket_id', 'price_id'));
         });
     }
 

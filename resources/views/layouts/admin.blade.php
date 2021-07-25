@@ -18,13 +18,17 @@
     <!-- script -->
     @livewireScripts
     <script>
+        var data;
         Livewire.on("datatable", (tab) => {
-            $('#'+tab).DataTable({
-                autoWidth: false,
+            data=$('#'+tab).DataTable({
+                autoWidth: true,
                 responsive: true,
                 bDestroy: true
             }).columns.adjust();
+        })
 
+        Livewire.on("refresh", (tab) => {
+            data.DataTable().ajax.reload();
         })
     </script>
     <script src="{{ asset('backend/js/scripts.js') }}"></script>

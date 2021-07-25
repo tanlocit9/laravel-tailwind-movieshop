@@ -7,15 +7,20 @@
                         <div class="screen text-red-900 text-center">SCREEN</div>
                         <div class="exit exit--front"></div>
                         <ol class="cabin max-w-full text-center">
+
                             @for ($i = 0;$i<strlen($stringSeat);$i++) <li class="w-full">
-                                <ol class="flex flex-row flex-nowrap justify-evenly w-full flex-1"
-                                    type="{{substr($stringSeat,$i,1) }}">
+                                <ol class="flex flex-row flex-nowrap justify-evenly w-full flex-1">
                                     @for ($j = 1;$j
-                                    <strlen($stringSeat)+1;$j++) <li class="flex text-black seat p-1 relative flex-0-7"
-                                        wire:click="addToCart('{{substr($stringSeat,$i,1)}}{{$j}}')"> <input
-                                            type="checkbox" id="{{substr($stringSeat,$i,1) }}{{$j}}" />
-                                        <label
-                                            for="{{substr($stringSeat,$i,1) }}{{$j}}">{{substr($stringSeat,$i,1) }}{{$j}}</label>
+                                    < strlen($stringSeat)+1;$j++) <li class="flex text-black seat p-1 relative flex-0-7"
+                                        {{$slot = substr($stringSeat,$i,1).(string)$j}}
+                                        @if($isFullSelected&&!in_array($slot, $selectedSeat))
+                                        class="hover:cursor-not-allowed pointer-events-none" @endif> <input
+                                            type="checkbox" id="{{substr($stringSeat,$i,1)}}{{$j}}"
+                                            @if($isFullSelected&&!in_array($slot,
+                                            $selectedSeat))class="hover:cursor-not-allowed" disabled @endif />
+                                        <label wire:click="selectSeat('{{substr($stringSeat,$i,1)}}{{$j}}')"
+                                            for="{{substr($stringSeat,$i,1)}}{{$j}}">{{substr($stringSeat,$i,1) }}{{$j}}
+                                        </label>
                                         </li>
                                         @endfor
                                 </ol>
@@ -25,7 +30,7 @@
                         <div class="exit exit--back "></div>
                     </div>
                 </div>
-
+                Selected {{count($selectedSeat)}} out of {{$totalTicket}} tickets
             </div>
 
         </div>
@@ -73,7 +78,7 @@
                         You have to pay:
                     </span>
                     <span>
-                        {{numfmt_format_currency(numfmt_create( 'vn_VN', NumberFormatter::CURRENCY ), Session::get("sessiontotalPriceTickets") + Session::get("sessiontotalPriceCombos"),"VND")}}
+                        {{numfmt_format_currency(numfmt_create( 'vn_VN', NumberFormatter::CURRENCY ), Session::get("sessionTotalPriceTickets") + Session::get("sessionTotalPriceCombos"),"VND")}}
                     </span>
                 </div>
                 @if (session()->has('message'))
@@ -82,9 +87,9 @@
                 </div>
                 @endif
                 <div class="p-2 mx-auto ">
-                    <a wire:click="openSelectSeatForm()"
+                    <a wire:click="openPaymentForm()"
                         class="cursor-pointer rounded-full bg-white hover:bg-yellow-500 text-black font-semibold py-2 px-4 border border-gray-400 shadow focus:outline-none">
-                        Continue
+                        Book
                     </a>
                 </div>
             </div>

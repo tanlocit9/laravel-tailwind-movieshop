@@ -20,8 +20,8 @@ class CreateMovieRolesTable extends Migration
             $table->string('description')->comment("Mô tả vai trò")->nullable();
         });
         $data = [
-            ['role' => 'actor_main', 'description' => null],
-            ['role' => 'actor_support', 'description' => null],
+            ['role' => 'Main actor', 'description' => null],
+            ['role' => 'Support actor', 'description' => null],
         ];
         MovieRole::insert($data);
     }

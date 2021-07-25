@@ -20,8 +20,8 @@ class CreateUserRolesTable extends Migration
             $table->string('description')->comment("Mô tả vai trò")->nullable();
         });
         $data = [
-            ['role' => 'admin', 'description' => null],
-            ['role' => 'customer', 'description' => null],
+            ['role' => 'Admin', 'description' => null],
+            ['role' => 'Customer', 'description' => null],
         ];
         UserRole::insert($data);
     }

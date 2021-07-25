@@ -20,9 +20,9 @@ class CreateScheduleStatusesTable extends Migration
             $table->string('description')->comment("Mô tả trạng thái")->nullable();
         });
         $data =[
-            ['status'=>'draft'],
-            ['status'=>'active'],
-            ['status'=>'canceled'],
+            ['status'=>'Draft'],
+            ['status'=>'Active'],
+            ['status'=>'Canceled'],
         ];
         ScheduleStatus::insert($data);
     }

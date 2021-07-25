@@ -85,6 +85,12 @@
             <i class="fad fa-shield-check text-xs mr-2"></i>
             Schedules
         </a>
+
+        <a @if($tab!='ticket' )wire:click.prevent="changeTab('ticket')" @endif
+            class="cursor-pointer mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
+            <i class="fad fa-shield-check text-xs mr-2"></i>
+            Tickets
+        </a>
         <!-- end link -->
         <!-- link -->
         {{-- <a href="{{route('manage_movie_calendar')}}" class="cursor-pointer mb-3 capitalize font-medium text-sm

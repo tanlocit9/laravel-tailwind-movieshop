@@ -23,6 +23,7 @@ class BookTicket extends Component
     public $theater;
     public $schedule;
     public $sessionTickets;
+    public $sessionAmount;
     public function mount($movie, $calendar)
     {
         $this->sessionTickets = 0;
@@ -31,7 +32,12 @@ class BookTicket extends Component
         $this->calendar = $calendar;
         $this->schedule = $calendar->schedule;
         $this->theater = $calendar->schedule->theater;
-        $this->amount = array_fill(1, Price::all()->count(), 0);
+        if (session()->has('sessionAmount')) {
+            $this->amount = session('sessionAmount');
+        } else {
+            $this->amount = array_fill(1, Price::all()->count(), 0);
+        }
+
         $this->total_price = array_fill(1, Price::all()->count(), 0);
         $this->prices = Price::all();
     }
@@ -50,8 +56,13 @@ class BookTicket extends Component
     {
         $this->amount[$price_id]++;
         if (Price::checkIsTicketType($price_id)) {
-            $this->sessionTickets++;
-            session()->put('sessionTickets', $this->sessionTickets);
+            if ($this->getTotalTicket() <= 0) {
+                session()->put('sessionTickets', 0);
+            } else {
+
+                session()->put('sessionTickets', $this->getTotalTicket());
+            }
+            session()->put('sessionAmount', $this->amount);
         }
     }
 
@@ -62,8 +73,12 @@ class BookTicket extends Component
         }
 
         if (Price::checkIsTicketType($price_id)) {
-            $this->sessionTickets--;
-            session()->put('sessionTickets', $this->sessionTickets);
+            if ($this->getTotalTicket() <= 0) {
+                session()->put('sessionTickets', 0);
+            } else {
+                session()->put('sessionTickets', $this->getTotalTicket());
+            }
+            session()->put('sessionAmount', $this->amount);
         }
     }
 
@@ -79,11 +94,8 @@ class BookTicket extends Component
             $this->total_ticket += $this->total_price[$i];
             $this->total_combo += $this->total_price[$i + 3];
         }
-        session()->forget('sessiontotalPriceTickets');
-        session()->put('sessiontotalPriceTickets', $this->total_ticket);
-
-        session()->forget('sessiontotalPriceCombos');
-        session()->put('sessiontotalPriceCombos', $this->total_combo);
+        session()->put('sessionTotalPriceTickets', $this->total_ticket);
+        session()->put('sessionTotalPriceCombos', $this->total_combo);
     }
 
     public function openSelectSeatForm()
@@ -97,9 +109,20 @@ class BookTicket extends Component
 
     public function validateInput($value)
     {
-        dd($value);
         if (!is_numeric($value) && $value < 0) {
             return false;
         }
+    }
+
+    public function getTotalTicket()
+    {
+        $tickets = 0;
+        foreach ($this->amount as $k => $v) {
+            if (Price::checkIsTicketType($k)) {
+                $tickets += $v;
+            }
+        }
+
+        return $tickets;
     }
 }

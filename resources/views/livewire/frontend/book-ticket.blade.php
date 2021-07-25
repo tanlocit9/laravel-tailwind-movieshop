@@ -61,7 +61,7 @@
                                 <i class="fa fa-minus cursor-pointer" wire:click="decrease({{$loop->index+1}})"
                                     aria-hidden="true"></i>
                                 <input wire:model="amount.{{$loop->index+1}}" wire:change="validateInput({{$loop->index+1}},$event.target.value)" type="text" value="0"
-                                    class="w-8 pl-2 rounded-md focus:outline-none"
+                                    class="w-8 pl-2 rounded-md focus:outline-none">
                                 <i class="fa fa-plus cursor-pointer" wire:click="increase({{$loop->index+1}})"
                                     aria-hidden="true"></i>
                             </th>

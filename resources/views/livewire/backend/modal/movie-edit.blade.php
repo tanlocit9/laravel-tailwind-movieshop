@@ -6,8 +6,8 @@
         <div class="overflow-auto h-full" style="background-color: rgba(0,0,0,0.5)"
             :class="{ 'fixed inset-0 z-10 flex items-center justify-center h-screen': open }">
             <!--Dialog-->
-            <div class="text-gray-600 bg-white w-5/12 md:max-w-md mx-auto rounded shadow-lg pt-4 text-left px-6 pb-0"
-                x-ref="myModal" x-show="open" x-transition:enter="ease-out duration-300"
+            <div class="text-gray-600 bg-white w-6/12 md:max-w-md mx-auto rounded shadow-lg pt-4 text-left px-6 pb-0"
+                x-ref="myModal" x-show="open" x-transition:enter="ease-out duration-300" @click.away="closeModal()"
                 x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
                 x-transition:leave="ease-in duration-300" x-transition:leave-start="opacity-100 scale-100"
                 x-transition:leave-end="opacity-0 scale-90">
@@ -23,7 +23,7 @@
                         <div class="flex items-center space-x-4 ">
                             <div class="flex flex-col">
                                 <label for="datepicker" class="leading-relaxed">Release day</label>
-                                <x-date-picker wire:model="releaseDate" id="datepicker"/>
+                                <x-date-picker wire:model="releaseDate" id="datepicker" />
                             </div>
                             <div class="flex flex-col">
                                 <label class="leading-relaxed">Duration</label>
@@ -79,16 +79,11 @@
                             </label>
                         </div>
                     </div>
-                    <div class="pt-4 flex items-center space-x-4">
-                        <div id="modal-close"
-                            class="flex justify-center items-center w-full text-gray-900 px-4 py-3 rounded-md focus:outline-none cursor-pointer">
-                            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M6 18L18 6M6 6l12 12"></path>
-                            </svg> Cancel
-                        </div>
-                        <button type="submit" class="modal-create">Create</button>
+                    <div class="w-full mx-auto py-4" x-on:click="closeModal()">
+                        <button
+                            class="bg-blue-500 hover:bg-blue-700 focus:outline-none text-white font-bold py-2 px-4 rounded float-right">
+                            Close
+                        </button>
                     </div>
                 </div>
                 </form>

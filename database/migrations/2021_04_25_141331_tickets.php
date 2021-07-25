@@ -15,13 +15,10 @@ class Tickets extends Migration
     {
         Schema::create('tickets', function (Blueprint $table) {
             $table->id()->comment("Mã vé");
-            $table->integer('total_price')->comment("Tổng giá vé")->default(0);
-            $table->integer('amount')->comment("Số lượng")->default(0);
-
+            $table->integer('total_price')->comment("Tổng giá tiền")->default(0);
             $table->foreignId('user_id')->comment("Mã người dùng")->constrained('users')->onDelete('cascade');
             $table->foreignId('calendar_id')->comment("Mã suất chiếu")->constrained('calendars')->onDelete('cascade');
-            $table->foreignId('price_id')->comment("Mã giá")->nullable()->constrained('prices')->onDelete('cascade');
-            $table->foreignId('paymode_id')->comment("Mã phương thức thanh toán")->nullable()->constrained('pay_modes')->onDelete('cascade');
+            $table->foreignId('paymode_id')->comment("Mã phương thức thanh toán")->default(1)->constrained('pay_modes')->onDelete('cascade');
             $table->foreignId('ticket_status_id')->comment("Mã trạng thái vé")->default(1)->constrained('ticket_statuses')->onDelete('cascade');
 
             $table->timestamps();

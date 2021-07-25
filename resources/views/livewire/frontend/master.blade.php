@@ -21,6 +21,8 @@
     @break
     @case('select-seat')
     @livewire('frontend.select-seat', ['movie' => $movie, 'calendar' => $calendar])
+    @livewire('frontend.modal.payment', ['movie' => $movie, 'calendar' => $calendar])
     @break
     @endswitch
+    @livewire('shared.modal.inform')
 </div>

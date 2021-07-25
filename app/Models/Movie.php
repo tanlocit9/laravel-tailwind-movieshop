@@ -58,10 +58,10 @@ class Movie extends Model
         return $this->genres()->wherePivot('is_main',0);
     }
     public function main_actor(){
-        return $this->actors()->wherePivot('role_id',3);
+        return $this->actors()->wherePivot('role_id',1);
     }
     public function sub_actor(){
-        return $this->actors()->wherePivot('role_id',4);
+        return $this->actors()->wherePivot('role_id',2);
     }
 
 }

@@ -20,10 +20,10 @@ class CreateCalendarStatusesTable extends Migration
             $table->string('description')->comment("Mô tả trạng thái")->nullable();
         });
         $data = [
-            ['status' => 'new'],
-            ['status' => 'active'],
-            ['status' => 'upcomming'],
-            ['status' => 'showing'],
+            ['status' => 'New'],
+            ['status' => 'Active'],
+            ['status' => 'Upcomming'],
+            ['status' => 'Showing'],
         ];
         CalendarStatus::insert($data);
     }
