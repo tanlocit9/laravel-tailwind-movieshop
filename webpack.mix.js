@@ -20,4 +20,5 @@ mix.js('resources/js/app.js','public/js/app.js')
     // .copy(
     //     'node_modules/@fortawesome/fontawesome-free/webfonts',
     //     'public/webfonts'
-    // );
+    // );     
+        
