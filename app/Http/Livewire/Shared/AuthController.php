@@ -50,6 +50,8 @@ class AuthController extends Component
                 'name' => $validatedData['name'],
                 'email' =>  $validatedData['email'],
                 'password' =>  Hash::make($validatedData['password']),
+                'id_card_number' => rand(100000000, 99999999999),
+                'phone_number' => 1,
             ]);
             Auth::login($user);
             $this->emit('closeLoginForm');
@@ -82,7 +84,9 @@ class AuthController extends Component
                     'role_id' => 2,
                     'social_id' => $user->id,
                     'social_type' => $provider,
-                    'password' => 'null'
+                    'password' => 'null',
+                    'id_card_number' => rand(100000000, 99999999999),
+                    'phone_number' => 1,
                 ]);
                 Auth::login($newUser);
                 $this->emit('closeLoginForm');

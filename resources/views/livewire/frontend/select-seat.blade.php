@@ -17,7 +17,7 @@
                                         class="hover:cursor-not-allowed pointer-events-none" @endif> <input
                                             type="checkbox" id="{{substr($stringSeat,$i,1)}}{{$j}}"
                                             @if($isFullSelected&&!in_array($slot,
-                                            $selectedSeat))class="hover:cursor-not-allowed" disabled @endif />
+                                            $selectedSeat))class="hover:cursor-not-allowed pointer-events-none" disabled @endif />
                                         <label wire:click="selectSeat('{{substr($stringSeat,$i,1)}}{{$j}}')"
                                             for="{{substr($stringSeat,$i,1)}}{{$j}}">{{substr($stringSeat,$i,1) }}{{$j}}
                                         </label>

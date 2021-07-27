@@ -17,12 +17,15 @@ class AuthView extends Component
     {
         $this->dispatchBrowserEvent('close-login-form');
     }
-
+    public function history()
+    {
+        $this->emit('changeTab', 'history');
+    }
     public function logout()
     {
         Session::invalidate();
         Session::regenerateToken();
-        $this->emit('changeTab', 'index');
+        return redirect('/');
     }
 
     public function render()

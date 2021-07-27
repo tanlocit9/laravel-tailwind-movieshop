@@ -8,6 +8,8 @@
     @switch($tab)
     @case('index')
     @livewire('frontend.index')
+    @case('history')
+    @livewire('frontend.history')
     @break
     @case('show-time')
     @livewire('frontend.show-time')

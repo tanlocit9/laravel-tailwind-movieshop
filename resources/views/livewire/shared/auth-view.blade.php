@@ -12,7 +12,9 @@
                         <i class="fa fa-user-circle fa-1x" aria-hidden="true"></i>
                         Hi, {{ Auth::user()->name }}
                     </a>
-
+                    <a class="ml-5" href="#" wire:click="history()">
+                        History
+                    </a>
                     @if (Auth::user()->role_id==1)
 
                         <a class="mx-5" href="{{ route('admin') }}">{{ __('Admin') }}</a>

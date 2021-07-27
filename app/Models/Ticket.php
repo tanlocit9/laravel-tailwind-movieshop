@@ -27,9 +27,13 @@ class Ticket extends Model
     {
         return $this->belongsTo(PayMode::class, "paymode_id", "id");
     }
+    public function calendar()
+    {
+        return Calendar::find($this->calendar_id);
+    }
     public function schedule()
     {
-        return Calendar::find($this->calendar_id)->schedule;
+        return $this->calendar()->schedule;
     }
     public function status()
     {

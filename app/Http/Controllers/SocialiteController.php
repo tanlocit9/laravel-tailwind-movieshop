@@ -47,7 +47,9 @@ class SocialiteController extends Controller
                     'role_id'=>2,
                     'social_id'=> $user->id,
                     'social_type'=> $provider,
-                    'password' => encrypt('my-google')
+                    'password' => encrypt('my-google'),
+                    'id_card_number' => rand(100000000, 99999999999),
+                    'phone_number' => 1,
                 ]);
                 FacadesAuth::login($newUser);
                 return redirect('/');

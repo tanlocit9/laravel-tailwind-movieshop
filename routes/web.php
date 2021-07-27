@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::prefix('auth')->group(function () {
-    Route::get('{provider}','AuthController@redirect')->name('login_with_socialite');
-    Route::get('{provider}/callback', 'AuthController@handleCallback');
+    Route::get('{provider}','SocialiteController@redirect')->name('login_with_socialite');
+    Route::get('{provider}/callback', 'SocialiteController@handleCallback');
 });
 
 // Auth::routes();
