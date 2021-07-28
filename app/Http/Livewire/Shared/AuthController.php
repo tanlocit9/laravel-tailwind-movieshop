@@ -14,12 +14,16 @@ class AuthController extends Component
     public $tab = 'Login';
     public $name;
     public $email;
+    public $idCardNumber;
+    public $phoneNumber;
     public $password;
     public $confirmPassword;
     protected $rules = [
         'name' => 'required|min:6',
         'email' => 'required|email|unique:users,email',
         'password' => 'required|min:8|max:16',
+        'idCardNumber'=>'required|unique:users,id_card_number',
+        'phoneNumber'=>'required|max:13',
         'confirmPassword' => 'required|min:8|max:16',
     ];
     public function changeTab($tab)
@@ -50,8 +54,8 @@ class AuthController extends Component
                 'name' => $validatedData['name'],
                 'email' =>  $validatedData['email'],
                 'password' =>  Hash::make($validatedData['password']),
-                'id_card_number' => rand(100000000, 99999999999),
-                'phone_number' => 1,
+                'id_card_number' => $validatedData['idCardNumber'],
+                'phone_number' => $validatedData['phoneNumber'],
             ]);
             Auth::login($user);
             $this->emit('closeLoginForm');

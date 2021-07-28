@@ -22,7 +22,7 @@ class ScheduleFactory extends Factory
     public function definition()
     {
         return [
-            'date'=>$this->faker->dateTimeBetween('now', '+1 months'),
+            'date'=>$this->faker->dateTimeBetween('now', '+1 weeks'),
             'theater_id'=>rand(1,12),
             'movie_id'=>rand(1,50)
         ];

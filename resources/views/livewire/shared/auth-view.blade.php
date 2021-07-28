@@ -3,12 +3,12 @@
         {{-- <input class="text-red-500" wire:model="something"> --}}
         @guest
             <li class="nav-item">
-                <a id="login" class="nav-link cursor-pointer" wire:click="openLoginForm()">{{ __('Login') }}</a>
+                <a id="login" class="nav-link cursor-pointer ml-5" wire:click="openLoginForm()">{{ __('Login') }}</a>
             </li>
         @else
             <li class="nav-item dropdown">
                 <div>
-                    <a class="" href="#" >
+                    <a class="ml-5" href="#" >
                         <i class="fa fa-user-circle fa-1x" aria-hidden="true"></i>
                         Hi, {{ Auth::user()->name }}
                     </a>

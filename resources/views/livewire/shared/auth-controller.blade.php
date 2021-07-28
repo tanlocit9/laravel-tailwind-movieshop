@@ -24,7 +24,7 @@
                     </li>
                 </ul>
                 @if ($tab == 'Login')
-                <form method="POST" wire:submit.prevent="login" class="my-5">
+                <form wire:submit.prevent="login" class="my-5">
                     @csrf
                     <div class="grid grid-rows-4 gap-0 space-y-2">
                         {{-- <i class="fa fa-user fa-1x" aria-hidden="true"></i> --}}
@@ -63,7 +63,7 @@
                     </div>
                 </form>
                 @else
-                <form method="POST" wire:submit.prevent="register" class="my-5">
+                <form wire:submit.prevent="register" class="my-5">
                     @csrf
                     <div class="grid grid-flow-row-dense gap-4">
                         <div>
@@ -71,7 +71,7 @@
                             <div>
                                 <i class="fa fa-user fa-1x absolute pt-2 pl-3" aria-hidden="true"></i>
                                 <input id="name" type="text" class="input-login" wire:model="name" required autofocus
-                                    placeholder="Loc ne">
+                                    placeholder="Username">
                             </div>
                             @error('name') <span class="text-red-700">{{ $message }}</span> @enderror
                         </div>
@@ -85,11 +85,29 @@
                             @error('email') <span class="text-red-700">{{ $message }}</span> @enderror
                         </div>
                         <div>
+                            <label for="idCardNumber" class="">{{ __('ID Card Number') }}</label>
+                            <div>
+                                <i class="fa fa-user fa-1x absolute pt-2 pl-3" aria-hidden="true"></i>
+                                <input id="idCardNumber" type="text" class="input-login" wire:model="idCardNumber" required
+                                    placeholder="012345678912" autocomplete="off" maxlength="12">
+                            </div>
+                            @error('idCardNumber') <span class="text-red-700">{{ $message }}</span> @enderror
+                        </div>
+                        <div>
+                            <label for="phoneNumber" class="">{{ __('Phone Number') }}</label>
+                            <div>
+                                <i class="fa fa-user fa-1x absolute pt-2 pl-3" aria-hidden="true"></i>
+                                <input id="phoneNumber" name="phoneNumber"type="text" class="input-login" wire:model="phoneNumber" required
+                                    placeholder="0368-823-899" autocomplete="off" maxlength="13">
+                            </div>
+                            @error('phoneNumber') <span class="text-red-700">{{ $message }}</span> @enderror
+                        </div>
+                        <div>
                             <label for="password" class="">{{ __('Password') }}</label>
                             <div>
                                 <i class="fa fa-lock absolute pt-2 pl-3" aria-hidden="true"></i>
                                 <input id="password" type="password" class="input-login" wire:model="password" required
-                                    placeholder="************">
+                                    placeholder="************" autocomplete="off">
                             </div>
                             @error('password') <span class="text-red-700">{{ $message }}</span> @enderror
                         </div>
