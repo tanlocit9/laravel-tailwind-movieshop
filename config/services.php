@@ -32,12 +32,12 @@ return [
     'google' => [
         'client_id' => env('GOOGLE_CLIENT_ID'),
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-        'redirect' => 'http://localhost:8000/auth/google/callback',
+        'redirect' => (env('APP_ENV') ==='production')?env('REDIRECT_CALLBACK_GOOGLE_HOST'):env('REDIRECT_CALLBACK_GOOGLE_LOCAL'),
     ],
     'facebook' => [
         'client_id' => env('166413261873291'),
         'client_secret' => env('61a1e10aaeb07fe94698696a89942cc7'),
-        'redirect' => 'http://localhost:8000/auth/facebook/callback',
+        'redirect' => (env('APP_ENV') ==='production')?env('REDIRECT_CALLBACK_FACEBOOK_HOST'):env('REDIRECT_CALLBACK_FACEBOOK_LOCAL'),
     ],
 
 ];
