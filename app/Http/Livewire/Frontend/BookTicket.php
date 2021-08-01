@@ -54,15 +54,16 @@ class BookTicket extends Component
 
     public function increase($price_id)
     {
-        $this->amount[$price_id]++;
-        if (Price::checkIsTicketType($price_id)) {
-            if ($this->getTotalTicket() <= 0) {
-                session()->put('sessionTickets', 0);
-            } else {
-
-                session()->put('sessionTickets', $this->getTotalTicket());
+        if ($this->getTotalTicket() < 10) {
+            $this->amount[$price_id]++;
+            if (Price::checkIsTicketType($price_id)) {
+                if ($this->getTotalTicket() <= 0) {
+                    session()->put('sessionTickets', 0);
+                } else {
+                    session()->put('sessionTickets', $this->getTotalTicket());
+                }
+                session()->put('sessionAmount', $this->amount);
             }
-            session()->put('sessionAmount', $this->amount);
         }
     }
 
@@ -87,7 +88,6 @@ class BookTicket extends Component
         $this->total_ticket = 0;
         $this->total_combo = 0;
         foreach ($prices as $price) {
-
             $this->total_price[$price->id] = (int) $this->amount[$price->id] * $price->price;
         }
         for ($i = 1; $i <= 3; $i++) {

@@ -7,7 +7,7 @@
             <p class="mt-4 flex items-center justify-center text-4xl leading-none font-bold text-gray-900">
                 {{numfmt_format_currency(numfmt_create( 'vn_VN', NumberFormatter::CURRENCY ), $ticket->total_price,"VND")}}
             </p>
-            <p class="mt-2 flex items-center justify-center text-md leading-none font-normal text-gray-500">
+            <p class="mt-2 flex items-center justify-center text-md leading-none font-normal text-gray-700">
                 {{$ticket->schedule()->date}}, {{$ticket->calendar()->time_start}}</p>
         </div>
         <div class="flex flex-row w-full justify-center items-center">
@@ -18,8 +18,7 @@
         @foreach ($ticket->prices as $price)
         <div class="flex flex-row w-full px-4 pt-2">
             <div class="flex flex-col justify-center w-full">
-                <p class="text-gray-500 font-semibold">{{$price->name}}</p>
-                <p class="text-gray-700 font-bold">{{$price->description}}</p>
+                <p class="text-gray-700 font-bold">{{$price->name}}</p>
             </div>
             <div class="flex flex-col justify-center w-full items-end">
                 <p class="text-gray-900 font-bold text-xl">
@@ -29,7 +28,7 @@
         </div>
         @endforeach
         <div class="border-t-2 border-gray-300 border-separate w-full"></div>
-        <div class="flex flex-row w-full px-4 justify-between pt-4">
+        <div class="flex flex-row w-full p-4 justify-between">
             <p class="text-gray-700 font-semibold">Status</p>
             <p class="text-gray-900 font-bold text-xl">{{$ticket->status->status}}</p>
         </div>

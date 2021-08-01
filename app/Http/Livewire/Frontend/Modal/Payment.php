@@ -20,9 +20,11 @@ class Payment extends Component
     public $amount;
     public $payModeId;
     public $selectedSeat;
+    public $tab;
     protected $listeners = ['openPaymentForm' => 'openPaymentForm'];
     public function mount($movie, $calendar)
     {
+        $this->tab = "direct";
         $this->payModeId = PayMode::all()->count();
         $this->payModes = PayMode::all();
         $this->user = Auth::user();

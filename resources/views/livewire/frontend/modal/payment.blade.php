@@ -6,19 +6,16 @@
         <div class="overflow-auto h-full" style="background-color: rgba(0,0,0,0.5)"
             :class="{ 'fixed inset-0 z-10 flex items-center justify-center h-screen': open }">
             <!--Dialog-->
-            <div class="text-gray-600 bg-white w-3/12 md:max-w-md mx-auto rounded shadow-lg py-4 text-left px-6"
+            <div class="text-gray-600 bg-white w-6/12 md:max-w-md mx-auto rounded shadow-lg py-4 text-left px-5"
                 x-ref="myModal" x-show="open" x-transition:enter="ease-out duration-300"
                 x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
                 x-transition:leave="ease-in duration-300" x-transition:leave-start="opacity-100 scale-100"
                 x-transition:leave-end="opacity-0 scale-90">
-                <!--Title-->
-                <!-- End Title-->
-                <!-- content -->
-                <div class=" mx-auto max-w-sm">
-                    <h1 class="mb-6 pt-6 text-3xl"> Choose your pay mode !</h1>
+                <h1 class="mb-6 pt-6 text-3xl text-center"> Choose your payment mode !</h1>
+                <div class="grid grid-cols-2 mx-auto ">
                     @foreach ($payModes as $payMode)
                     <div class="pl-12">
-                        <div class="flex items-center mr-4 mb-4">
+                        <div class="flex items-center mb-4 mx-auto">
                             <input id="{{$payMode->id}}" type="radio" name="radio" class="hidden" checked />
                             <label for="{{$payMode->id}}" class="flex items-center cursor-pointer text-xl"
                                 wire:click="selectPayMode({{$payMode->id}})">
@@ -26,6 +23,21 @@
                                     class="w-8 h-8 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
                                 {{$payMode->description}}</label>
                         </div>
+                        <div
+                            class="-ml-7 border-4 border-separate border-solid  p-6 @if($payModeId==$payMode->id) border-blue-800 @else border-gray-800 @endif">
+                            @if($payMode->id==1)
+                            <ul class="list-decimal list-inside">
+                                <li>
+                                    Expired after 3 day without payment.
+                                </li>
+                            </ul>
+                            @else
+                            <ul class="list-decimal list-inside">
+                                <li>
+                                    No expiration count down.
+                                </li>
+                            </ul>
+                            @endif</div>
                     </div>
                     @endforeach
                 </div>
