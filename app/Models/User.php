@@ -21,7 +21,6 @@ class User extends Authenticatable
         'password',
         'id_card_number',
         'phone_number',
-        'role_id',
         'social_id',
         'social_type'
     ];

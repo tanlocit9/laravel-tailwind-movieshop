@@ -31,7 +31,6 @@ class UserFactory extends Factory
             'password' => Hash::make('123456789'), // password
             'phone_number'=>$this->faker->numerify('#############'),
             'id_card_number' => rand(100000000,99999999999),
-            'role_id'=>2,
         ];
     }
 }

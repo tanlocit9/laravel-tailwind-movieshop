@@ -12,7 +12,7 @@
             </li>
             @livewire('frontend.search-bar')
         </ul>
-        @livewire('shared.auth-view')
+        @livewire('frontend.login-view')
         {{-- @livewire('frontend.login-with-auth') --}}
     </div>
 </div>

@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Livewire\Shared;
+namespace App\Http\Livewire\Frontend;
 
 use Illuminate\Support\Facades\Session;
 use Livewire\Component;
 
-class AuthView extends Component
+class LoginView extends Component
 {
     protected $listeners = ['closeLoginForm' => 'closeLoginForm', 'openLoginForm' => 'openLoginForm'];
     public function openLoginForm()
@@ -30,6 +30,6 @@ class AuthView extends Component
 
     public function render()
     {
-        return view('livewire.shared.auth-view');
+        return view('livewire.frontend.login-view');
     }
 }
