@@ -25,7 +25,6 @@ class CreateUsersTable extends Migration
             $table->integer('log_count')->comment("Số lần người dùng đăng nhập")->default(0);
             $table->string('social_id')->comment("Mã mạng xã hội người dùng")->nullable();
             $table->string('social_type')->comment("Loại mạng xã hộingười dùng")->nullable();
-            $table->foreignId('role_id')->comment("Mã vai trò người dùng")->default(2)->constrained('user_roles')->onDelete('cascade');
             $table->timestamps();
         });
         $user = User::create([
@@ -34,7 +33,6 @@ class CreateUsersTable extends Migration
             'id_card_number' => '025847663',
             'phone_number' => '084123456789',
             'password' => Hash::make('123456789'),
-            'role_id' => 1,
         ]);
         $user = User::create([
             'name' => 'Loc',

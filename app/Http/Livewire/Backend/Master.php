@@ -53,6 +53,7 @@ class Master extends Component
         if ($tab != $this->tab) {
             $this->tab = $tab;
         }
+
         $this->emit('datatable', $tab);
     }
 

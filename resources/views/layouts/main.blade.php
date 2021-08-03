@@ -18,7 +18,7 @@
 <footer>
     @include('layouts.frontend.footer')
 </footer>
-@livewire('shared.auth-controller')
+@livewire('frontend.login-controller')
 <script type="text/javascript">
     window.onscroll = function (ev) {
         if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {

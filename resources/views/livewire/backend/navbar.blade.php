@@ -1,8 +1,8 @@
 <div
     class="w-full md:z-20 flex flex-row flex-wrap items-center bg-gray-800 p-3 border-b border-gray-300 h-full">
     <!-- logo -->
-    <div class="flex-none w-56 flex flex-row items-center">
-        <strong class="capitalize ml-1 flex-1">BakaMovie</strong>
+    <div class="flex-none w-56 flex flex-row items-center cursor-pointer" wire:click="$emit('changeTab','default')">
+        <strong class="capitalize ml-1 flex-1 text-white">Baka Movie Admin</strong>
 
         <button id="sliderBtn" class="flex-none text-right text-gray-900 hidden md:block">
             <i class="fad fa-list-ul"></i>
@@ -72,6 +72,11 @@
                         href="#">
                         <i class="fad fa-comment-alt-dots text-xs mr-1"></i>
                         chats
+                    </a>
+                    <a wire:click='logout' class="px-4 py-2 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 hover:text-gray-900 transition-all duration-300 ease-in-out"
+                        href="#">
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                        Logout
                     </a>
                     <!-- end item -->
                     <hr>

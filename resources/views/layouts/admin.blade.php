@@ -13,33 +13,36 @@
 </head>
 
 <body class="bg-gray-900 flex flex-col h-screen">
-
+    @guest
+    @livewire('backend.login-controller')
+    @else
+    <div class="flex md:inline-flex w-full h-1/12">
+        @livewire('backend.navbar')
+    </div>
     <livewire:backend.master />
-    <!-- script -->
+    @endguest
+
     @livewireScripts
     <script>
         var data;
-        Livewire.on("datatable", (tab) => {
-            data=$('#'+tab).DataTable({
-                autoWidth: true,
-                responsive: true,
-                bDestroy: true
-            }).columns.adjust();
-        })
+    Livewire.on("datatable", (tab) => {
+        data=$('#'+tab).DataTable({
+            autoWidth: true,
+            responsive: true,
+            bDestroy: true
+        }).columns.adjust();
+    })
 
-        Livewire.on("refresh", (tab) => {
-            data.DataTable().ajax.reload();
-        })
     </script>
     <script src="{{ asset('backend/js/scripts.js') }}"></script>
     <script src="{{ asset('/js/app.js') }}" type="text/javascript"></script>
     <script src="{{ asset('/js/scrollBlock.js') }}" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-            $( "#adatepicker" ).datepicker({
-                format: 'dd-mm-yyyy'
-            });
+        $( "#adatepicker" ).datepicker({
+            format: 'dd-mm-yyyy'
         });
+    });
     </script>
 </body>
 @include('components.alert')

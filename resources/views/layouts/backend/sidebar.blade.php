@@ -17,7 +17,7 @@
         <a @if($tab!='default' )wire:click.prevent="changeTab('default')" @endif
             class="cursor-pointer mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
             <i class="fad fa-chart-pie text-xs mr-2"></i>
-            Analytics dashboard
+            Home page
         </a>
         <!-- end link -->
 

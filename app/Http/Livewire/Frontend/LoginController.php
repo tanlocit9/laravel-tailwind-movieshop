@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire\Shared;
+namespace App\Http\Livewire\Frontend;
 
 use App\Models\User;
 use Exception;
@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Hash;
 use Livewire\Component;
 use Laravel\Socialite\Facades\Socialite;
 
-class AuthController extends Component
+class LoginController extends Component
 {
     public $tab = 'Login';
     public $name;
@@ -102,6 +102,6 @@ class AuthController extends Component
 
     public function render()
     {
-        return view('livewire.shared.auth-controller');
+        return view('livewire.frontend.login-controller');
     }
 }
