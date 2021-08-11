@@ -13,10 +13,19 @@
                 x-transition:leave-end="opacity-0 scale-90">
                 <h1 class="mb-6 pt-6 text-3xl text-center"> Choose your payment mode !</h1>
                 <div class="grid grid-cols-2 mx-auto ">
-                    @foreach ($payModes as $payMode)
+                    @if(Session::has('qrcode'))
+                    <div class="visible-print text-center">
+
+                        {!! QrCode::size(500)->generate(Session::get('qrcode')); !!}
+
+                        <p>Scan me to return to the original page.</p>
+                    </div>
+                    @endif
+                    {{-- @foreach ($payModes as $payMode)
                     <div class="pl-12">
                         <div class="flex items-center mb-4 mx-auto">
-                            <input id="{{$payMode->id}}" type="radio" name="radio" class="hidden" checked />
+                            <input id="{{$payMode->id}}" type="radio" name="radio" class="hidden" checked
+                                @if(session('sessionTickets')>3) disabled @endif/>
                             <label for="{{$payMode->id}}" class="flex items-center cursor-pointer text-xl"
                                 wire:click="selectPayMode({{$payMode->id}})">
                                 <span
@@ -37,9 +46,10 @@
                                     No expiration count down.
                                 </li>
                             </ul>
-                            @endif</div>
+                            @endif
+                        </div>
                     </div>
-                    @endforeach
+                    @endforeach --}}
                 </div>
 
                 <div class="w-full mx-auto py-4" x-on:click="closeModal()">

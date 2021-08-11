@@ -35,9 +35,10 @@ class Payment extends Component
         $this->totalPrice = session("sessionTotalPriceTickets") + session("sessionTotalPriceCombos");
         $this->amount = session('sessionAmount');
     }
-    public function openPaymentForm($selectedSeat)
+    public function openPaymentForm($selectedSeat, $fullUrl)
     {
         $this->selectedSeat = $selectedSeat;
+        session()->flash('qrcode', $fullUrl);
         $this->dispatchBrowserEvent('open-payment-form');
     }
     public function book()
