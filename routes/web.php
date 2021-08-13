@@ -23,6 +23,6 @@ Route::group([],function () {
     Route::get('/','CustomerController@index')->name('home_page');
 });
 
-Route::group(['middleware'=>'checkadmin','prefix'=>'admin'],function () {
+Route::group(['prefix'=>'admin'],function () {
     Route::get('/','HomeController@admin')->name('admin');
 });

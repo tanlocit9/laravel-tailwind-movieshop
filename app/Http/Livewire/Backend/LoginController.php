@@ -2,7 +2,7 @@
 
 namespace App\Http\Livewire\Backend;
 
-use App\Models\User;
+use App\Models\Staff;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Livewire\Component;
@@ -19,16 +19,17 @@ class LoginController extends Component
 
     public function login()
     {
-        $user = User::where('email', $this->email)->first();
-        if ($user == null) {
+
+        $staff = Staff::where('email', $this->email)->first();
+        if ($staff == null) {
             session()->flash('message', 'Staff not found.');
         }
 
-        if (Hash::check($this->password, $user->password)) {
+        if (!Hash::check($this->password, $staff->password)) {
             session()->flash('message', 'Password not correct.');
         }
 
-        Auth::login($user);
+        Auth::guard('staff')->login($staff);
         return redirect('/admin');
     }
 }

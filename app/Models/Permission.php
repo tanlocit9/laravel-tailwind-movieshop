@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Permission extends Model
 {
     use HasFactory;
+    public static function findByPermission($permission){
+        return Permission::where("permission",$permission)->get();
+    }
 }

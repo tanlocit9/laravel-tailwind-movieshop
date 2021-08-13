@@ -3,42 +3,45 @@
         @include('layouts.backend.sidebar')
     </div>
     <div class="w-10/12">
+        @if ($tab=='index')
+        {{-- <livewire:backend.index /> --}}
+        @else
+        @if(in_array(Component::findByName($tab)->first()->id,$accessibleComponentIds))
         @switch($tab)
         @case('index')
-        <livewire:backend.index />
         @break
         @case('user')
-        @include('components.table.tb-user',['items'=>$users])
+        @livewire('backend.management.user-management')
         @break
         @case('movie')
-        @include('components.table.tb-movie',['items'=>$movies])
+        @livewire('backend.management.movie-management')
         @livewire('backend.modal.movie-edit',['countries'=>$countries,'genres'=>$genres])
         @break
         @case('genre')
-        @include('components.table.tb-genre',['items'=>$genres])
-        @break
-        @case('movie_genre')
-        @include('components.table.tb-movie-genre',['items'=>$movies])
+        @livewire('backend.management.genre-management')
         @break
         @case('theater')
-        @include('components.table.tb-theater',['items'=>$theaters])
+        @livewire('backend.management.theater-management')
         @break
         @case('actor')
-        @include('components.table.tb-actor',['items'=>$actors])
-        @break
-        @case('movie_actor')
-        @include('components.table.tb-movie-actor',['items'=>$movies])
+        @livewire('backend.management.actor-management')
         @break
         @case('schedule')
-        @include('components.table.tb-schedule',['items'=>$schedules])
+        @livewire('backend.management.schedule-management')
+        @break
+        @case('role')
+        @livewire('backend.management.role-management')
         @break
         @case('ticket')
-        @include('components.table.tb-ticket',['items'=>$tickets])
+        @livewire('backend.management.ticket-management')
         @livewire('backend.modal.ticket-edit')
         @break
         @default
-        <livewire:backend.index />
+        @include('components.coming-soon')
+        @break
         @endswitch
-
+        @else
+        @include('components.forbidden')
+        @endif @endif
     </div>
 </div>
