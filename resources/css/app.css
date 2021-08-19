@@ -13,6 +13,10 @@
 
 @tailwind utilities;
 
+input:checked+svg {
+    display: block;
+}
+
 .input-login {
     @apply pl-8 outline-dash-gray w-full h-8;
 }

@@ -34,11 +34,11 @@
             <!-- user -->
             <div class="dropdown relative md:static focus:outline-none">
                 <button class="menu-btn focus:outline-none focus:ring flex flex-wrap items-center">
-                    <div class="w-8 h-8 overflow-hidden rounded-full">
+                    <div class="w-8 h-8 overflow-hidden rounded-full focus:outline-none">
                         <img class="w-full h-full object-cover" src="{{ asset('backend/img/user.svg') }}">
                     </div>
                     <div class="ml-2 capitalize flex ">
-                        <h1 class="text-sm text-red-800 font-semibold m-0 p-0 leading-none">{{ Auth::user()->name }}
+                        <h1 class="text-sm text-red-800 font-semibold m-0 p-0 leading-none">{{ Auth::guard('staff')->user()->name }}
                         </h1>
                         <i class="fad fa-chevron-down ml-2 text-xs leading-none"></i>
                     </div>

@@ -1,5 +1,8 @@
 <?php
 
+use App\Models\Accessibility;
+use App\Models\Component;
+
 return [
 
     /*
@@ -194,7 +197,8 @@ return [
     'aliases' => [
 
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
-
+        'Component' => Component::class,
+        'Accessibility' => Accessibility::class,
         'App' => Illuminate\Support\Facades\App::class,
         'Arr' => Illuminate\Support\Arr::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,

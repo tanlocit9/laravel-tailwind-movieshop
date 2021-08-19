@@ -13,14 +13,17 @@
 </head>
 
 <body class="bg-gray-900 flex flex-col h-screen">
-    @guest
-    @livewire('backend.login-controller')
-    @else
+    @auth('staff')
     <div class="flex md:inline-flex w-full h-1/12">
         @livewire('backend.navbar')
     </div>
     <livewire:backend.master />
-    @endguest
+    @else
+    @livewire('backend.login-controller')
+    @endauth()
+
+
+
 
     @livewireScripts
     <script>
