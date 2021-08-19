@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="token" id="token" value="{{ csrf_token() }}">
     <title>{{ config('app.name') }}</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <script src="https://use.fontawesome.com/692bdfc97d.js"></script>

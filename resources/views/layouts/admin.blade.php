@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.12.1/css/pro.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/app.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/pikaday.css') }}">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="token" id="token" value="{{ csrf_token() }}">
     @livewireStyles
     <title>BakaMovie Admin</title>
 </head>
