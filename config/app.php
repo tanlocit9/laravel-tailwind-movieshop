@@ -141,6 +141,7 @@ return [
 
         Laravel\Socialite\SocialiteServiceProvider::class,
         Laravel\Scout\ScoutServiceProvider::class,
+        PHPViet\Laravel\Omnipay\OmnipayServiceProvider::class,
         /*
          * Laravel Framework Service Providers...
          */

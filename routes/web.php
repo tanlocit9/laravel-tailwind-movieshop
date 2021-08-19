@@ -21,8 +21,10 @@ Route::prefix('auth')->group(function () {
 // Auth::routes();
 Route::group([],function () {
     Route::get('/','CustomerController@index')->name('home_page');
+    Route::get('/momo','CustomerController@momoPaymentResult')->name('momo');
 });
 
 Route::group(['prefix'=>'admin'],function () {
     Route::get('/','HomeController@admin')->name('admin');
 });
+

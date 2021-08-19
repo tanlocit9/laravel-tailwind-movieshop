@@ -23,7 +23,12 @@ class Master extends Component
 
     public function mount()
     {
-        $this->tab = 'index';
+        if(session('tab')!=null){
+            $this->tab = session('tab');
+        }
+        else{
+            $this->tab = 'index';
+        }
         $this->payModes = PayMode::all();
     }
 

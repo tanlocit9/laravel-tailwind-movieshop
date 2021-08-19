@@ -2,7 +2,7 @@
     <div class="grid grid-cols-4">
         <div class="col-span-3 bg-orange-700">
             <div class="mx-2 ">
-                <table class="text-center w-full mt-3">
+                <table class="text-center w-full my-3">
                     <thead>
                         <tr class="bg-yellow-900">
                             <th class="w-1/2 text-left pl-2">Ticket type</th>
@@ -11,7 +11,7 @@
                             <th>Total (VND)</th>
                         </tr>
                     </thead>
-                    <tbody class="text-sm bg-yellow-400 text-black">
+                    <tbody class="text-sm bg-yellow-300 text-black">
                         @foreach ($prices as $price)
                         @if($price->price_type_id==1)
                         <tr class="h-12">
@@ -21,27 +21,30 @@
                             <th>
                                 <i class="fa fa-minus cursor-pointer" wire:click="decrease({{$loop->index+1}})"
                                     aria-hidden="true"></i>
-                                <input wire:model="amount.{{$loop->index+1}}" wire:change="validateInput('a','a')" type="text" value="0"
+                                <input wire:model="amount.{{$loop->index+1}}" disabled
+                                    wire:change="validateInput('a','a')" type="text" value="0"
                                     class="w-10 pl-2 rounded-md focus:outline-none">
                                 <i class="fa fa-plus cursor-pointer" wire:click="increase({{$loop->index+1}})"
                                     aria-hidden="true"></i>
                             </th>
-                            <th>{{$price->price}}</th>
-                            <th>{{$total_price[$loop->index+1]}}</th>
+                            <th>{{numfmt_format_currency(numfmt_create( 'vn_VN', NumberFormatter::CURRENCY ), $price->price,"VND")}}
+                            </th>
+                            <th>{{numfmt_format_currency(numfmt_create( 'vn_VN', NumberFormatter::CURRENCY ),$total_price[$loop->index+1],"VND")}}
+                            </th>
                         </tr>
                         @endif
                         @endforeach
                         <tr class="h-12">
-                            <th class="w-1/2 text-left pl-2">
+                            <th class="w-1/2 text-left pl-2 border-t-2 border-red-800">
                                 Total
                             </th>
-                            <th></th>
-                            <th></th>
-                            <th>{{$total_ticket}}</th>
+                            <th class="border-t-2 border-red-800"></th>
+                            <th class="border-t-2 border-red-800"></th>
+                            <th class="border-t-2 border-red-800">{{numfmt_format_currency(numfmt_create( 'vn_VN', NumberFormatter::CURRENCY ),$total_ticket,"VND")}}</th>
                         </tr>
                     </tbody>
                 </table>
-                <table class="text-center w-full">
+                <table class="text-center w-full mb-3">
                     <thead>
                         <tr class="bg-yellow-900">
                             <th class="w-1/2 text-left pl-2">Combo</th>
@@ -50,7 +53,7 @@
                             <th class="text-white">Total (VND)</th>
                         </tr>
                     </thead>
-                    <tbody class="text-sm bg-yellow-400 text-black">
+                    <tbody class="text-sm bg-yellow-300 text-black">
                         @foreach ($prices as $price)
                         @if($price->price_type_id==2)
                         <tr class="h-12">
@@ -60,23 +63,27 @@
                             <th>
                                 <i class="fa fa-minus cursor-pointer" wire:click="decrease({{$loop->index+1}})"
                                     aria-hidden="true"></i>
-                                <input wire:model="amount.{{$loop->index+1}}" wire:change="validateInput({{$loop->index+1}},$event.target.value)" type="text" value="0"
-                                    class="w-8 pl-2 rounded-md focus:outline-none">
+                                <input wire:model="amount.{{$loop->index+1}}" disabled
+                                    wire:change="validateInput({{$loop->index+1}},$event.target.value)" type="text"
+                                    value="0" class="w-8 pl-2 rounded-md focus:outline-none">
                                 <i class="fa fa-plus cursor-pointer" wire:click="increase({{$loop->index+1}})"
                                     aria-hidden="true"></i>
                             </th>
-                            <th>{{$price->price}}</th>
-                            <th>{{$total_price[$loop->index+1]}}</th>
+                            <th>{{numfmt_format_currency(numfmt_create( 'vn_VN', NumberFormatter::CURRENCY ), $price->price,"VND")}}
+                            </th>
+                            <th>{{numfmt_format_currency(numfmt_create( 'vn_VN', NumberFormatter::CURRENCY ),$total_price[$loop->index+1],"VND")}}
+                            </th>
                         </tr>
                         @endif
                         @endforeach
                         <tr class="h-12">
-                            <th class="w-1/2 text-left pl-2">
+                            <th class="w-1/2 text-left pl-2 border-t-2 border-red-800">
                                 Total
                             </th>
-                            <th></th>
-                            <th></th>
-                            <th>{{$total_combo}}</th>
+                            <th class="border-t-2 border-red-800"></th>
+                            <th class="border-t-2 border-red-800"></th>
+                            <th class="border-t-2 border-red-800">{{numfmt_format_currency(numfmt_create( 'vn_VN', NumberFormatter::CURRENCY ),$total_combo,"VND")}}
+                            </th>
                         </tr>
                     </tbody>
                 </table>
