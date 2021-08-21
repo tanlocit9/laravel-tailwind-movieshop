@@ -30,7 +30,14 @@ class CreateStaffsTable extends Migration
         });
         Staff::create([
             'name' => 'Loc',
-            'email' => 'admin@gmail.com',
+            'email' => 'superadmin@gmail.com',
+            'password' => Hash::make('123456789'),
+            'staff_status_id'=>1
+        ]);
+
+        Staff::create([
+            'name' => 'Loc',
+            'email' => 'superadmin@gmail.com',
             'password' => Hash::make('123456789'),
             'staff_status_id'=>1
         ]);

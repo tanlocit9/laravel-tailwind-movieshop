@@ -13,15 +13,7 @@
                 x-transition:leave-end="opacity-0 scale-90">
                 <h1 class="mb-6 pt-6 text-3xl text-center"> Choose your payment mode !</h1>
                 <div class="grid grid-cols-2 mx-auto ">
-                    @if(Session::has('qrcode'))
-                    <div class="visible-print text-center">
-
-                        {!! QrCode::size(500)->generate(Session::get('qrcode')); !!}
-
-                        <p>Scan me to return to the original page.</p>
-                    </div>
-                    @endif
-                    {{-- @foreach ($payModes as $payMode)
+                    @foreach ($payModes as $payMode)
                     <div class="pl-12">
                         <div class="flex items-center mb-4 mx-auto">
                             <input id="{{$payMode->id}}" type="radio" name="radio" class="hidden" checked
@@ -49,7 +41,7 @@
                             @endif
                         </div>
                     </div>
-                    @endforeach --}}
+                    @endforeach
                 </div>
 
                 <div class="w-full mx-auto py-4" x-on:click="closeModal()">
