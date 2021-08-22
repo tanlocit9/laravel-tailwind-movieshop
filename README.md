@@ -4,13 +4,16 @@
 	2. PHP 7.x
 	3. NodeJs
 	4. Postgres 13
+    5. Git (optional)
 **Build project:**
 
-	1. Composer install
-	2. Composer dump-autoload
-	3. php artisan key:generate
-	4. npm run dev
-	5. php artisan serve
+    1. git clone https://github.com/tanlocit9/laravel-tailwind-movieshop.git
+	2. Composer install
+	3. Composer dump-autoload
+	4. php artisan key:generate
+	5. npm run dev
+	6. php artisan serve
+    7. Open browser and connect to localhost:8000
 **Run migration:**
 
 	1. php artisan migrate --seed
