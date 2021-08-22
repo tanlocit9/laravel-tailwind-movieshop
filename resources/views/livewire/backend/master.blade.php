@@ -16,6 +16,7 @@
         @case('movie')
         @livewire('backend.management.movie-management')
         @livewire('backend.modal.movie-edit',['countries'=>$countries,'genres'=>$genres])
+        @livewire('backend.modal.movie-create', ['countries' => $countries, 'genres' => $genres])
         @break
         @case('genre')
         @livewire('backend.management.genre-management')
@@ -43,5 +44,6 @@
         @else
         @include('components.forbidden')
         @endif @endif
+        @livewire('shared.modal.inform')
     </div>
 </div>
