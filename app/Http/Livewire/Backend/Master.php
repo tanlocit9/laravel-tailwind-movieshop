@@ -16,9 +16,15 @@ class Master extends Component
     public $accessibility;
     public $accessibleComponentIds;
     public $components;
+    protected $listeners = ['refreshBackend' => '$refresh'];
     public function mount()
     {
-        $this->tab = 'index';
+        if(session('tab')!=null){
+            $this->tab = session('tab');
+        }
+        else{
+            $this->tab = 'index';
+        }
         $this->genres = Genre::all();
         $this->countries = Country::all();
         $this->components = ModelsComponent::all();

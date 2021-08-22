@@ -42,9 +42,6 @@ class Payment extends Component
     }
     public function book()
     {
-        if($this->payModeId!=1){
-            $this->callMomo();
-        }
         $tickets = Ticket::create(['total_price' => $this->totalPrice, "user_id" => $this->user->id, "calendar_id" => $this->calendar->id, "paymode_id" => $this->payModeId]);
         foreach ($this->amount as $k => $v) {
             if ($v != 0) {
@@ -56,6 +53,9 @@ class Payment extends Component
                     $tickets->prices()->attach($k, ['name' => $price->name, 'amount' => $v, 'seat' => ""]);
                 }
             }
+        }
+        if ($this->payModeId != 1) {
+            $this->callMomo($this->totalPrice);
         }
         $this->emit('openInformModal', "Book tickets", "success");
     }
@@ -69,14 +69,15 @@ class Payment extends Component
         return view('livewire.frontend.modal.payment');
     }
 
-    public function callMomo(){
+    public function callMomo($amount)
+    {
         $endpoint = "https://test-payment.momo.vn/gw_payment/transactionProcessor";
         $partnerCode = env('MOMO_PARTNER_CODE');
         $accessKey = env('MOMO_ACCESS_KEY');
         $secretKey = env('MOMO_SECRET_KEY');
         $orderInfo = "Thanh toán qua MoMo";
-        $amount = "10000";
         $orderId = time() . "";
+        $amount = (string)$amount;
         $returnUrl = route('momo');
         $notifyurl = "http://localhost:8000/php/PayMoMo/ipn_momo.php";
         // Lưu ý: link notifyUrl không phải là dạng localhost
@@ -102,10 +103,10 @@ class Payment extends Component
             'signature' => $signature
         );
         $result = $this->execPostRequest($endpoint, json_encode($data));
-        $jsonResult = json_decode($result, true);  // decode json
-        //Just a example, please check more in there
-
-        return redirect($jsonResult['payUrl']);
+        $jsonResult = json_decode($result, true);
+        if (isset($jsonResult['payUrl'])) {
+            return redirect($jsonResult['payUrl']);
+        }
     }
 
     function execPostRequest($url, $data)
@@ -114,9 +115,13 @@ class Payment extends Component
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
         curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+        curl_setopt(
+            $ch,
+            CURLOPT_HTTPHEADER,
+            array(
                 'Content-Type: application/json',
-                'Content-Length: ' . strlen($data))
+                'Content-Length: ' . strlen($data)
+            )
         );
         curl_setopt($ch, CURLOPT_TIMEOUT, 5);
         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);

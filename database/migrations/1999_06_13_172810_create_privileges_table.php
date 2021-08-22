@@ -23,6 +23,10 @@ class CreatePrivilegesTable extends Migration
             'staff_role_id' => 1,
             'staff_id' => 1,
         ]);
+        Privilege::create([
+            'staff_role_id' => 5,
+            'staff_id' => 2,
+        ]);
     }
 
     /**

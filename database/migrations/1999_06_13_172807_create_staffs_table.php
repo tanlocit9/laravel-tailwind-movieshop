@@ -29,15 +29,15 @@ class CreateStaffsTable extends Migration
             $table->timestamps();
         });
         Staff::create([
-            'name' => 'Loc',
+            'name' => 'SuperAdmin',
             'email' => 'superadmin@gmail.com',
             'password' => Hash::make('123456789'),
             'staff_status_id'=>1
         ]);
 
         Staff::create([
-            'name' => 'Loc',
-            'email' => 'superadmin@gmail.com',
+            'name' => 'Tiketer',
+            'email' => 'ticketer@gmail.com',
             'password' => Hash::make('123456789'),
             'staff_status_id'=>1
         ]);

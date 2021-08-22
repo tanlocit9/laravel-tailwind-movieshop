@@ -13,6 +13,9 @@ class CustomerController extends Controller
 
     public function momoPaymentResult(Request $request)
     {
+        if($request["errorCode"]=="0"){
+
+        }
         session()->flash("tab","history");
         return view('layouts.main');
     }

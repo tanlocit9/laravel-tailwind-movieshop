@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.12.1/css/pro.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/app.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/pikaday.css') }}">
+    <script src="https://cdn.jsdelivr.net/timepicker.js/latest/timepicker.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/timepicker.js/latest/timepicker.min.css" rel="stylesheet" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="token" id="token" value="{{ csrf_token() }}">
     @livewireStyles
@@ -47,6 +49,24 @@
         $( "#adatepicker" ).datepicker({
             format: 'dd-mm-yyyy'
         });
+    });
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function(e) {
+            const image = $('#tempImg')
+            image.attr('src', e.target.result);
+            image.removeClass("invisible");
+            // image.addClass("w-20 h-20");
+        }
+        reader.readAsDataURL(input.files[0]); // convert to base64 string
+    }
+}
+    $("#poster").change(function() {
+        filename = this.files[0].name
+        readURL(this);
+        $("#poster-label").text(filename)
     });
     </script>
 </body>

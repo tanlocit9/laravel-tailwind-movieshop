@@ -24,7 +24,7 @@
                                     class="w-8 h-8 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
                                 {{$payMode->description}}</label>
                         </div>
-                        <div
+                        {{-- <div
                             class="-ml-7 border-4 border-separate border-solid  p-6 @if($payModeId==$payMode->id) border-blue-800 @else border-gray-800 @endif">
                             @if($payMode->id==1)
                             <ul class="list-decimal list-inside">
@@ -39,7 +39,7 @@
                                 </li>
                             </ul>
                             @endif
-                        </div>
+                        </div> --}}
                     </div>
                     @endforeach
                 </div>
