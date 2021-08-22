@@ -2,7 +2,7 @@
 
 	1. Composer
 	2. PHP 7.x
-	3. NodeJs
+	3. NodeJs 12.x.x
 	4. Postgres 13
     5. Git (optional)
 **Build project:**
@@ -11,9 +11,10 @@
 	2. Composer install
 	3. Composer dump-autoload
 	4. php artisan key:generate
-	5. npm run dev
-	6. php artisan serve
-    7. Open browser and connect to localhost:8000
+    5. npm install
+	6. npm run dev
+	7. php artisan serve
+    8. Open browser and connect to localhost:8000
 **Run migration:**
 
 	1. php artisan migrate --seed
