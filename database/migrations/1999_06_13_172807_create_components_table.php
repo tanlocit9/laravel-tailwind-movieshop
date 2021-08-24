@@ -28,6 +28,8 @@ class CreateComponentsTable extends Migration
             ['name' => "ticket"],
             ['name' => "schedule"],
             ['name' => "role"],
+            ['name' => "room"],
+            ['name' => "staff"],
         ];
         Component::insert($data);
     }

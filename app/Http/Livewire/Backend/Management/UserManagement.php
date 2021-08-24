@@ -15,6 +15,7 @@ class UserManagement extends Component
 
     public function render()
     {
+        $this->items = User::all();
         return view('livewire.backend.management.user-management');
     }
 }

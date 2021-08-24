@@ -34,12 +34,16 @@ class Staff extends Authenticatable
 
     public function accessibilities()
     {
-        return Accessibility::where('staff_role_id', $this->privileges())->get()->groupBy('component_id')->collect()->toArray();
+        return Accessibility::whereIn('staff_role_id', $this->privileges())->get()->groupBy('component_id')->collect()->toArray();
     }
 
     public function getAccessibilitiesByComponent($component)
     {
         $componentId=Component::findByName($component)->first()->id;
         return Accessibility::where('staff_role_id', $this->privileges())->where('component_id', $componentId)->get(['permission_id', 'component_id'])->groupBy(['component_id', 'permission_id'])->collect()->toArray()[$componentId];
+    }
+    public function getStatus()
+    {
+        return StaffStatus::find($this->staff_status_id)->status;
     }
 }

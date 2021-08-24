@@ -14,6 +14,7 @@ class ActorManagement extends Component
     }
     public function render()
     {
+        $this->items = Actor::all();
         return view('livewire.backend.management.actor-management');
     }
 }

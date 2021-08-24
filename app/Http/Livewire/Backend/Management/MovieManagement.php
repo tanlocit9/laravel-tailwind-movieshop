@@ -19,8 +19,15 @@ class MovieManagement extends Component
         $this->accessibilities = $this->staff->getAccessibilitiesByComponent('movie');
         $this->items = Movie::all();
     }
+
+    public function delete($id){
+        Movie::destroy($id);
+    }
+
     public function render()
     {
+        $this->items = Movie::all();
+        $this->emit('datatable', 'movie');
         return view('livewire.backend.management.movie-management');
     }
 }

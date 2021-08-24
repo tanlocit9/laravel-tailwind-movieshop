@@ -14,6 +14,7 @@ class GenreManagement extends Component
     }
     public function render()
     {
+        $this->items = Genre::all();
         return view('livewire.backend.management.genre-management');
     }
 }

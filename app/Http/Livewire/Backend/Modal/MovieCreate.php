@@ -3,13 +3,13 @@
 namespace App\Http\Livewire\Backend\Modal;
 
 use App\Models\Movie;
+use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
 class MovieCreate extends Component
 {
     use WithFileUploads;
-    public $movie;
     public $title;
     public $hours;
     public $minutes;
@@ -26,6 +26,14 @@ class MovieCreate extends Component
 
     public function mount($countries, $genres)
     {
+        $this->title = 'Phim này hay nè';
+        $this->hours = 1;
+        $this->minutes = 30;
+        $this->secconds = 20;
+        $this->limit = 18;
+        $this->country = 1;
+        $this->genre = 1;
+        $this->description = 'Phim hay lắm';
         $this->countries = $countries;
         $this->genres = $genres;
     }
@@ -44,20 +52,32 @@ class MovieCreate extends Component
         if ($this->limit > 18) {
             $this->limit = 18;
         }
+        if ($this->minutes < 0) {
+            $this->minutes = 0;
+        }
+        if ($this->hours < 0) {
+            $this->hours = 0;
+        }
+        if ($this->secconds < 0) {
+            $this->secconds = 0;
+        }
+        if ($this->limit < 0) {
+            $this->limit = 0;
+        }
         return view('livewire.backend.modal.movie-create');
     }
 
     public function saveMovie()
     {
-        $target_dir = $_SERVER["DOCUMENT_ROOT"] . '/storage/posters';
-        $filename = time().'';
-        $target_file = $target_dir . '/' . $filename;
-        $path = $this->poster->path();
+        $target_dir = $_SERVER["DOCUMENT_ROOT"] . '\storage\posters';
+
+        $filename = time() . "." . explode('.', $this->poster->getClientOriginalName())[1];
+        $target_file = $target_dir . '\\' . $filename;
         $this->poster->storeAs('posters', $filename);
+        $savedDirectory = dirname($_SERVER["DOCUMENT_ROOT"]) . '\storage\app\posters\\' . $filename;
+        copy($savedDirectory, $target_file);
 
         $seconds = $this->hours * 3600 + $this->minutes * 60 + $this->secconds;
-        move_uploaded_file($path, $target_file);
-
         $movie = Movie::create([
             'title' => $this->title,
             'description' =>  $this->description,
@@ -70,9 +90,7 @@ class MovieCreate extends Component
         ]);
 
         $movie->genres()->attach($this->genre, ['is_main' => 1]);
-        session()->flash("tab","movie");
         $this->emit('openInformModal', "Movie create", "Success");
-        $this->emit('refreshBackend');
         $this->closeMovieAddModal();
     }
     public function openMovieAddModal()

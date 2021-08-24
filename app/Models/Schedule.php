@@ -31,4 +31,8 @@ class Schedule extends Model
     {
         return $this->calendars()->where('movie_id', $movie_id)->where('theater_id', $theater_id)->get();
     }
+    public static function findByDate($date)
+    {
+        return Schedule::where('date',$date);
+    }
 }

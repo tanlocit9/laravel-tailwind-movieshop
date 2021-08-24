@@ -14,6 +14,8 @@ class TicketManagement extends Component
     }
     public function render()
     {
+        $this->items = Ticket::all();
+        $this->emit('datatable', 'ticket');
         return view('livewire.backend.management.ticket-management');
     }
 }

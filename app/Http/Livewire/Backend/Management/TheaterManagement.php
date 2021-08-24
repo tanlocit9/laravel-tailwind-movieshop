@@ -14,6 +14,8 @@ class TheaterManagement extends Component
     }
     public function render()
     {
+        $this->items = Theater::all();
+        $this->emit('datatable', 'theater');
         return view('livewire.backend.management.theater-management');
     }
 }

@@ -28,6 +28,9 @@ class CreateAccessibilitiesTable extends Migration
             ['staff_role_id' => 1, 'permission_id' => 1, 'component_id' => 5],
             ['staff_role_id' => 1, 'permission_id' => 1, 'component_id' => 6],
             ['staff_role_id' => 1, 'permission_id' => 1, 'component_id' => 7],
+            ['staff_role_id' => 1, 'permission_id' => 1, 'component_id' => 8],
+            ['staff_role_id' => 1, 'permission_id' => 1, 'component_id' => 9],
+
             ['staff_role_id' => 1, 'permission_id' => 2, 'component_id' => 1],
             ['staff_role_id' => 1, 'permission_id' => 2, 'component_id' => 2],
             ['staff_role_id' => 1, 'permission_id' => 2, 'component_id' => 3],

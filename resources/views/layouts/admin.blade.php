@@ -39,7 +39,6 @@
             bDestroy: true
         }).columns.adjust();
     })
-
     </script>
     <script src="{{ asset('backend/js/scripts.js') }}"></script>
     <script src="{{ asset('/js/app.js') }}" type="text/javascript"></script>

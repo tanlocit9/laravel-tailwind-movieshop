@@ -4,10 +4,14 @@ namespace App\Http\Livewire\Backend\Modal;
 
 use App\Models\Movie;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class MovieEdit extends Component
 {
+    use WithFileUploads;
+
     public $movie;
+    public $movieId;
     public $title;
     public $hours;
     public $minutes;
@@ -26,6 +30,7 @@ class MovieEdit extends Component
     {
         $this->countries = $countries;
         $this->genres = $genres;
+        $this->poster == null;
     }
     public function render()
     {
@@ -45,38 +50,43 @@ class MovieEdit extends Component
     }
     public function saveMovie()
     {
-        $target_dir = $_SERVER["DOCUMENT_ROOT"] . '/storage/posters';
-        $filename = time() . '';
-        $target_file = $target_dir . '/' . $filename;
-        $path = $this->poster->path();
-        $this->poster->storeAs('posters', $filename);
-
+        $filename = '';
+        if ($this->poster != null) {
+            $target_dir = $_SERVER["DOCUMENT_ROOT"] . '\storage\posters';
+            $filename = time() . "." . explode('.', $this->poster->getClientOriginalName())[1];
+            $target_file = $target_dir . '\\' . $filename;
+            $this->poster->storeAs('posters', $filename);
+            $savedDirectory = dirname($_SERVER["DOCUMENT_ROOT"]) . '\storage\app\posters\\' . $filename;
+            copy($savedDirectory, $target_file);
+            unlink($_SERVER["DOCUMENT_ROOT"] . '\storage\posters' . '\\' . $this->movie->poster);
+        }
         $seconds = $this->hours * 3600 + $this->minutes * 60 + $this->secconds;
-        move_uploaded_file($path, $target_file);
-        $this->movie->title = $this->title;
-        $this->movie->description = $this->description;
-        $this->movie->duration = date('H:i:s', $seconds);
-        $this->movie->poster = $this->poster;
-        $this->movie->release_date = date('Y-m-d', strtotime($this->releaseDate));
-        $this->movie->age_limit = $this->limit;
-        $this->movie->country_id = $this->countryId;
-        $this->movie->genres()->wherePivot('is_main', 1)->detach();
-        $this->movie->genres()->attach($this->genreId, ['is_main' => 1]);
+        $movie = Movie::find($this->movieId);
+        $movie->title = $this->title;
+        $movie->description = $this->description;
+        $movie->duration = date('H:i:s', $seconds);
+        $movie->poster = $filename;
+        $movie->release_date = date('Y-m-d', strtotime($this->releaseDate));
+        $movie->age_limit = $this->limit;
+        $movie->country_id = $this->countryId;
+        $movie->genres()->wherePivot('is_main', 1)->detach();
+        $movie->genres()->attach($this->genreId, ['is_main' => 1]);
+        $movie->save();
         $this->emit('openInformModal', "Movie update", "Success");
         $this->closeMovieEditModal();
     }
     public function openMovieEditModal($id)
     {
         $this->movie = Movie::find($id);
+        $this->movieId = $id;
         $seconds = strtotime($this->movie->duration);
-        $time = gmdate("H:i:s",$seconds);
-        $times = explode(':',$time);
+        $time = gmdate("H:i:s", $seconds);
+        $times = explode(':', $time);
         $this->title = $this->movie->title;
         $this->hours = $times[0];
         $this->minutes = $times[1];
         $this->seconds = $times[2];
         $this->description = $this->movie->description;
-        $this->poster = $this->movie->poster;
         $this->releaseDate = date('Y-m-d', strtotime($this->movie->release_date));
         $this->limit = $this->movie->age_limit;
         $this->countryId = $this->movie->country_id;

@@ -25,8 +25,8 @@
                         </div>
                         <div class="flex items-center space-x-3 ">
                             <div class="flex flex-col w-1/4">
-                                <label for="datepicker" class="leading-relaxed">Release day</label>
-                                <input type="date" wire:model='releaseDate' name="releaseDate"
+                                <label for="releaseDate" class="leading-relaxed">Release day</label>
+                                <input type="date" wire:model='releaseDate' name="releaseDate" id="releaseDate"
                                     class="input-text sm:text-sm" placeholder="22-12-1999" required>
                             </div>
                             <div class="flex flex-col w-1/4">
@@ -90,7 +90,7 @@
                                     <p class="pointer-none text-gray-500 "><span class="text-sm">Drag and drop</span>
                                         files here <br /> or select a file from your computer</p>
                                 </div>
-                                <input wire:model='poster' id="poster" accept="image/*" name="poster" type="file" class="hidden">
+                                <input wire:model='poster' id="poster" accept="image/*" name="poster" type="file" class="hidden" required>
                             </label>
                         </div>
                     </div>

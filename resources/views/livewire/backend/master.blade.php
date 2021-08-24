@@ -13,6 +13,10 @@
         @case('user')
         @livewire('backend.management.user-management')
         @break
+        @case('staff')
+        @livewire('backend.management.staff-management')
+        @livewire('backend.modal.assign-role')
+        @break
         @case('movie')
         @livewire('backend.management.movie-management')
         @livewire('backend.modal.movie-edit',['countries'=>$countries,'genres'=>$genres])
@@ -24,11 +28,17 @@
         @case('theater')
         @livewire('backend.management.theater-management')
         @break
+        @case('room')
+        @livewire('backend.management.room-management')
+        @livewire('backend.modal.room-create')
+        @break
         @case('actor')
         @livewire('backend.management.actor-management')
         @break
         @case('schedule')
         @livewire('backend.management.schedule-management')
+        @livewire('backend.modal.schedule-create')
+        @livewire('backend.modal.calendar-create')
         @break
         @case('role')
         @livewire('backend.management.role-management')

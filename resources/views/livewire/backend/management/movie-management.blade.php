@@ -1,7 +1,7 @@
 <div class="container xl:w-3/5">
     <div id='recipients' class="p-8 m-2 rounded shadow bg-white">
-        <button  wire:click="$emit('openMovieAddModal')" class="text-center my-3 bg-blue-700 hover:bg-blue-800 text-black font-bold py-2 px-4 focus:outline-none rounded-2xl">Add Movie</button>
-
+        <button wire:click="$refresh" class="text-center my-3 bg-blue-700 hover:bg-blue-800 text-black font-bold py-2 px-4 focus:outline-none rounded-2xl">Refresh</button>
+        <button wire:click="$emit('openMovieAddModal')" class="text-center my-3 bg-blue-700 hover:bg-blue-800 text-black font-bold py-2 px-4 focus:outline-none rounded-2xl">Add Movie</button>
         <table id="movie" class="display cell-border min-w-full divide-y divide-gray-200 normal-case">
             <thead class="bg-gray-50">
                 <tr>
@@ -77,7 +77,7 @@
                         @break
                         @case('delete')
                         @if(Accessibility::hasAuthorize($permission->id,$accessibilities))
-                        <button wire:click="$emit('openMovieEditModal',{{$item->id}})"
+                        <button wire:click="delete({{$item->id}})"
                             class="bg-red-500 hover:bg-red-400 inline-flex items-center justify-center w-10 h-10 mr-2 text-gray-700 transition-colors duration-150 rounded-full focus:outline-none ">
                             <i class="fa fa-trash" aria-hidden="true"></i>
                         </button>

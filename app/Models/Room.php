@@ -8,6 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Room extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'name',
+        'slot',
+        'theater_id'
+    ];
     public function theater()
     {
         return $this->belongsTo(Theater::class);
@@ -19,5 +24,9 @@ class Room extends Model
     public function schedule()
     {
         return $this->hasMany(RoomSchedule::class);
+    }
+    public function getStatus()
+    {
+        return RoomStatus::find($this->room_status_id)->status;
     }
 }

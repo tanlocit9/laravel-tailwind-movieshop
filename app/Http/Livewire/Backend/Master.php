@@ -16,7 +16,7 @@ class Master extends Component
     public $accessibility;
     public $accessibleComponentIds;
     public $components;
-    protected $listeners = ['refreshBackend' => '$refresh'];
+    protected $listeners = ['refresh' => '$refresh'];
     public function mount()
     {
         if(session('tab')!=null){

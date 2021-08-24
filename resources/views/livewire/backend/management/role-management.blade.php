@@ -1,6 +1,6 @@
 <div class="container xl:w-3/5">
     <div id='recipients' class="p-8 m-2 rounded shadow bg-white">
-        <div class="grid grid-flow-col mt">
+        <div class="grid grid-flow-col mt-2">
             @foreach ($staffRoles as $role)
             <a wire:click.prevent="changeRole({{$role->id}})"
                 class="cursor-pointer capitalize p-1 border border-separate border-solid border-gray-600 bg-yellow-200 text-center">

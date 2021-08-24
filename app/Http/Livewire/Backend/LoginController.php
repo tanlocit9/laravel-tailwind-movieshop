@@ -19,7 +19,6 @@ class LoginController extends Component
 
     public function login()
     {
-
         $staff = Staff::where('email', $this->email)->first();
         if ($staff == null) {
             session()->flash('message', 'Staff not found.');
